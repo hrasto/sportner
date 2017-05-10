@@ -11,8 +11,14 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class RhrEntries {
 
-  constructor(public http: Http) {
+  entryToday: any = false;
+
+  constructor() {
     console.log('Hello RhrEntries Provider');
+  }
+
+  setEntryToday(){
+    this.entryToday = false;
   }
 
 }
