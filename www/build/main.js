@@ -55809,6 +55809,7 @@ Profile = __decorate([
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rhr_entries__ = __webpack_require__(108);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RhrReminder; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -55822,6 +55823,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 /**
  * Generated class for the RhrReminder page.
  *
@@ -55829,10 +55831,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * on Ionic pages and navigation.
  */
 var RhrReminder = (function () {
-    function RhrReminder(navCtrl, navParams, viewCtrl) {
+    function RhrReminder(navCtrl, navParams, viewCtrl, rhrEntries) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.viewCtrl = viewCtrl;
+        this.rhrEntries = rhrEntries;
+        this.rhrEntry = 65;
     }
     RhrReminder.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad RhrReminder');
@@ -55842,6 +55846,8 @@ var RhrReminder = (function () {
     };
     RhrReminder.prototype.saveEnry = function () {
         console.log(this.rhrEntry);
+        this.rhrEntries.addEntry("rasto", this.rhrEntry);
+        console.log(this.rhrEntries.data);
     };
     return RhrReminder;
 }());
@@ -55850,10 +55856,10 @@ RhrReminder = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
         selector: 'page-rhr-reminder',template:/*ion-inline-start:"C:\Users\Rasto\ionic-apps\sportner\src\pages\rhr-reminder\rhr-reminder.html"*/'<!--\n\n  Generated template for the RhrReminder page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n\n\n<!--\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar color="danger">\n\n    <ion-title>Reminder</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <div class="reminder-content">\n\n    <h1>Todays RHR entry</h1>\n\n    <p>It seems like you have not entered your todays resting heart rate yet!</p>\n\n    <p>Add it now, or just skip</p>\n\n\n\n    <ion-item>\n\n      <ion-input type="number" [(ngModel)]="rhrEntry" placeholder="Number Input with no label"></ion-input>\n\n    </ion-item>\n\n\n\n    <button ion-button block color="primary" (click)="saveEnry()">Save</button>\n\n    <button ion-button block color="primary" (click)="closeModal()">Skip</button>\n\n\n\n  </div>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Rasto\ionic-apps\sportner\src\pages\rhr-reminder\rhr-reminder.html"*/,
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* ViewController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* ViewController */]) === "function" && _c || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* ViewController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* ViewController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_2__providers_rhr_entries__["a" /* RhrEntries */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_rhr_entries__["a" /* RhrEntries */]) === "function" && _d || Object])
 ], RhrReminder);
 
-var _a, _b, _c;
+var _a, _b, _c, _d;
 //# sourceMappingURL=rhr-reminder.js.map
 
 /***/ }),
@@ -55991,6 +55997,7 @@ var HomePage = (function () {
         this.modalCtrl = modalCtrl;
         this.workoutsService = workoutsService;
         this.rhrService = rhrService;
+        rhrService.generateData();
     }
     HomePage.prototype.ionViewDidLoad = function () {
         this.workoutsService.load();
@@ -56006,12 +56013,10 @@ HomePage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
         selector: 'page-home',template:/*ion-inline-start:"C:\Users\Rasto\ionic-apps\sportner\src\pages\home\home.html"*/'<ion-header>\n\n  <ion-navbar color="sportner">\n\n    <ion-title>Home</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <p>\n\n    "The best way to make your dreams come true is to wake up."\n\n  </p>\n\n  \n\n  <ion-list>\n\n      <ion-card *ngFor="let workout of workoutsService.workouts">\n\n        <ion-card-header>\n\n          {{workout.activity}}\n\n        </ion-card-header>\n\n        <ion-card-content>\n\n          {{workout.date}}\n\n        </ion-card-content>\n\n      </ion-card>\n\n  </ion-list>\n\n  \n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Rasto\ionic-apps\sportner\src\pages\home\home.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ModalController */],
-        __WEBPACK_IMPORTED_MODULE_2__providers_workout_entries__["a" /* WorkoutEntries */],
-        __WEBPACK_IMPORTED_MODULE_3__providers_rhr_entries__["a" /* RhrEntries */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ModalController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ModalController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__providers_workout_entries__["a" /* WorkoutEntries */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_workout_entries__["a" /* WorkoutEntries */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__providers_rhr_entries__["a" /* RhrEntries */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__providers_rhr_entries__["a" /* RhrEntries */]) === "function" && _d || Object])
 ], HomePage);
 
+var _a, _b, _c, _d;
 //# sourceMappingURL=home.js.map
 
 /***/ }),
@@ -56088,10 +56093,35 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var RhrEntries = (function () {
     function RhrEntries() {
         this.entryToday = false;
+        this.data = [];
         console.log('Hello RhrEntries Provider');
     }
+    RhrEntries.prototype.generateData = function () {
+        this.data = [
+            {
+                user: "rasto",
+                entries: [
+                    { day: "04.05.2017", value: "63" },
+                    { day: "05.05.2017", value: "62" },
+                    { day: "06.05.2017", value: "61" },
+                    { day: "07.05.2017", value: "61" },
+                    { day: "08.05.2017", value: "60" }
+                ]
+            }
+        ];
+    };
     RhrEntries.prototype.setEntryToday = function () {
         this.entryToday = false;
+    };
+    RhrEntries.prototype.addEntry = function (user, value) {
+        for (var i = 0; i < this.data.length; ++i)
+            if (this.data[i].user == user) {
+                var entry = {
+                    "day": Math.floor((new Date).getTime() / 1000),
+                    "value": value
+                };
+                this.data[i].entries.push();
+            }
     };
     return RhrEntries;
 }());

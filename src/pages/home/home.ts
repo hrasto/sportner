@@ -17,7 +17,7 @@ export class HomePage {
     public workoutsService: WorkoutEntries,
     public rhrService: RhrEntries  
   ) {
-
+    rhrService.generateData();
   }
 
   ionViewDidLoad(){

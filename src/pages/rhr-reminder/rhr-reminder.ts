@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ViewController } from 'ionic-angular';
+import { RhrEntries } from '../../providers/rhr-entries';
 
 /**
  * Generated class for the RhrReminder page.
@@ -16,12 +17,13 @@ import { ViewController } from 'ionic-angular';
 })
 export class RhrReminder {
 
-  rhrEntry: any;
-  
+  rhrEntry: any = 65;
+
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams,
-    public viewCtrl: ViewController
+    public viewCtrl: ViewController,
+    public rhrEntries: RhrEntries
   ) {  }
 
   ionViewDidLoad() {
@@ -34,6 +36,8 @@ export class RhrReminder {
 
   saveEnry(){
     console.log(this.rhrEntry);
+    this.rhrEntries.addEntry("rasto", this.rhrEntry);
+    console.log(this.rhrEntries.data);
   }
 
 }
