@@ -10,7 +10,7 @@ import { Intro } from '../pages/intro/intro';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = Intro;
+  rootPage:any = TabsPage;
 
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
