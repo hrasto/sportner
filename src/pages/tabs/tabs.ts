@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
-import { AboutPage } from '../about/about';
-import { ContactPage } from '../contact/contact';
+import { Profile } from '../profile/profile';
+import { Diary } from '../diary/diary';
 import { HomePage } from '../home/home';
 import { Settings } from '../settings/settings';
 import { Statistics } from '../statistics/statistics';
@@ -12,8 +12,8 @@ import { Statistics } from '../statistics/statistics';
 export class TabsPage {
 
   tab1Root = HomePage;
-  tab2Root = AboutPage;
-  tab3Root = ContactPage;
+  tab2Root = Profile;
+  tab3Root = Diary;
   tab4Root = Statistics;
   tab5Root = Settings;
 
