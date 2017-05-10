@@ -16,5 +16,17 @@
 </ion-header>
 
 <ion-content padding>
+  <div class="reminder-content">
+    <h1>Todays RHR entry</h1>
+    <p>It seems like you have not entered your todays resting heart rate yet!</p>
+    <p>Add it now, or just skip</p>
 
+    <ion-item>
+      <ion-input type="number" [(ngModel)]="rhrEntry" placeholder="Number Input with no label"></ion-input>
+    </ion-item>
+
+    <button ion-button block color="primary" (click)="saveEnry()">Save</button>
+    <button ion-button block color="primary" (click)="closeModal()">Skip</button>
+
+  </div>
 </ion-content>

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { ViewController } from 'ionic-angular';
 
 /**
  * Generated class for the RhrReminder page.
@@ -15,11 +16,24 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class RhrReminder {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+  rhrEntry: any;
+  
+  constructor(
+    public navCtrl: NavController, 
+    public navParams: NavParams,
+    public viewCtrl: ViewController
+  ) {  }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad RhrReminder');
+  }
+
+  closeModal() {
+    this.viewCtrl.dismiss();
+  }
+
+  saveEnry(){
+    console.log(this.rhrEntry);
   }
 
 }

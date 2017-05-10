@@ -21,4 +21,5 @@ export class RhrEntries {
     this.entryToday = false;
   }
 
+
 }
