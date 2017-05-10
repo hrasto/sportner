@@ -4,6 +4,7 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
 import { Intro } from '../pages/intro/intro';
+import { RhrReminder } from '../pages/rhr-reminder/rhr-reminder';
 import { Diary } from '../pages/diary/diary';
 import { Profile } from '../pages/profile/profile';
 import { HomePage } from '../pages/home/home';
@@ -16,6 +17,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { WorkoutEntries } from '../providers/workout-entries';
 import { AuthService } from '../providers/auth-service';
+import { RhrEntries } from '../providers/rhr-entries';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,8 @@ import { AuthService } from '../providers/auth-service';
     Statistics,
     Settings,
     TabsPage,
-    Intro
+    Intro,
+    RhrReminder
   ],
   imports: [
     BrowserModule,
@@ -41,14 +44,16 @@ import { AuthService } from '../providers/auth-service';
     Statistics,
     Settings,
     TabsPage,
-    Intro
+    Intro,
+    RhrReminder
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     WorkoutEntries,
-    AuthService
+    AuthService,
+    RhrEntries
   ]
 })
 export class AppModule {}
