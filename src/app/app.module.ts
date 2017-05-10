@@ -15,6 +15,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { WorkoutEntries } from '../providers/workout-entries';
+import { AuthService } from '../providers/auth-service';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { WorkoutEntries } from '../providers/workout-entries';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    WorkoutEntries
+    WorkoutEntries,
+    AuthService
   ]
 })
 export class AppModule {}
