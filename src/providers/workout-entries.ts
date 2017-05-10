@@ -11,8 +11,25 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class WorkoutEntries {
 
-  constructor(public http: Http) {
+  workouts: any = [];
+
+  constructor() {
     console.log('Hello WorkoutEntries Provider');
+  }
+
+  load(){
+    this.workouts = [
+      {date: '5.5.2017', activity: 'running', note: '', duration: ''},
+      {date: '6.5.2017', activity: 'gym', note: '', duration: ''},
+      {date: '6.5.2017', activity: 'running', note: '', duration: ''},
+      {date: '9.5.2017', activity: 'cycling', note: '', duration: ''}
+    ];
+  }
+
+  addItem(){
+
+    // later
+
   }
 
 }
