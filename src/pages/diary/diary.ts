@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { WorkoutEntries } from '../../providers/workout-entries';
 
 /**
  * Generated class for the Diary page.
@@ -14,11 +15,12 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class Diary {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public workoutsService: WorkoutEntries) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad Diary');
+    this.workoutsService.load();
   }
 
 }

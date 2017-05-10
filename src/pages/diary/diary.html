@@ -14,5 +14,14 @@
 
 
 <ion-content padding>
-
+  <ion-list>
+      <ion-card *ngFor="let workout of workoutsService.workouts">
+        <ion-card-header>
+          {{workout.activity}}
+        </ion-card-header>
+        <ion-card-content>
+          {{workout.date}}
+        </ion-card-content>
+      </ion-card>
+  </ion-list>
 </ion-content>

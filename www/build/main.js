@@ -55653,6 +55653,7 @@ exports.isFunction = isFunction;
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_workout_entries__ = __webpack_require__(269);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Diary; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -55665,6 +55666,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 /**
  * Generated class for the Diary page.
  *
@@ -55672,23 +55674,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * on Ionic pages and navigation.
  */
 var Diary = (function () {
-    function Diary(navCtrl, navParams) {
+    function Diary(navCtrl, navParams, workoutsService) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
+        this.workoutsService = workoutsService;
     }
     Diary.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad Diary');
+        this.workoutsService.load();
     };
     return Diary;
 }());
 Diary = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-diary',template:/*ion-inline-start:"C:\Users\Rasto\ionic-apps\sportner\src\pages\diary\diary.html"*/'<!--\n  Generated template for the Diary page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar color="sportner">\n    <ion-title>Diary</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"C:\Users\Rasto\ionic-apps\sportner\src\pages\diary\diary.html"*/,
+        selector: 'page-diary',template:/*ion-inline-start:"C:\Users\Rasto\ionic-apps\sportner\src\pages\diary\diary.html"*/'<!--\n  Generated template for the Diary page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar color="sportner">\n    <ion-title>Diary</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-list>\n      <ion-card *ngFor="let workout of workoutsService.workouts">\n        <ion-card-header>\n          {{workout.activity}}\n        </ion-card-header>\n        <ion-card-content>\n          {{workout.date}}\n        </ion-card-content>\n      </ion-card>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"C:\Users\Rasto\ionic-apps\sportner\src\pages\diary\diary.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__providers_workout_entries__["a" /* WorkoutEntries */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_workout_entries__["a" /* WorkoutEntries */]) === "function" && _c || Object])
 ], Diary);
 
+var _a, _b, _c;
 //# sourceMappingURL=diary.js.map
 
 /***/ }),
