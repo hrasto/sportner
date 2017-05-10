@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
+import { Intro } from '../pages/intro/intro';
 import { Diary } from '../pages/diary/diary';
 import { Profile } from '../pages/profile/profile';
 import { HomePage } from '../pages/home/home';
@@ -23,7 +24,8 @@ import { WorkoutEntries } from '../providers/workout-entries';
     Profile,
     Statistics,
     Settings,
-    TabsPage
+    TabsPage,
+    Intro
   ],
   imports: [
     BrowserModule,
@@ -37,7 +39,8 @@ import { WorkoutEntries } from '../providers/workout-entries';
     Diary,
     Statistics,
     Settings,
-    TabsPage
+    TabsPage,
+    Intro
   ],
   providers: [
     StatusBar,
