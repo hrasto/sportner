@@ -55739,7 +55739,7 @@ var Diary = (function () {
 Diary = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-diary',template:/*ion-inline-start:"C:\Users\Andrada\Desktop\hci_m3\sportner\src\pages\diary\diary.html"*/'<!--\n\n  Generated template for the Diary page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar color="sportner">\n\n    <ion-title>Diary</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <ion-list>\n\n      <ion-card *ngFor="let workout of workoutsService.workouts">\n\n        <ion-card-header>\n\n          {{workout.activity}}\n\n        </ion-card-header>\n\n        <ion-card-content>\n\n          {{workout.date}}\n\n        </ion-card-content>\n\n      </ion-card>\n\n  </ion-list>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Andrada\Desktop\hci_m3\sportner\src\pages\diary\diary.html"*/,
+        selector: 'page-diary',template:/*ion-inline-start:"C:\Users\Rasto\ionic-apps\sportner\src\pages\diary\diary.html"*/'<!--\n\n  Generated template for the Diary page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar color="sportner">\n\n    <ion-title>Diary</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <ion-list>\n\n      <ion-card *ngFor="let workout of workoutsService.workouts">\n\n        <ion-card-header>\n\n          {{workout.activity}}\n\n        </ion-card-header>\n\n        <ion-card-content>\n\n          {{workout.date}}\n\n        </ion-card-content>\n\n      </ion-card>\n\n  </ion-list>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Rasto\ionic-apps\sportner\src\pages\diary\diary.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_workout_entries__["a" /* WorkoutEntries */]])
 ], Diary);
@@ -55784,7 +55784,7 @@ var Profile = (function () {
 Profile = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-profile',template:/*ion-inline-start:"C:\Users\Andrada\Desktop\hci_m3\sportner\src\pages\profile\profile.html"*/'<!--\n\n  Generated template for the Profile page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar color="sportner">\n\n    <ion-title>Profile</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Andrada\Desktop\hci_m3\sportner\src\pages\profile\profile.html"*/,
+        selector: 'page-profile',template:/*ion-inline-start:"C:\Users\Rasto\ionic-apps\sportner\src\pages\profile\profile.html"*/'<!--\n\n  Generated template for the Profile page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar color="sportner">\n\n    <ion-title>Profile</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Rasto\ionic-apps\sportner\src\pages\profile\profile.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
 ], Profile);
@@ -55829,7 +55829,7 @@ var Settings = (function () {
 Settings = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-settings',template:/*ion-inline-start:"C:\Users\Andrada\Desktop\hci_m3\sportner\src\pages\settings\settings.html"*/'<!--\n\n  Generated template for the Settings page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar color="sportner">\n\n    <ion-title>Settings</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Andrada\Desktop\hci_m3\sportner\src\pages\settings\settings.html"*/,
+        selector: 'page-settings',template:/*ion-inline-start:"C:\Users\Rasto\ionic-apps\sportner\src\pages\settings\settings.html"*/'<!--\n\n  Generated template for the Settings page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar color="sportner">\n\n    <ion-title>Settings</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Rasto\ionic-apps\sportner\src\pages\settings\settings.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
 ], Settings);
@@ -55874,7 +55874,7 @@ var Statistics = (function () {
 Statistics = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-statistics',template:/*ion-inline-start:"C:\Users\Andrada\Desktop\hci_m3\sportner\src\pages\statistics\statistics.html"*/'<!--\n\n  Generated template for the Statistics page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar color="sportner">\n\n    <ion-title>Statistics</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Andrada\Desktop\hci_m3\sportner\src\pages\statistics\statistics.html"*/,
+        selector: 'page-statistics',template:/*ion-inline-start:"C:\Users\Rasto\ionic-apps\sportner\src\pages\statistics\statistics.html"*/'<!--\n\n  Generated template for the Statistics page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar color="sportner">\n\n    <ion-title>Statistics</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Rasto\ionic-apps\sportner\src\pages\statistics\statistics.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
 ], Statistics);
@@ -55927,11 +55927,12 @@ var HomePage = (function () {
 }());
 HomePage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-home',template:/*ion-inline-start:"C:\Users\Andrada\Desktop\hci_m3\sportner\src\pages\home\home.html"*/'<ion-header>\n\n  <ion-navbar color="sportner">\n\n    <ion-title>Home</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <p>\n\n    "The best way to make your dreams come true is to wake up."\n\n  </p>\n\n  \n\n  <ion-list>\n\n      <ion-card *ngFor="let workout of workoutsService.workouts">\n\n        <ion-card-header>\n\n          {{workout.activity}}\n\n        </ion-card-header>\n\n        <ion-card-content>\n\n          {{workout.date}}\n\n        </ion-card-content>\n\n      </ion-card>\n\n  </ion-list>\n\n  \n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Andrada\Desktop\hci_m3\sportner\src\pages\home\home.html"*/
+        selector: 'page-home',template:/*ion-inline-start:"C:\Users\Rasto\ionic-apps\sportner\src\pages\home\home.html"*/'<ion-header>\n\n  <ion-navbar color="sportner">\n\n    <ion-title>Home</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <p>\n\n    "The best way to make your dreams come true is to wake up."\n\n  </p>\n\n  \n\n  <ion-list>\n\n      <ion-card *ngFor="let workout of workoutsService.workouts">\n\n        <ion-card-header>\n\n          {{workout.activity}}\n\n        </ion-card-header>\n\n        <ion-card-content>\n\n          {{workout.date}}\n\n        </ion-card-content>\n\n      </ion-card>\n\n  </ion-list>\n\n  \n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Rasto\ionic-apps\sportner\src\pages\home\home.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__providers_workout_entries__["a" /* WorkoutEntries */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__providers_workout_entries__["a" /* WorkoutEntries */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_workout_entries__["a" /* WorkoutEntries */]) === "function" && _b || Object])
 ], HomePage);
 
+var _a, _b;
 //# sourceMappingURL=home.js.map
 
 /***/ }),
@@ -55972,7 +55973,7 @@ var TabsPage = (function () {
     return TabsPage;
 }());
 TabsPage = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({template:/*ion-inline-start:"C:\Users\Andrada\Desktop\hci_m3\sportner\src\pages\tabs\tabs.html"*/'<ion-tabs>\n\n  <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="home"></ion-tab>\n\n  <ion-tab [root]="tab2Root" tabTitle="Profile" tabIcon="contact"></ion-tab>\n\n  <ion-tab [root]="tab3Root" tabTitle="Add new entry!" tabIcon="book"></ion-tab>\n\n  <ion-tab [root]="tab4Root" tabTitle="Statistics" tabIcon="stats"></ion-tab>\n\n  <ion-tab [root]="tab5Root" tabTitle="Settings" tabIcon="settings"></ion-tab>\n\n</ion-tabs>\n\n'/*ion-inline-end:"C:\Users\Andrada\Desktop\hci_m3\sportner\src\pages\tabs\tabs.html"*/
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({template:/*ion-inline-start:"C:\Users\Rasto\ionic-apps\sportner\src\pages\tabs\tabs.html"*/'<ion-tabs>\n\n  <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="home"></ion-tab>\n\n  <ion-tab [root]="tab2Root" tabTitle="Profile" tabIcon="contact"></ion-tab>\n\n  <ion-tab [root]="tab3Root" tabTitle="Add new entry!" tabIcon="book"></ion-tab>\n\n  <ion-tab [root]="tab4Root" tabTitle="Statistics" tabIcon="stats"></ion-tab>\n\n  <ion-tab [root]="tab5Root" tabTitle="Settings" tabIcon="settings"></ion-tab>\n\n</ion-tabs>\n\n'/*ion-inline-end:"C:\Users\Rasto\ionic-apps\sportner\src\pages\tabs\tabs.html"*/
     }),
     __metadata("design:paramtypes", [])
 ], TabsPage);
@@ -74873,7 +74874,7 @@ var Intro = (function () {
 Intro = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-intro',template:/*ion-inline-start:"C:\Users\Andrada\Desktop\hci_m3\sportner\src\pages\intro\intro.html"*/'<!--\n\n  Generated template for the Intro page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>intro</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Andrada\Desktop\hci_m3\sportner\src\pages\intro\intro.html"*/,
+        selector: 'page-intro',template:/*ion-inline-start:"C:\Users\Rasto\ionic-apps\sportner\src\pages\intro\intro.html"*/'<!--\n\n  Generated template for the Intro page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>intro</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Rasto\ionic-apps\sportner\src\pages\intro\intro.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
 ], Intro);
@@ -74918,7 +74919,7 @@ var MyApp = (function () {
     return MyApp;
 }());
 MyApp = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({template:/*ion-inline-start:"C:\Users\Andrada\Desktop\hci_m3\sportner\src\app\app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n\n'/*ion-inline-end:"C:\Users\Andrada\Desktop\hci_m3\sportner\src\app\app.html"*/
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({template:/*ion-inline-start:"C:\Users\Rasto\ionic-apps\sportner\src\app\app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n\n'/*ion-inline-end:"C:\Users\Rasto\ionic-apps\sportner\src\app\app.html"*/
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]) === "function" && _c || Object])
 ], MyApp);
