@@ -44734,27 +44734,33 @@ var RhrEntries = (function () {
             {
                 user: "rasto",
                 entries: [
-                    { day: "04.05.2017", value: "63" },
-                    { day: "05.05.2017", value: "62" },
-                    { day: "06.05.2017", value: "61" },
-                    { day: "07.05.2017", value: "61" },
-                    { day: "08.05.2017", value: "60" }
+                    { day: "1494518", value: "63" },
+                    { day: "1494519", value: "62" },
+                    { day: "1494520", value: "62" },
+                    { day: "1494521", value: "60" }
                 ]
             }
         ];
     };
     RhrEntries.prototype.setEntryToday = function () {
-        this.entryToday = false;
+        if (this.data[0].entries[this.data[0].entries.length - 1].day == this.getElapsedDays())
+            this.entryToday = true;
+        else
+            this.entryToday = false;
     };
     RhrEntries.prototype.addEntry = function (user, value) {
         for (var i = 0; i < this.data.length; ++i)
             if (this.data[i].user == user) {
+                console.log('adding rhr entry');
                 var entry = {
-                    "day": Math.floor((new Date).getTime() / 1000),
+                    "day": this.getElapsedDays(),
                     "value": value
                 };
-                this.data[i].entries.push();
+                this.data[i].entries.push(entry);
             }
+    };
+    RhrEntries.prototype.getElapsedDays = function () {
+        return Math.floor((new Date).getTime() / 1000000);
     };
     return RhrEntries;
 }());
@@ -55863,7 +55869,7 @@ var Profile = (function () {
 Profile = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-profile',template:/*ion-inline-start:"C:\Users\Andrada\Desktop\hci_m3\sportner\src\pages\profile\profile.html"*/'\n\n<ion-header>\n\n\n\n  <ion-navbar color="sportner">\n\n    <ion-title>Profile</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n<center>\n\n    <ion-icon name="contact"></ion-icon>\n\n    <p *ngFor="let user of userData.users"> {{user.firstName}} {{user.lastName}}</p>\n\n</center>\n\n  \n\n        \n\n        \n\n<ion-card *ngFor="let user of userData.users">\n\n    \n\n    <ion-card-content>\n\n         {{user.email}}\n\n         {{user.birthdate}}\n\n        </ion-card-content>\n\n    </ion-card>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Andrada\Desktop\hci_m3\sportner\src\pages\profile\profile.html"*/,
+        selector: 'page-profile',template:/*ion-inline-start:"C:\Users\Andrada\Desktop\hci_m3\sportner\src\pages\profile\profile.html"*/'\n\n<ion-header>\n\n\n\n  <ion-navbar color="sportner">\n\n    <ion-title>Profile</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n    <ion-icon name="contact"></ion-icon>\n\n    <p *ngFor="let user of userData.users"> {{user.firstName}} {{user.lastName}}</p>\n\n\n\n  \n\n        \n\n        \n\n<ion-card *ngFor="let user of userData.users">\n\n    \n\n    <ion-card-content>\n\n         {{user.email}}\n\n         {{user.birthdate}}\n\n        </ion-card-content>\n\n    </ion-card>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Andrada\Desktop\hci_m3\sportner\src\pages\profile\profile.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
@@ -55927,10 +55933,12 @@ RhrReminder = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
         selector: 'page-rhr-reminder',template:/*ion-inline-start:"C:\Users\Andrada\Desktop\hci_m3\sportner\src\pages\rhr-reminder\rhr-reminder.html"*/'<!--\n\n  Generated template for the RhrReminder page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n\n\n<!--\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar color="danger">\n\n    <ion-title>Reminder</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <div class="reminder-content">\n\n    <h1>Todays RHR entry</h1>\n\n    <p>It seems like you have not entered your todays resting heart rate yet!</p>\n\n    <p>Add it now, or just skip</p>\n\n\n\n    <ion-item>\n\n      <ion-input type="number" [(ngModel)]="rhrEntry" placeholder="Number Input with no label"></ion-input>\n\n    </ion-item>\n\n\n\n    <button ion-button block color="primary" (click)="saveEnry()">Save</button>\n\n    <button ion-button block color="primary" (click)="closeModal()">Skip</button>\n\n\n\n  </div>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Andrada\Desktop\hci_m3\sportner\src\pages\rhr-reminder\rhr-reminder.html"*/,
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* ViewController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* ViewController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_2__providers_rhr_entries__["a" /* RhrEntries */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_rhr_entries__["a" /* RhrEntries */]) === "function" && _d || Object])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* ViewController */],
+        __WEBPACK_IMPORTED_MODULE_2__providers_rhr_entries__["a" /* RhrEntries */]])
 ], RhrReminder);
 
-var _a, _b, _c, _d;
 //# sourceMappingURL=rhr-reminder.js.map
 
 /***/ }),
@@ -56098,10 +56106,12 @@ HomePage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
         selector: 'page-home',template:/*ion-inline-start:"C:\Users\Andrada\Desktop\hci_m3\sportner\src\pages\home\home.html"*/'<ion-header>\n\n  <ion-navbar color="sportner">\n\n    <ion-title>Home</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <p>\n\n    "{{quote}}"\n\n  </p>\n\n  \n\n  <ion-list>\n\n      <ion-card *ngFor="let workout of workoutsService.workouts">\n\n        <ion-card-header>\n\n          {{workout.activity}}\n\n        </ion-card-header>\n\n        <ion-card-content>\n\n          {{workout.date}}\n\n        </ion-card-content>\n\n      </ion-card>\n\n  </ion-list>\n\n  \n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Andrada\Desktop\hci_m3\sportner\src\pages\home\home.html"*/
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ModalController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ModalController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__providers_workout_entries__["a" /* WorkoutEntries */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_workout_entries__["a" /* WorkoutEntries */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__providers_rhr_entries__["a" /* RhrEntries */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__providers_rhr_entries__["a" /* RhrEntries */]) === "function" && _d || Object])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ModalController */],
+        __WEBPACK_IMPORTED_MODULE_2__providers_workout_entries__["a" /* WorkoutEntries */],
+        __WEBPACK_IMPORTED_MODULE_3__providers_rhr_entries__["a" /* RhrEntries */]])
 ], HomePage);
 
-var _a, _b, _c, _d;
 //# sourceMappingURL=home.js.map
 
 /***/ }),
