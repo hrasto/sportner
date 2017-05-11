@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+//import { Http } from '@angular/http';
 import { Observable} from 'rxjs/Observable'
 import 'rxjs/add/operator/map';
 
@@ -22,7 +22,9 @@ constructor (email: string, firstName: string){
 }
 @Injectable()
 export class AuthService {
-    
+    constructor() {
+    console.log('Hello AuthService Provider');
+  }
   currentUser: User;
   public login (credentials)
   {
@@ -40,9 +42,7 @@ export class AuthService {
         
         }
   }
-  constructor() {
-    console.log('Hello AuthService Provider');
-  }
+  
   
    public register(credentials) {
     if (credentials.email === null || credentials.password === null) {

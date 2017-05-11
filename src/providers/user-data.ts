@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+//import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 
 /*
@@ -11,8 +11,23 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class UserData {
 
-  constructor(public http: Http) {
+  constructor() {
     console.log('Hello UserData Provider');
   }
+  users: any = [];
+
+  
+  load(){
+    this.users = [
+      {firstName: 'Andrada', lastName: 'Colceriu', email: 'andradaclr@yahoo.de', birthdate: '10.08.1996', height: '178', weight: '68' },
+    ];
+  }
+
+  addItem(){
+
+    // later
+
+  }
+
 
 }
