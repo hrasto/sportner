@@ -5,20 +5,40 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { TabsPage } from '../pages/tabs/tabs';
 import { Intro } from '../pages/intro/intro';
+import { AuthService } from '../providers/auth-service';
+
+import { LoadingController } from 'ionic-angular';
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = TabsPage;
+  rootPage:any;
+  loader:any;
 
-
-  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
+  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, public auth:AuthService, public loading:LoadingController) {
+  
+  this.presentLoading();
     platform.ready().then(() => {
-      // Okay, so the platform is ready and our plugins are available.
-      // Here you can do any higher level native things you might need.
       statusBar.styleDefault();
       splashScreen.hide();
+      
+     // if(true) {
+        this.rootPage = TabsPage;
+     // } else {
+      //  this.rootPage = Intro;
+      //}
+      
+      this.loader.dismiss();
     });
+  }
+  
+  presentLoading(){
+    this.loader = this.loading.create({
+        content: "Authenticating... "
+    });
+    
+    this.loader.present();
+    
   }
 }
