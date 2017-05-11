@@ -24,29 +24,38 @@ export class RhrEntries {
       {
         user:"rasto",
         entries:[
-          {day: "04.05.2017", value: "63"},
-          {day: "05.05.2017", value: "62"},
-          {day: "06.05.2017", value: "61"},
-          {day: "07.05.2017", value: "61"},
-          {day: "08.05.2017", value: "60"}
+          {day: "1494518", value: "63"},
+          {day: "1494519", value: "62"},
+          {day: "1494520", value: "62"},
+          {day: "1494521", value: "60"}
         ]        
       }
     ];
   }
 
-  setEntryToday(){
-    this.entryToday = false;
+  setEntryToday(){    
+    if(this.data[0].entries[this.data[0].entries.length - 1].day == this.getElapsedDays())
+      this.entryToday = true;
+    else
+      this.entryToday = false;
   }
 
   addEntry(user, value){
     for(var i = 0; i < this.data.length; ++i)
       if(this.data[i].user == user){
+        console.log('adding rhr entry');
         var entry = {
-          "day": Math.floor((new Date).getTime() / 1000),
+          "day": this.getElapsedDays(),
           "value": value
         };
-        this.data[i].entries.push();
+        this.data[i].entries.push(entry);
       }
   }
+
+  getElapsedDays(){
+    return Math.floor((new Date).getTime() / 1000000);
+  }
+
+  
 
 }
