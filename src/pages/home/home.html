@@ -5,19 +5,26 @@
 </ion-header>
 
 <ion-content padding>
-  <p>
+
+  <p (click)="generateRandomQuote()" class="quote">
     "{{quote}}"
   </p>
   
   <ion-list>
-      <ion-card *ngFor="let workout of workoutsService.workouts">
-        <ion-card-header>
-          {{workout.activity}}
-        </ion-card-header>
-        <ion-card-content>
-          {{workout.date}}
-        </ion-card-content>
-      </ion-card>
+      <ion-card *ngFor="let workout of workoutsService.workouts" (click)="showWorkout(workout.id)">
+
+      <ion-item>
+        <ion-avatar item-left>
+          <img src="img/{{activities.getItem(workout.activity).icon}}">
+        </ion-avatar>
+        <h2>{{activities.getItem(workout.activity).name}}</h2>
+        <p>{{workout.date}}</p>
+      </ion-item>
+
+      <ion-card-content>
+        <p>{{workout.note}}</p>
+      </ion-card-content>
+    </ion-card>
   </ion-list>
   
 </ion-content>

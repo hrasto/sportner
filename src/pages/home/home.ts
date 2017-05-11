@@ -2,8 +2,10 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { ModalController } from 'ionic-angular';
 import { WorkoutEntries } from '../../providers/workout-entries';
+import { Activities } from '../../providers/activities';
 import { RhrEntries } from '../../providers/rhr-entries';
 import { RhrReminder } from '../rhr-reminder/rhr-reminder';
+import { WorkoutDetails } from '../workout-details/workout-details';
 
 @Component({
   selector: 'page-home',
@@ -11,13 +13,14 @@ import { RhrReminder } from '../rhr-reminder/rhr-reminder';
 })
 export class HomePage {
 
-  quote: any = "bla";
+  public quote: any = "";
 
   constructor(
     public navCtrl: NavController, 
     public modalCtrl: ModalController,
     public workoutsService: WorkoutEntries,
-    public rhrService: RhrEntries  
+    public rhrService: RhrEntries,  
+    public activities: Activities  
   ) {
     rhrService.generateData();
   }
@@ -43,8 +46,12 @@ export class HomePage {
       "The best way to predict the future is to create it."
     ];
 
-    var index = Math.random()*100 % quotes.length;
+    var index = (new Date).getMilliseconds() % quotes.length;
     this.quote = quotes[index];
+  }
+
+  showWorkout(id){
+    this.navCtrl.push(WorkoutDetails, id);
   }
 
 }
