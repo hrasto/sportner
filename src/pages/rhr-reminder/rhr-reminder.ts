@@ -38,6 +38,7 @@ export class RhrReminder {
     console.log(this.rhrEntry);
     this.rhrEntries.addEntry("rasto", this.rhrEntry);
     console.log(this.rhrEntries.data);
+    this.closeModal();
   }
 
 }

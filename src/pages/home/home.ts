@@ -11,6 +11,8 @@ import { RhrReminder } from '../rhr-reminder/rhr-reminder';
 })
 export class HomePage {
 
+  quote: any = "bla";
+
   constructor(
     public navCtrl: NavController, 
     public modalCtrl: ModalController,
@@ -22,13 +24,27 @@ export class HomePage {
 
   ionViewDidLoad(){
     this.workoutsService.load();
-
+    this.generateRandomQuote();
     this.rhrService.setEntryToday();
 
     if(this.rhrService.entryToday == false){
       let myModal = this.modalCtrl.create(RhrReminder);
       myModal.present();
     }
+  }
+
+  generateRandomQuote(){
+    var quotes = [
+      "Sweat is just fat crying.",
+      "Fit is not a destination, it is a way of life.",
+      "Wake up. Work out. Kick ass. Repeat.",
+      "The hardest lift of all is lifting your butt off the couch.",
+      "One of the greatest moments in life is realizing that two weeks ago, your body could not do what it just did.",
+      "The best way to predict the future is to create it."
+    ];
+
+    var index = Math.random()*100 % quotes.length;
+    this.quote = quotes[index];
   }
 
 }
