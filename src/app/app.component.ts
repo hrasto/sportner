@@ -4,19 +4,28 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { TabsPage } from '../pages/tabs/tabs';
-import { Intro } from '../pages/intro/intro';
-import { AuthService } from '../providers/auth-service';
+//import { Intro } from '../pages/intro/intro';
+//import { AuthService } from '../providers/auth-service';
 
-import { LoadingController } from 'ionic-angular';
+//import { LoadingController } from 'ionic-angular';
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any;
-  loader:any;
+  rootPage:any =TabsPage;
+  
 
-  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, public auth:AuthService, public loading:LoadingController) {
+constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
+  
+      statusBar.styleDefault();
+      splashScreen.hide();
+      
+      }
+      
+  
+ //loader:any;
+ /* constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, public auth:AuthService, public loading:LoadingController) {
   
   this.presentLoading();
     platform.ready().then(() => {
@@ -39,6 +48,6 @@ export class MyApp {
     });
     
     this.loader.present();
-    
   }
+  */
 }

@@ -17,6 +17,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { WorkoutEntries } from '../providers/workout-entries';
+import { UserData } from '../providers/user-data';
 import { AuthService } from '../providers/auth-service';
 import { RhrEntries } from '../providers/rhr-entries';
 import { Activities } from '../providers/activities';
@@ -58,7 +59,8 @@ import { Activities } from '../providers/activities';
     WorkoutEntries,
     AuthService,
     RhrEntries,
-    Activities
+    Activities,
+    UserData
   ]
 })
 export class AppModule {}
