@@ -26965,3 +26965,7 @@ page-home .quote {
   color: #999;
   transition: 0.3s linear;
 }
+
+page-statistics ion-card-header {
+  font-weight: bold;
+}

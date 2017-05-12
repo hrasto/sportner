@@ -56161,7 +56161,7 @@ var NewrhrPage = (function () {
 NewrhrPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-newrhr',template:/*ion-inline-start:"C:\Users\Andrada\Desktop\hci_m3\sportner\src\pages\newrhr\newrhr.html"*/'<!--\n\n  Generated template for the NewrhrPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>New RHR</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n <ion-item> \n\n    <ion-label color="primary">Value</ion-label>\n\n    <ion-input type="number" [(ngModel)]="rhrEntry" placeholder="Value"></ion-input>\n\n  </ion-item>\n\n\n\n   <!-- <ion-item>\n\n    <ion-label color="primary">Date</ion-label>\n\n    <ion-input placeholder="" type="date"></ion-input>\n\n  </ion-item> -->\n\n\n\n<br><br>\n\n<div align="center">\n\n\n\n<button ion-button round style="font-size:17px" (click)="saveEnry()">\n\n  Save\n\n</button>\n\n</div>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Andrada\Desktop\hci_m3\sportner\src\pages\newrhr\newrhr.html"*/,
+        selector: 'page-newrhr',template:/*ion-inline-start:"C:\Users\Andrada\Desktop\hci_m3\sportner\src\pages\newrhr\newrhr.html"*/'<!--\n\n  Generated template for the NewrhrPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>New RHR</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n <ion-item> \n\n    <ion-label color="primary">Value</ion-label>\n\n    <ion-input type="number" [(ngModel)]="rhrEntry" placeholder="Value"></ion-input>\n\n  </ion-item>\n\n\n\n   <!-- <ion-item>\n\n    <ion-label color="primary">Date</ion-label>\n\n    <ion-input placeholder="" type="date"></ion-input>\n\n  </ion-item> -->\n\n\n\n<br><br>\n\n<div align="center">\n\n\n\n<button ion-button round style="font-size:17px" (click)="saveEnry()">\n\n  Save\n\n</button>\n\n</div>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Andrada\Desktop\hci_m3\sportner\src\pages\newrhr\newrhr.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
@@ -56408,6 +56408,7 @@ Settings = __decorate([
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(9);
+throw new Error("Cannot find module \"chart.js\"");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Statistics; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -56418,6 +56419,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 /**
@@ -56432,18 +56434,120 @@ var Statistics = (function () {
         this.navParams = navParams;
     }
     Statistics.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad Statistics');
+        this.barChart = new __WEBPACK_IMPORTED_MODULE_2_chart_js__["Chart"](this.barCanvas.nativeElement, {
+            type: 'bar',
+            data: {
+                labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+                datasets: [{
+                        label: '# of Votes',
+                        data: [12, 19, 3, 5, 2, 3],
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(153, 102, 255, 0.2)',
+                            'rgba(255, 159, 64, 0.2)'
+                        ],
+                        borderColor: [
+                            'rgba(255,99,132,1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 159, 64, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                            ticks: {
+                                beginAtZero: true
+                            }
+                        }]
+                }
+            }
+        });
+        /**  this.doughnutChart = new Chart(this.doughnutCanvas.nativeElement, {
+   
+              type: 'doughnut',
+              data: {
+                  labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+                  datasets: [{
+                      label: '# of Votes',
+                      data: [12, 19, 3, 5, 2, 3],
+                      backgroundColor: [
+                          'rgba(255, 99, 132, 0.2)',
+                          'rgba(54, 162, 235, 0.2)',
+                          'rgba(255, 206, 86, 0.2)',
+                          'rgba(75, 192, 192, 0.2)',
+                          'rgba(153, 102, 255, 0.2)',
+                          'rgba(255, 159, 64, 0.2)'
+                      ],
+                      hoverBackgroundColor: [
+                          "#FF6384",
+                          "#36A2EB",
+                          "#FFCE56",
+                          "#FF6384",
+                          "#36A2EB",
+                          "#FFCE56"
+                      ]
+                  }]
+              }
+   
+          }); */
+        this.lineChart = new __WEBPACK_IMPORTED_MODULE_2_chart_js__["Chart"](this.lineCanvas.nativeElement, {
+            type: 'line',
+            data: {
+                labels: ["January", "February", "March", "April", "May", "June", "July"],
+                datasets: [
+                    {
+                        label: "RHR dataset",
+                        fill: false,
+                        lineTension: 0.1,
+                        backgroundColor: "#29e5ab",
+                        borderColor: "#29e5ab",
+                        borderCapStyle: 'butt',
+                        borderDash: [],
+                        borderDashOffset: 0.0,
+                        borderJoinStyle: 'miter',
+                        pointBorderColor: "#29e5ab",
+                        pointBackgroundColor: "#fff",
+                        pointBorderWidth: 1,
+                        pointHoverRadius: 5,
+                        pointHoverBackgroundColor: "#29e5ab",
+                        pointHoverBorderColor: "rgba(220,220,220,1)",
+                        pointHoverBorderWidth: 1,
+                        pointRadius: 1,
+                        pointHitRadius: 10,
+                        data: [65, 59, 80, 81, 56, 55, 40],
+                        spanGaps: false,
+                    }
+                ]
+            }
+        });
     };
     return Statistics;
 }());
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])('barCanvas'),
+    __metadata("design:type", Object)
+], Statistics.prototype, "barCanvas", void 0);
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])('lineCanvas'),
+    __metadata("design:type", Object)
+], Statistics.prototype, "lineCanvas", void 0);
 Statistics = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-statistics',template:/*ion-inline-start:"C:\Users\Andrada\Desktop\hci_m3\sportner\src\pages\statistics\statistics.html"*/'<!--\n\n  Generated template for the Statistics page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar color="sportner">\n\n    <ion-title>Statistics</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Andrada\Desktop\hci_m3\sportner\src\pages\statistics\statistics.html"*/,
+        selector: 'page-statistics',template:/*ion-inline-start:"C:\Users\Andrada\Desktop\hci_m3\sportner\src\pages\statistics\statistics.html"*/'<!--\n\n  Generated template for the Statistics page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar color="sportner">\n\n    <ion-title>Statistics</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n   <ion-card>\n\n      <ion-card-header>\n\n        Resting Heart Rate\n\n      </ion-card-header>\n\n      <ion-card-content>\n\n        <canvas #lineCanvas></canvas>\n\n      </ion-card-content>\n\n    </ion-card>\n\n<ion-card>\n\n      <ion-card-header>\n\n        Bar Chart\n\n      </ion-card-header>\n\n      <ion-card-content>\n\n        <canvas #barCanvas></canvas>\n\n      </ion-card-content>\n\n    </ion-card>\n\n \n\n   <!-- <ion-card>\n\n      <ion-card-header>\n\n        Doughnut Chart\n\n      </ion-card-header>\n\n      <ion-card-content>\n\n        <canvas #doughnutCanvas></canvas>\n\n      </ion-card-content>\n\n    </ion-card> -->\n\n \n\n \n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Andrada\Desktop\hci_m3\sportner\src\pages\statistics\statistics.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object])
 ], Statistics);
 
+var _a, _b;
 //# sourceMappingURL=statistics.js.map
 
 /***/ }),

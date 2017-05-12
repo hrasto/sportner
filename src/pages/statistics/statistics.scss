@@ -1,3 +1,10 @@
 page-statistics {
 
+        .scroll-content {
+            background-color: map-get($colors, white);
+        }
+ 
+        ion-card-header {
+            font-weight: bold;
+        }
 }
