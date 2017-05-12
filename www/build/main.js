@@ -56072,9 +56072,6 @@ var NewrhrPage = (function () {
         this.rhrEntries = rhrEntries;
         this.rhrEntry = 65;
     }
-    NewrhrPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad RhrReminder');
-    };
     NewrhrPage.prototype.closeModal = function () {
         this.viewCtrl.dismiss();
     };
@@ -56088,7 +56085,7 @@ var NewrhrPage = (function () {
     NewrhrPage.prototype.showAlert = function () {
         var alert = this.alertCtrl.create({
             title: 'Notification',
-            subTitle: 'New RHR ist saved',
+            subTitle: 'New RHR is saved',
             buttons: ['OK']
         });
         alert.present();
@@ -56129,6 +56126,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 /**
  * Generated class for the NewworkoutPage page.
  *
@@ -56136,21 +56134,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * on Ionic pages and navigation.
  */
 var NewworkoutPage = (function () {
-    function NewworkoutPage(navCtrl, navParams, alertCtrl) {
+    function NewworkoutPage(navCtrl, navParams, viewCtrl, alertCtrl) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
+        this.viewCtrl = viewCtrl;
         this.alertCtrl = alertCtrl;
     }
     NewworkoutPage.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad NewworkoutPage');
     };
+    NewworkoutPage.prototype.closeModal = function () {
+        this.viewCtrl.dismiss();
+    };
     NewworkoutPage.prototype.showAlert = function () {
         var alert = this.alertCtrl.create({
             title: 'Notification',
-            subTitle: 'New workout is added',
+            subTitle: 'New workout is saved',
             buttons: ['OK']
         });
         alert.present();
+        this.closeModal();
     };
     return NewworkoutPage;
 }());
@@ -56161,6 +56164,7 @@ NewworkoutPage = __decorate([
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ViewController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* AlertController */]])
 ], NewworkoutPage);
 

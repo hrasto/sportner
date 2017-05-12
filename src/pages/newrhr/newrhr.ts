@@ -24,9 +24,7 @@ export class NewrhrPage {
   public viewCtrl: ViewController,
   public rhrEntries: RhrEntries) {
   }
-    ionViewDidLoad() {
-    console.log('ionViewDidLoad RhrReminder');
-  }
+   
   closeModal() {
     this.viewCtrl.dismiss();
   }
