@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
+import { AlertController } from 'ionic-angular';
 /**
  * Generated class for the NewrhrPage page.
  *
@@ -13,9 +14,19 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'newrhr.html',
 })
 export class NewrhrPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+	
+  constructor(public navCtrl: NavController, public navParams: NavParams, private alertCtrl: AlertController) {
   }
+  
+ showAlert() {
+  let alert = this.alertCtrl.create({
+    title: 'Low battery',
+    subTitle: '10% of battery remaining',
+    buttons: ['Dismiss']
+  });
+  alert.present();
+  }
+  
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad NewrhrPage');

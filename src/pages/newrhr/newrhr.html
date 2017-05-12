@@ -14,5 +14,35 @@
 
 
 <ion-content padding>
-efsgrdtfhgyjhj
+ <ion-item> 
+    <ion-label color="primary">Value</ion-label>
+    <ion-input placeholder="Value" typw="number"></ion-input>
+  </ion-item>
+
+
+
+   <ion-item>
+    <ion-label color="primary">Date</ion-label>
+    <ion-input placeholder="" type="date"></ion-input>
+  </ion-item>
+
+ <ion-item>
+    <ion-label color="primary">Time </ion-label>
+    <ion-input placeholder="00:00" type="time"></ion-input>
+  </ion-item>
+
+
+   <ion-item>
+    <ion-label color="primary">Notes</ion-label>
+    <ion-textarea placeholder="Notes" ></ion-textarea>
+  </ion-item>
+
+<br><br>
+<div align="center">
+
+<button ion-button round style="font-size:17px"  type="submit" (click)="showAlert()">
+  Save
+</button>
+</div>
+
 </ion-content>
