@@ -44805,11 +44805,23 @@ var WorkoutEntries = (function () {
     }
     WorkoutEntries.prototype.load = function () {
         this.workouts = [
-            { date: '5.5.2017', activity: 'running', note: '', duration: '' },
-            { date: '6.5.2017', activity: 'gym', note: '', duration: '' },
-            { date: '6.5.2017', activity: 'running', note: '', duration: '' },
-            { date: '9.5.2017', activity: 'cycling', note: '', duration: '' }
+            { id: 1, date: '1.5.2017', activity: 1, note: 'Morning run', duration: '' },
+            { id: 2, date: '2.5.2017', activity: 2, note: 'Bla bla bla', duration: '' },
+            { id: 3, date: '3.5.2017', activity: 3, note: 'Bla bla bla', duration: '' },
+            { id: 4, date: '3.5.2017', activity: 4, note: 'Bla bla bla', duration: '' },
+            { id: 5, date: '4.5.2017', activity: 5, note: 'Bla bla bla', duration: '' },
+            { id: 6, date: '5.5.2017', activity: 6, note: 'Bla bla bla', duration: '' },
+            { id: 7, date: '6.5.2017', activity: 7, note: 'Bla bla bla', duration: '' },
+            { id: 8, date: '7.5.2017', activity: 8, note: 'Bla bla bla', duration: '' },
+            { id: 9, date: '8.5.2017', activity: 9, note: 'Bla bla bla', duration: '' },
+            { id: 10, date: '9.5.2017', activity: 10, note: 'Bla bla bla', duration: '' }
         ];
+    };
+    WorkoutEntries.prototype.getItem = function (id) {
+        for (var i = 0; i < this.workouts.length; ++i)
+            if (this.workouts[i].id == id)
+                return this.workouts[i];
+        return false;
     };
     WorkoutEntries.prototype.addItem = function () {
         // later
@@ -55871,6 +55883,7 @@ var Profile = (function () {
             var ge = "female";
         else if (this.userData.users.gender == 0)
             var ge = "male";
+        this.g = ge;
     };
     return Profile;
 }());
@@ -55879,10 +55892,11 @@ Profile = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
         selector: 'page-profile',template:/*ion-inline-start:"C:\Users\Andrada\Desktop\hci_m3\sportner\src\pages\profile\profile.html"*/'\n\n<ion-header>\n\n\n\n  <ion-navbar color="sportner">\n\n    <ion-title>Profile</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n<div align="center"*ngFor="let user of userData.users">\n\n    <ion-icon name="contact" style="font-size: 200px; color: #b5b1b2"></ion-icon>\n\n    <div class="bla" style="font-size: 25px; color:#ff4d4d; ">\n\n        <b> {{user.firstName}} {{user.lastName}}</b> <br>\n\n    </div>\n\n    <div class="email" style="font-size:16px">\n\n        {{user.email}} <br><br>\n\n    </div>\n\n    <button ion-button round outline>Edit profile</button>\n\n</div>\n\n\n\n        \n\n<ion-card *ngFor="let user of userData.users">\n\n    \n\n    <ion-card-content style= "font-size: 18px; padding: 18px 18px 18px 18px">\n\n         Birthdate: &nbsp; &nbsp; <b>{{user.birthdate}} </b><br><br>\n\n         Gender: &nbsp; &nbsp; &nbsp; &nbsp; {{g}} <br>\n\n         Height: &nbsp; &nbsp; &nbsp; &nbsp;<b> {{user.height}} cm  </b><br><br>\n\n         Weight: &nbsp; &nbsp; &nbsp; &nbsp;<b>  {{user.weight}} kg </b>\n\n    </ion-card-content>\n\n    </ion-card>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Andrada\Desktop\hci_m3\sportner\src\pages\profile\profile.html"*/,
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__providers_user_data__["a" /* UserData */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_user_data__["a" /* UserData */]) === "function" && _c || Object])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
+        __WEBPACK_IMPORTED_MODULE_2__providers_user_data__["a" /* UserData */]])
 ], Profile);
 
-var _a, _b, _c;
 //# sourceMappingURL=profile.js.map
 
 /***/ }),
@@ -56059,8 +56073,10 @@ webpackEmptyContext.id = 106;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_workout_entries__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_rhr_entries__ = __webpack_require__(48);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__rhr_reminder_rhr_reminder__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_activities__ = __webpack_require__(279);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_rhr_entries__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__rhr_reminder_rhr_reminder__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__workout_details_workout_details__ = __webpack_require__(278);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -56077,13 +56093,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
 var HomePage = (function () {
-    function HomePage(navCtrl, modalCtrl, workoutsService, rhrService) {
+    function HomePage(navCtrl, modalCtrl, workoutsService, rhrService, activities) {
         this.navCtrl = navCtrl;
         this.modalCtrl = modalCtrl;
         this.workoutsService = workoutsService;
         this.rhrService = rhrService;
-        this.quote = "bla";
+        this.activities = activities;
+        this.quote = "";
         rhrService.generateData();
     }
     HomePage.prototype.ionViewDidLoad = function () {
@@ -56091,7 +56110,7 @@ var HomePage = (function () {
         this.generateRandomQuote();
         this.rhrService.setEntryToday();
         if (this.rhrService.entryToday == false) {
-            var myModal = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_4__rhr_reminder_rhr_reminder__["a" /* RhrReminder */]);
+            var myModal = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_5__rhr_reminder_rhr_reminder__["a" /* RhrReminder */]);
             myModal.present();
         }
     };
@@ -56104,19 +56123,23 @@ var HomePage = (function () {
             "One of the greatest moments in life is realizing that two weeks ago, your body could not do what it just did.",
             "The best way to predict the future is to create it."
         ];
-        var index = Math.random() * 100 % quotes.length;
+        var index = (new Date).getMilliseconds() % quotes.length;
         this.quote = quotes[index];
+    };
+    HomePage.prototype.showWorkout = function (id) {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_6__workout_details_workout_details__["a" /* WorkoutDetails */], id);
     };
     return HomePage;
 }());
 HomePage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-home',template:/*ion-inline-start:"C:\Users\Andrada\Desktop\hci_m3\sportner\src\pages\home\home.html"*/'<ion-header>\n\n  <ion-navbar color="sportner">\n\n    <ion-title>Home</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <p>\n\n    "{{quote}}"\n\n  </p>\n\n  \n\n  <ion-list>\n\n      <ion-card *ngFor="let workout of workoutsService.workouts">\n\n        <ion-card-header>\n\n          {{workout.activity}}\n\n        </ion-card-header>\n\n        <ion-card-content>\n\n          {{workout.date}}\n\n        </ion-card-content>\n\n      </ion-card>\n\n  </ion-list>\n\n  \n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Andrada\Desktop\hci_m3\sportner\src\pages\home\home.html"*/
+        selector: 'page-home',template:/*ion-inline-start:"C:\Users\Andrada\Desktop\hci_m3\sportner\src\pages\home\home.html"*/'<ion-header>\n\n  <ion-navbar color="sportner">\n\n    <ion-title>Home</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n\n\n  <p (click)="generateRandomQuote()" class="quote">\n\n    "{{quote}}"\n\n  </p>\n\n  \n\n  <ion-list>\n\n      <ion-card *ngFor="let workout of workoutsService.workouts" (click)="showWorkout(workout.id)">\n\n\n\n      <ion-item>\n\n        <ion-avatar item-left>\n\n          <img src="img/{{activities.getItem(workout.activity).icon}}">\n\n        </ion-avatar>\n\n        <h2>{{activities.getItem(workout.activity).name}}</h2>\n\n        <p>{{workout.date}}</p>\n\n      </ion-item>\n\n\n\n      <ion-card-content>\n\n        <p>{{workout.note}}</p>\n\n      </ion-card-content>\n\n    </ion-card>\n\n  </ion-list>\n\n  \n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Andrada\Desktop\hci_m3\sportner\src\pages\home\home.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ModalController */],
         __WEBPACK_IMPORTED_MODULE_2__providers_workout_entries__["a" /* WorkoutEntries */],
-        __WEBPACK_IMPORTED_MODULE_3__providers_rhr_entries__["a" /* RhrEntries */]])
+        __WEBPACK_IMPORTED_MODULE_4__providers_rhr_entries__["a" /* RhrEntries */],
+        __WEBPACK_IMPORTED_MODULE_3__providers_activities__["a" /* Activities */]])
 ], HomePage);
 
 //# sourceMappingURL=home.js.map
@@ -74756,27 +74779,31 @@ module.exports = g;
 var map = {
 	"../pages/diary/diary.module": [
 		272,
-		5
+		13
 	],
 	"../pages/intro/intro.module": [
 		273,
-		4
+		12
 	],
 	"../pages/profile/profile.module": [
 		274,
-		3
+		11
 	],
 	"../pages/rhr-reminder/rhr-reminder.module": [
 		275,
-		2
+		10
 	],
 	"../pages/settings/settings.module": [
 		276,
-		1
+		9
 	],
 	"../pages/statistics/statistics.module": [
 		277,
-		0
+		8
+	],
+	"../pages/workout-details/workout-details.module": [
+		280,
+		7
 	]
 };
 function webpackAsyncContext(req) {
@@ -74810,12 +74837,14 @@ webpackAsyncContext.id = 203;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_statistics_statistics__ = __webpack_require__(105);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_settings_settings__ = __webpack_require__(104);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_tabs_tabs__ = __webpack_require__(108);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ionic_native_status_bar__ = __webpack_require__(113);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__ionic_native_splash_screen__ = __webpack_require__(112);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__providers_workout_entries__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__providers_user_data__ = __webpack_require__(109);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__providers_auth_service__ = __webpack_require__(208);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__providers_rhr_entries__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_workout_details_workout_details__ = __webpack_require__(278);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__ionic_native_status_bar__ = __webpack_require__(113);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__ionic_native_splash_screen__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__providers_workout_entries__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__providers_user_data__ = __webpack_require__(109);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__providers_auth_service__ = __webpack_require__(208);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__providers_rhr_entries__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__providers_activities__ = __webpack_require__(279);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -74823,6 +74852,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
 
 
 
@@ -74857,7 +74888,8 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_10__pages_settings_settings__["a" /* Settings */],
             __WEBPACK_IMPORTED_MODULE_11__pages_tabs_tabs__["a" /* TabsPage */],
             __WEBPACK_IMPORTED_MODULE_4__pages_intro_intro__["a" /* Intro */],
-            __WEBPACK_IMPORTED_MODULE_5__pages_rhr_reminder_rhr_reminder__["a" /* RhrReminder */]
+            __WEBPACK_IMPORTED_MODULE_5__pages_rhr_reminder_rhr_reminder__["a" /* RhrReminder */],
+            __WEBPACK_IMPORTED_MODULE_12__pages_workout_details_workout_details__["a" /* WorkoutDetails */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["a" /* BrowserModule */],
@@ -74868,7 +74900,8 @@ AppModule = __decorate([
                     { loadChildren: '../pages/rhr-reminder/rhr-reminder.module#RhrReminderModule', name: 'RhrReminder', segment: 'rhr-reminder', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/settings/settings.module#SettingsModule', name: 'Settings', segment: 'settings', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/statistics/statistics.module#StatisticsModule', name: 'Statistics', segment: 'statistics', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/intro/intro.module#IntroModule', name: 'Intro', segment: 'intro', priority: 'low', defaultHistory: [] }
+                    { loadChildren: '../pages/intro/intro.module#IntroModule', name: 'Intro', segment: 'intro', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/workout-details/workout-details.module#WorkoutDetailsModule', name: 'WorkoutDetails', segment: 'workout-details', priority: 'low', defaultHistory: [] }
                 ]
             })
         ],
@@ -74882,16 +74915,18 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_10__pages_settings_settings__["a" /* Settings */],
             __WEBPACK_IMPORTED_MODULE_11__pages_tabs_tabs__["a" /* TabsPage */],
             __WEBPACK_IMPORTED_MODULE_4__pages_intro_intro__["a" /* Intro */],
-            __WEBPACK_IMPORTED_MODULE_5__pages_rhr_reminder_rhr_reminder__["a" /* RhrReminder */]
+            __WEBPACK_IMPORTED_MODULE_5__pages_rhr_reminder_rhr_reminder__["a" /* RhrReminder */],
+            __WEBPACK_IMPORTED_MODULE_12__pages_workout_details_workout_details__["a" /* WorkoutDetails */]
         ],
         providers: [
-            __WEBPACK_IMPORTED_MODULE_12__ionic_native_status_bar__["a" /* StatusBar */],
-            __WEBPACK_IMPORTED_MODULE_13__ionic_native_splash_screen__["a" /* SplashScreen */],
+            __WEBPACK_IMPORTED_MODULE_13__ionic_native_status_bar__["a" /* StatusBar */],
+            __WEBPACK_IMPORTED_MODULE_14__ionic_native_splash_screen__["a" /* SplashScreen */],
             { provide: __WEBPACK_IMPORTED_MODULE_0__angular_core__["b" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicErrorHandler */] },
-            __WEBPACK_IMPORTED_MODULE_14__providers_workout_entries__["a" /* WorkoutEntries */],
-            __WEBPACK_IMPORTED_MODULE_16__providers_auth_service__["a" /* AuthService */],
-            __WEBPACK_IMPORTED_MODULE_17__providers_rhr_entries__["a" /* RhrEntries */],
-            __WEBPACK_IMPORTED_MODULE_15__providers_user_data__["a" /* UserData */]
+            __WEBPACK_IMPORTED_MODULE_15__providers_workout_entries__["a" /* WorkoutEntries */],
+            __WEBPACK_IMPORTED_MODULE_17__providers_auth_service__["a" /* AuthService */],
+            __WEBPACK_IMPORTED_MODULE_18__providers_rhr_entries__["a" /* RhrEntries */],
+            __WEBPACK_IMPORTED_MODULE_19__providers_activities__["a" /* Activities */],
+            __WEBPACK_IMPORTED_MODULE_16__providers_user_data__["a" /* UserData */]
         ]
     })
 ], AppModule);
@@ -111998,6 +112033,132 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
 //# sourceMappingURL=main.js.map
+
+/***/ }),
+/* 272 */,
+/* 273 */,
+/* 274 */,
+/* 275 */,
+/* 276 */,
+/* 277 */,
+/* 278 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_workout_entries__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_activities__ = __webpack_require__(279);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return WorkoutDetails; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+/**
+ * Generated class for the WorkoutDetails page.
+ *
+ * See http://ionicframework.com/docs/components/#navigation for more info
+ * on Ionic pages and navigation.
+ */
+var WorkoutDetails = (function () {
+    function WorkoutDetails(navCtrl, navParams, workouts, activities) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.workouts = workouts;
+        this.activities = activities;
+    }
+    WorkoutDetails.prototype.ionViewDidLoad = function () {
+        var workout = this.workouts.getItem(this.navParams.data);
+        this.date = workout.date;
+        this.activity = this.activities.getItem(workout.id).name;
+        this.icon = this.activities.getItem(workout.id).icon;
+        this.note = workout.note;
+        this.duration = workout.duration;
+    };
+    return WorkoutDetails;
+}());
+WorkoutDetails = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
+        selector: 'page-workout-details',template:/*ion-inline-start:"C:\Users\Andrada\Desktop\hci_m3\sportner\src\pages\workout-details\workout-details.html"*/'<!--\n\n  Generated template for the WorkoutDetails page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>{{date}}</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n  <ion-icon name="{{icon}}"></ion-icon>\n\n  \n\n  <p>{{note}}</p>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Andrada\Desktop\hci_m3\sportner\src\pages\workout-details\workout-details.html"*/,
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
+        __WEBPACK_IMPORTED_MODULE_2__providers_workout_entries__["a" /* WorkoutEntries */],
+        __WEBPACK_IMPORTED_MODULE_3__providers_activities__["a" /* Activities */]])
+], WorkoutDetails);
+
+//# sourceMappingURL=workout-details.js.map
+
+/***/ }),
+/* 279 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_map__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_map__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Activities; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/*
+  Generated class for the Activities provider.
+
+  See https://angular.io/docs/ts/latest/guide/dependency-injection.html
+  for more info on providers and Angular 2 DI.
+*/
+var Activities = (function () {
+    function Activities() {
+        this.data = [];
+        console.log('Hello Activities Provider');
+    }
+    Activities.prototype.load = function () {
+        this.data = [
+            { id: 1, name: "Running", icon: "011-run.png" },
+            { id: 2, name: "Cycling", icon: "010-bicycle.png" },
+            { id: 3, name: "Mountain Biking", icon: "010-bicycle.png" },
+            { id: 4, name: "Walking", icon: "007-hiker.png" },
+            { id: 5, name: "Nordic Walking", icon: "007-hiker.png" },
+            { id: 6, name: "Nordic Skiing", icon: "005-skiing.png" },
+            { id: 7, name: "Skiing", icon: "005-skiing.png" },
+            { id: 8, name: "Swimming", icon: "009-swimming.png" },
+            { id: 9, name: "Gym", icon: "006-dumbbell.png" },
+            { id: 10, name: "Hiking", icon: "007-hiker.png" }
+        ];
+    };
+    Activities.prototype.getItem = function (id) {
+        this.load();
+        for (var i = 0; i < this.data.length; ++i)
+            if (this.data[i].id == id)
+                return this.data[i];
+        return false;
+    };
+    return Activities;
+}());
+Activities = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["c" /* Injectable */])(),
+    __metadata("design:paramtypes", [])
+], Activities);
+
+//# sourceMappingURL=activities.js.map
 
 /***/ })
 /******/ ]);

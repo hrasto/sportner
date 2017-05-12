@@ -19,11 +19,24 @@ export class WorkoutEntries {
 
   load(){
     this.workouts = [
-      {date: '5.5.2017', activity: 'running', note: '', duration: ''},
-      {date: '6.5.2017', activity: 'gym', note: '', duration: ''},
-      {date: '6.5.2017', activity: 'running', note: '', duration: ''},
-      {date: '9.5.2017', activity: 'cycling', note: '', duration: ''}
+      {id:1, date: '1.5.2017', activity: 1, note: 'Morning run', duration: ''},
+      {id:2, date: '2.5.2017', activity: 2, note: 'Bla bla bla', duration: ''},
+      {id:3, date: '3.5.2017', activity: 3, note: 'Bla bla bla', duration: ''},
+      {id:4, date: '3.5.2017', activity: 4, note: 'Bla bla bla', duration: ''},
+      {id:5, date: '4.5.2017', activity: 5, note: 'Bla bla bla', duration: ''},
+      {id:6, date: '5.5.2017', activity: 6, note: 'Bla bla bla', duration: ''},
+      {id:7, date: '6.5.2017', activity: 7, note: 'Bla bla bla', duration: ''},
+      {id:8, date: '7.5.2017', activity: 8, note: 'Bla bla bla', duration: ''},
+      {id:9, date: '8.5.2017', activity: 9, note: 'Bla bla bla', duration: ''},
+      {id:10, date: '9.5.2017', activity: 10, note: 'Bla bla bla', duration: ''}
     ];
+  }
+
+  getItem(id){
+    for(var i = 0; i < this.workouts.length; ++i)
+      if(this.workouts[i].id == id)
+        return this.workouts[i];
+    return false;
   }
 
   addItem(){
