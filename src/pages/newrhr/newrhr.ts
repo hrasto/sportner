@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { RhrEntries } from '../../providers/rhr-entries';
+import { ViewController } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
+
 /**
  * Generated class for the NewrhrPage page.
  *
@@ -14,22 +16,35 @@ import { AlertController } from 'ionic-angular';
   templateUrl: 'newrhr.html',
 })
 export class NewrhrPage {
-	
-  constructor(public navCtrl: NavController, public navParams: NavParams, private alertCtrl: AlertController) {
+	rhrEntry: any = 65;
+  constructor(
+  public navCtrl: NavController, 
+  public navParams: NavParams, 
+  private alertCtrl: AlertController,
+  public viewCtrl: ViewController,
+  public rhrEntries: RhrEntries) {
+  }
+    ionViewDidLoad() {
+    console.log('ionViewDidLoad RhrReminder');
+  }
+  closeModal() {
+    this.viewCtrl.dismiss();
   }
   
+  saveEnry(){
+    console.log(this.rhrEntry);
+    this.rhrEntries.addEntry("rasto", this.rhrEntry);
+    console.log(this.rhrEntries.data);
+    this.showAlert();
+    this.closeModal();
+  }
+
  showAlert() {
   let alert = this.alertCtrl.create({
     title: 'Notification',
-    subTitle: 'New RHR ist saved',
+    subTitle: 'New RHR is saved',
     buttons: ['OK']
   });
   alert.present();
   }
-  
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad NewrhrPage');
-  }
-
 }

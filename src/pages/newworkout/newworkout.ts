@@ -28,7 +28,7 @@ constructor(
    showAlert() {
     let alert = this.alertCtrl.create({
       title: 'Notification',
-      subTitle: 'New workout is added',
+      subTitle: 'New workout is saved',
       buttons: ['OK']
     });
     alert.present();
