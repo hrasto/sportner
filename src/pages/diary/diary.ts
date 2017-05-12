@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { WorkoutEntries } from '../../providers/workout-entries';
+import { RhrEntries } from '../../providers/rhr-entries';
+import { Activities } from '../../providers/activities';
 
 /**
  * Generated class for the Diary page.
@@ -15,12 +17,31 @@ import { WorkoutEntries } from '../../providers/workout-entries';
 })
 export class Diary {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public workoutsService: WorkoutEntries) {
-  }
+  rhrEntries:any=[];
+
+  constructor(
+    public navCtrl: NavController, 
+    public navParams: NavParams, 
+    public workoutsService: WorkoutEntries,
+    public rhrService: RhrEntries,
+    public activities: Activities
+  ) { }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad Diary');
-    this.workoutsService.load();
+    this.setRhrEntries();
+    //this.workoutsService.load();
+  }
+
+  setRhrEntries(){
+    for(var i = 0; i < this.rhrService.data[0].entries.length; ++i){
+      this.rhrEntries.push({
+        value: this.rhrService.data[0].entries[i].value,
+        year: (new Date(this.rhrService.data[0].entries[i].day * 1000000)).getFullYear(),
+        month: (new Date(this.rhrService.data[0].entries[i].day * 1000000)).getMonth(),
+        day: (new Date(this.rhrService.data[0].entries[i].day * 1000000)).getDay()
+      });
+    }
   }
 
 }
