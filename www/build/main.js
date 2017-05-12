@@ -37540,67 +37540,6 @@ Observable_1.Observable.prototype.map = map_1.map;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_map__ = __webpack_require__(38);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_map__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Activities; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-/*
-  Generated class for the Activities provider.
-
-  See https://angular.io/docs/ts/latest/guide/dependency-injection.html
-  for more info on providers and Angular 2 DI.
-*/
-var Activities = (function () {
-    function Activities() {
-        this.data = [];
-        console.log('Hello Activities Provider');
-    }
-    Activities.prototype.load = function () {
-        this.data = [
-            { id: 1, name: "Running", icon: "011-run.png" },
-            { id: 2, name: "Cycling", icon: "010-bicycle.png" },
-            { id: 3, name: "Mountain Biking", icon: "010-bicycle.png" },
-            { id: 4, name: "Walking", icon: "007-hiker.png" },
-            { id: 5, name: "Nordic Walking", icon: "007-hiker.png" },
-            { id: 6, name: "Nordic Skiing", icon: "005-skiing.png" },
-            { id: 7, name: "Skiing", icon: "005-skiing.png" },
-            { id: 8, name: "Swimming", icon: "009-swimming.png" },
-            { id: 9, name: "Gym", icon: "006-dumbbell.png" },
-            { id: 10, name: "Hiking", icon: "007-hiker.png" }
-        ];
-    };
-    Activities.prototype.getItem = function (id) {
-        this.load();
-        for (var i = 0; i < this.data.length; ++i)
-            if (this.data[i].id == id)
-                return this.data[i];
-        return false;
-    };
-    return Activities;
-}());
-Activities = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["c" /* Injectable */])(),
-    __metadata("design:paramtypes", [])
-], Activities);
-
-//# sourceMappingURL=activities.js.map
-
-/***/ }),
-/* 40 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_map__ = __webpack_require__(38);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_map__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RhrEntries; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -37667,6 +37606,67 @@ RhrEntries = __decorate([
 ], RhrEntries);
 
 //# sourceMappingURL=rhr-entries.js.map
+
+/***/ }),
+/* 40 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_map__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_map__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Activities; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/*
+  Generated class for the Activities provider.
+
+  See https://angular.io/docs/ts/latest/guide/dependency-injection.html
+  for more info on providers and Angular 2 DI.
+*/
+var Activities = (function () {
+    function Activities() {
+        this.data = [];
+        console.log('Hello Activities Provider');
+    }
+    Activities.prototype.load = function () {
+        this.data = [
+            { id: 1, name: "Running", icon: "011-run.png" },
+            { id: 2, name: "Cycling", icon: "010-bicycle.png" },
+            { id: 3, name: "Mountain Biking", icon: "010-bicycle.png" },
+            { id: 4, name: "Walking", icon: "007-hiker.png" },
+            { id: 5, name: "Nordic Walking", icon: "007-hiker.png" },
+            { id: 6, name: "Nordic Skiing", icon: "005-skiing.png" },
+            { id: 7, name: "Skiing", icon: "005-skiing.png" },
+            { id: 8, name: "Swimming", icon: "009-swimming.png" },
+            { id: 9, name: "Gym", icon: "006-dumbbell.png" },
+            { id: 10, name: "Hiking", icon: "007-hiker.png" }
+        ];
+    };
+    Activities.prototype.getItem = function (id) {
+        this.load();
+        for (var i = 0; i < this.data.length; ++i)
+            if (this.data[i].id == id)
+                return this.data[i];
+        return false;
+    };
+    return Activities;
+}());
+Activities = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["c" /* Injectable */])(),
+    __metadata("design:paramtypes", [])
+], Activities);
+
+//# sourceMappingURL=activities.js.map
 
 /***/ }),
 /* 41 */
@@ -55914,8 +55914,8 @@ exports.isFunction = isFunction;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_workout_entries__ = __webpack_require__(41);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_rhr_entries__ = __webpack_require__(40);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_activities__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_rhr_entries__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_activities__ = __webpack_require__(40);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__newworkout_newworkout__ = __webpack_require__(106);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__newrhr_newrhr__ = __webpack_require__(105);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Diary; });
@@ -55972,11 +55972,7 @@ var Diary = (function () {
 Diary = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-<<<<<<< HEAD
-        selector: 'page-diary',template:/*ion-inline-start:"C:\Users\gledi\Desktop\sportner\src\pages\diary\diary.html"*/'<!--\n\n  Generated template for the Diary page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar color="sportner">    \n\n    <div padding>\n\n      <ion-segment [(ngModel)]="entries" color="light">\n\n        <ion-segment-button value="workout">\n\n          Workouts\n\n        </ion-segment-button>\n\n        <ion-segment-button value="rhr">\n\n          RHR\n\n        </ion-segment-button>\n\n      </ion-segment>\n\n    </div>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <ion-fab bottom right>\n\n    <button ion-fab mini [navPush]="newrhrPage"color="danger"><ion-icon name="heart"></ion-icon></button>\n\n    <button ion-fab mini [navPush]="newworkoutPage" color="primary" ><ion-icon name="football"></ion-icon></button>\n\n  </ion-fab>\n\n  <!--\n\n  <ion-fab bottom right>\n\n    <button ion-fab mini><ion-icon name="add"></ion-icon></button>\n\n    <ion-fab-list side="left">\n\n      <button ion-fab><ion-icon name="heart"></ion-icon></button>\n\n      <button ion-fab><ion-icon name="football"></ion-icon></button>\n\n    </ion-fab-list>\n\n  </ion-fab>\n\n  -->\n\n\n\n  <div [ngSwitch]="entries">\n\n    <ion-list *ngSwitchCase="\'workout\'">\n\n      <ion-card *ngFor="let workout of workoutsService.workouts" (click)="showWorkout(workout.id)">\n\n        <ion-item>\n\n          <ion-avatar item-left>\n\n            <img src="img/{{activities.getItem(workout.activity).icon}}">\n\n          </ion-avatar>\n\n          <h2>{{activities.getItem(workout.activity).name}}</h2>\n\n          <p>{{workout.date}}</p>\n\n        </ion-item>\n\n\n\n        <ion-card-content>\n\n          <p>{{workout.note}}</p>\n\n   \n\n        </ion-card-content>\n\n      </ion-card>\n\n    </ion-list>\n\n\n\n    <ion-list *ngSwitchCase="\'rhr\'">\n\n      <ion-card *ngFor="let rhr of rhrEntries">\n\n        <ion-item>\n\n          <ion-avatar item-left>\n\n            <ion-icon name="heart"></ion-icon>\n\n          </ion-avatar>\n\n          <h2>{{rhr.value}}</h2>\n\n          <p>{{rhr.day}}.{{rhr.month}}.{{rhr.year}}</p>\n\n        </ion-item>\n\n      </ion-card>\n\n    </ion-list>\n\n  </div>\n\n\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\gledi\Desktop\sportner\src\pages\diary\diary.html"*/,
-=======
         selector: 'page-diary',template:/*ion-inline-start:"C:\Users\Axinya\Desktop\hci-projekt\Новая папка (2)\sportner\src\pages\diary\diary.html"*/'<!--\n\n  Generated template for the Diary page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar color="sportner">    \n\n    <div padding>\n\n      <ion-segment [(ngModel)]="entries" color="light">\n\n        <ion-segment-button value="workout">\n\n          Workouts\n\n        </ion-segment-button>\n\n        <ion-segment-button value="rhr">\n\n          RHR\n\n        </ion-segment-button>\n\n      </ion-segment>\n\n    </div>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n\n\n  <ion-fab bottom right>\n\n    <button ion-fab mini [navPush]="newrhrPage"color="danger"><ion-icon name="heart"></ion-icon></button>\n\n    <button ion-fab mini [navPush]="newworkoutPage" color="primary" ><ion-icon name="football"></ion-icon></button>\n\n  </ion-fab>\n\n  <!--\n\n  <ion-fab bottom right>\n\n    <button ion-fab mini><ion-icon name="add"></ion-icon></button>\n\n    <ion-fab-list side="left">\n\n      <button ion-fab><ion-icon name="heart"></ion-icon></button>\n\n      <button ion-fab><ion-icon name="football"></ion-icon></button>\n\n    </ion-fab-list>\n\n  </ion-fab>\n\n  -->\n\n\n\n  <div [ngSwitch]="entries">\n\n    <ion-list *ngSwitchCase="\'workout\'">\n\n      <ion-card *ngFor="let workout of workoutsService.workouts" (click)="showWorkout(workout.id)">\n\n        <ion-item>\n\n          <ion-avatar item-left>\n\n            <img src="img/{{activities.getItem(workout.activity).icon}}">\n\n          </ion-avatar>\n\n          <h2>{{activities.getItem(workout.activity).name}}</h2>\n\n          <p>{{workout.date}}</p>\n\n        </ion-item>\n\n\n\n        <ion-card-content>\n\n          <p>{{workout.note}}</p>\n\n   \n\n        </ion-card-content>\n\n      </ion-card>\n\n    </ion-list>\n\n\n\n    <ion-list *ngSwitchCase="\'rhr\'">\n\n      <ion-card *ngFor="let rhr of rhrEntries">\n\n        <ion-item>\n\n          <ion-avatar item-left>\n\n            <ion-icon name="heart"></ion-icon>\n\n          </ion-avatar>\n\n          <h2>{{rhr.value}}</h2>\n\n          <p>{{rhr.day}}.{{rhr.month}}.{{rhr.year}}</p>\n\n        </ion-item>\n\n      </ion-card>\n\n    </ion-list>\n\n  </div>\n\n\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Axinya\Desktop\hci-projekt\Новая папка (2)\sportner\src\pages\diary\diary.html"*/,
->>>>>>> e42df763b6af5f82d42602ad5c4ee70460fc8f6f
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
@@ -56029,7 +56025,7 @@ var Manageprofile = (function () {
 Manageprofile = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-manageprofile',template:/*ion-inline-start:"C:\Users\gledi\Desktop\sportner\src\pages\manageprofile\manageprofile.html"*/'<!--\n\n  Generated template for the Manageprofile page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header color="sportner">\n\n\n\n  <ion-navbar>\n\n    <ion-title>Edit your profile!</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n<div align="center"*ngFor="let user of userData.users">\n\n    <ion-icon name="contact" style="font-size: 100px; color: #b5b1b2"></ion-icon>\n\n    <div class="bla" style="font-size: 25px; color:#ff4d4d; ">\n\n        <b> {{user.firstName}} {{user.lastName}}</b> <br>\n\n    </div>\n\n    <div class="email" style="font-size:16px">\n\n        {{user.email}} <br><br>\n\n    </div>\n\n    \n\n</div>\n\n\n\n <ion-item>\n\n    <ion-label color="primary">First Name</ion-label>\n\n    <ion-input placeholder="bla" typw="text"></ion-input>\n\n  </ion-item>\n\n\n\n   <ion-item>\n\n    <ion-label color="primary">Last Name</ion-label>\n\n    <ion-input placeholder="bla" typw="text"></ion-input>\n\n  </ion-item>\n\n\n\n   <ion-item>\n\n    <ion-label color="primary">Birthdate</ion-label>\n\n    <ion-input placeholder="bla" type="date"></ion-input>\n\n  </ion-item>\n\n\n\n <ion-item>\n\n    <ion-label color="primary">Height (cm)</ion-label>\n\n    <ion-input placeholder="160" type="number"></ion-input>\n\n  </ion-item>\n\n\n\n   <ion-item>\n\n    <ion-label color="primary">Weight (kg) </ion-label>\n\n    <ion-input placeholder="50" type="number"></ion-input>\n\n  </ion-item>\n\n\n\n   <ion-item>\n\n    <ion-label color="primary">Notes</ion-label>\n\n    <ion-input placeholder="bla" type="text"clearInput></ion-input>\n\n  </ion-item>\n\n\n\n<br><br>\n\n<div align="center">\n\n<button ion-button round style="font-size:17px" type="submit" [navPush]="editprofile">\n\n  Save\n\n</button>\n\n</div>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\gledi\Desktop\sportner\src\pages\manageprofile\manageprofile.html"*/,
+        selector: 'page-manageprofile',template:/*ion-inline-start:"C:\Users\Axinya\Desktop\hci-projekt\Новая папка (2)\sportner\src\pages\manageprofile\manageprofile.html"*/'<!--\n\n  Generated template for the Manageprofile page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header color="sportner">\n\n\n\n  <ion-navbar>\n\n    <ion-title>Edit your profile!</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n<div align="center"*ngFor="let user of userData.users">\n\n    <ion-icon name="contact" style="font-size: 100px; color: #b5b1b2"></ion-icon>\n\n    <div class="bla" style="font-size: 25px; color:#ff4d4d; ">\n\n        <b> {{user.firstName}} {{user.lastName}}</b> <br>\n\n    </div>\n\n    <div class="email" style="font-size:16px">\n\n        {{user.email}} <br><br>\n\n    </div>\n\n    \n\n</div>\n\n\n\n <ion-item>\n\n    <ion-label color="primary">First Name</ion-label>\n\n    <ion-input placeholder="bla" typw="text"></ion-input>\n\n  </ion-item>\n\n\n\n   <ion-item>\n\n    <ion-label color="primary">Last Name</ion-label>\n\n    <ion-input placeholder="bla" typw="text"></ion-input>\n\n  </ion-item>\n\n\n\n   <ion-item>\n\n    <ion-label color="primary">Birthdate</ion-label>\n\n    <ion-input placeholder="bla" type="date"></ion-input>\n\n  </ion-item>\n\n\n\n <ion-item>\n\n    <ion-label color="primary">Height (cm)</ion-label>\n\n    <ion-input placeholder="160" type="number"></ion-input>\n\n  </ion-item>\n\n\n\n   <ion-item>\n\n    <ion-label color="primary">Weight (kg) </ion-label>\n\n    <ion-input placeholder="50" type="number"></ion-input>\n\n  </ion-item>\n\n\n\n   <ion-item>\n\n    <ion-label color="primary">Notes</ion-label>\n\n    <ion-input placeholder="bla" type="text"clearInput></ion-input>\n\n  </ion-item>\n\n\n\n<br><br>\n\n<div align="center">\n\n<button ion-button round style="font-size:17px" type="submit" [navPush]="editprofile">\n\n  Save\n\n</button>\n\n</div>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Axinya\Desktop\hci-projekt\Новая папка (2)\sportner\src\pages\manageprofile\manageprofile.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
@@ -56044,12 +56040,7 @@ Manageprofile = __decorate([
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-<<<<<<< HEAD
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__diary_diary__ = __webpack_require__(103);
-=======
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(9);
->>>>>>> e42df763b6af5f82d42602ad5c4ee70460fc8f6f
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NewrhrPage; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -56060,7 +56051,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
 
 
 
@@ -56075,13 +56065,12 @@ var NewrhrPage = (function () {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.alertCtrl = alertCtrl;
-        this.diarypage = __WEBPACK_IMPORTED_MODULE_2__diary_diary__["a" /* Diary */];
     }
     NewrhrPage.prototype.showAlert = function () {
         var alert = this.alertCtrl.create({
-            title: 'Low battery',
-            subTitle: '10% of battery remaining',
-            buttons: ['Dismiss']
+            title: 'Notification',
+            subTitle: 'New RHR ist saved',
+            buttons: ['OK']
         });
         alert.present();
     };
@@ -56093,12 +56082,11 @@ var NewrhrPage = (function () {
 NewrhrPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-newrhr',template:/*ion-inline-start:"C:\Users\gledi\Desktop\sportner\src\pages\newrhr\newrhr.html"*/'<!--\n\n  Generated template for the NewrhrPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>newrhr</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n <ion-item> \n\n    <ion-label color="primary">Value</ion-label>\n\n    <ion-input placeholder="Value" typw="number"></ion-input>\n\n  </ion-item>\n\n\n\n\n\n\n\n   <ion-item>\n\n    <ion-label color="primary">Date</ion-label>\n\n    <ion-input placeholder="" type="date"></ion-input>\n\n  </ion-item>\n\n\n\n <ion-item>\n\n    <ion-label color="primary">Time </ion-label>\n\n    <ion-input placeholder="00:00" type="time"></ion-input>\n\n  </ion-item>\n\n\n\n\n\n   <ion-item>\n\n    <ion-label color="primary">Notes</ion-label>\n\n    <ion-textarea placeholder="Notes" ></ion-textarea>\n\n  </ion-item>\n\n\n\n<br><br>\n\n<div align="center">\n\n\n\n<button ion-button round style="font-size:17px"  type="submit" (click)="showAlert()">\n\n  Save\n\n</button>\n\n</div>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\gledi\Desktop\sportner\src\pages\newrhr\newrhr.html"*/,
+        selector: 'page-newrhr',template:/*ion-inline-start:"C:\Users\Axinya\Desktop\hci-projekt\Новая папка (2)\sportner\src\pages\newrhr\newrhr.html"*/'<!--\n\n  Generated template for the NewrhrPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>New RHR</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n <ion-item> \n\n    <ion-label color="primary">Value</ion-label>\n\n    <ion-input placeholder="Value" typw="number"></ion-input>\n\n  </ion-item>\n\n\n\n\n\n\n\n   <ion-item>\n\n    <ion-label color="primary">Date</ion-label>\n\n    <ion-input placeholder="" type="date"></ion-input>\n\n  </ion-item>\n\n\n\n <ion-item>\n\n    <ion-label color="primary">Time </ion-label>\n\n    <ion-input placeholder="00:00" type="time"></ion-input>\n\n  </ion-item>\n\n\n\n\n\n   <ion-item>\n\n    <ion-label color="primary">Notes</ion-label>\n\n    <ion-textarea placeholder="Notes" ></ion-textarea>\n\n  </ion-item>\n\n\n\n<br><br>\n\n<div align="center">\n\n\n\n<button ion-button round style="font-size:17px"  type="submit" (click)="showAlert()">\n\n  Save\n\n</button>\n\n</div>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Axinya\Desktop\hci-projekt\Новая папка (2)\sportner\src\pages\newrhr\newrhr.html"*/,
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* AlertController */]) === "function" && _c || Object])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* AlertController */]])
 ], NewrhrPage);
 
-var _a, _b, _c;
 //# sourceMappingURL=newrhr.js.map
 
 /***/ }),
@@ -56149,11 +56137,7 @@ var NewworkoutPage = (function () {
 NewworkoutPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-<<<<<<< HEAD
-        selector: 'page-newworkout',template:/*ion-inline-start:"C:\Users\gledi\Desktop\sportner\src\pages\newworkout\newworkout.html"*/'<!--\n\n  Generated template for the NewworkoutPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>newworkout</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding class="newworkout">\n\nThis is my super awesome newworkout page.\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\gledi\Desktop\sportner\src\pages\newworkout\newworkout.html"*/,
-=======
         selector: 'page-newworkout',template:/*ion-inline-start:"C:\Users\Axinya\Desktop\hci-projekt\Новая папка (2)\sportner\src\pages\newworkout\newworkout.html"*/'<!--\n\n  Generated template for the NewworkoutPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header color="sportner">\n\n\n\n  <ion-navbar>\n\n    <ion-title>New workout</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n  <ion-item>\n\n    <ion-label color="primary">Activity</ion-label>\n\n    <ion-select [(ngModel)]="activities">\n\n      <ion-option value="run">Running</ion-option>\n\n      <ion-option value="cyc">Cycling</ion-option>\n\n      <ion-option value="mbyke">Mountain Biking</ion-option>\n\n      <ion-option value="walk">Walking</ion-option>\n\n      <ion-option value="nordwolk">Nordic Walking</ion-option>\n\n      <ion-option value="ski">Skiing</ion-option>\n\n      <ion-option value="swim">Swimming</ion-option>\n\n      <ion-option value="gym">Gym</ion-option>\n\n      <ion-option value="hike">Hiking</ion-option>      \n\n    </ion-select>\n\n  </ion-item>\n\n\n\n   <ion-item>\n\n    <ion-label color="primary">Date</ion-label>\n\n    <ion-input type="date"></ion-input>\n\n  </ion-item>\n\n\n\n <ion-item>\n\n    <ion-label color="primary">Duration (min)</ion-label>\n\n    <ion-input placeholder="120" type="number"></ion-input>\n\n  </ion-item>\n\n\n\n   <ion-item>\n\n    <ion-label color="primary">Distance (m) </ion-label>\n\n    <ion-input placeholder="1200" type="number"></ion-input>\n\n  </ion-item>\n\n\n\n   <ion-item>\n\n    <ion-label color="primary">Notes</ion-label>\n\n    <ion-input placeholder="add details" type="text"clearInput></ion-input>\n\n  </ion-item>\n\n\n\n<br><br>\n\n<div align="center">\n\n<button ion-button round style="font-size:17px" type="submit" (click)="showAlert()" >\n\n  Save\n\n</button>\n\n</div>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Axinya\Desktop\hci-projekt\Новая папка (2)\sportner\src\pages\newworkout\newworkout.html"*/,
->>>>>>> e42df763b6af5f82d42602ad5c4ee70460fc8f6f
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
@@ -56210,7 +56194,7 @@ var Profile = (function () {
 Profile = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-profile',template:/*ion-inline-start:"C:\Users\gledi\Desktop\sportner\src\pages\profile\profile.html"*/'\n\n<ion-header>\n\n\n\n  <ion-navbar color="sportner">\n\n    <ion-title>Profile</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n<div align="center"*ngFor="let user of userData.users">\n\n    <ion-icon name="contact" style="font-size: 200px; color: #b5b1b2"></ion-icon>\n\n    <div class="bla" style="font-size: 25px; color:#ff4d4d; ">\n\n        <b> {{user.firstName}} {{user.lastName}}</b> <br>\n\n    </div>\n\n    <div class="email" style="font-size:16px">\n\n        {{user.email}} <br><br>\n\n    </div>\n\n    <button ion-button round outline [navPush]="editprofile">Edit profile</button>\n\n</div>\n\n\n\n        \n\n<ion-card *ngFor="let user of userData.users">\n\n    \n\n    <ion-card-content style= "font-size: 18px; padding: 18px 18px 18px 18px">\n\n         Birthdate: &nbsp; &nbsp; <b>{{user.birthdate}} </b><br>\n\n         Gender: &nbsp; &nbsp; &nbsp; &nbsp; {{gender()}} <br>\n\n         Height: &nbsp; &nbsp; &nbsp; &nbsp;<b> {{user.height}} cm  </b><br>\n\n         Weight: &nbsp; &nbsp; &nbsp; &nbsp;<b>  {{user.weight}} kg </b><br>\n\n       <br><i>  Notes: &nbsp; &nbsp; &nbsp; &nbsp; </i>\n\n    </ion-card-content>\n\n    </ion-card>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\gledi\Desktop\sportner\src\pages\profile\profile.html"*/,
+        selector: 'page-profile',template:/*ion-inline-start:"C:\Users\Axinya\Desktop\hci-projekt\Новая папка (2)\sportner\src\pages\profile\profile.html"*/'\n\n<ion-header>\n\n\n\n  <ion-navbar color="sportner">\n\n    <ion-title>Profile</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n<div align="center"*ngFor="let user of userData.users">\n\n    <ion-icon name="contact" style="font-size: 200px; color: #b5b1b2"></ion-icon>\n\n    <div class="bla" style="font-size: 25px; color:#ff4d4d; ">\n\n        <b> {{user.firstName}} {{user.lastName}}</b> <br>\n\n    </div>\n\n    <div class="email" style="font-size:16px">\n\n        {{user.email}} <br><br>\n\n    </div>\n\n    <button ion-button round outline [navPush]="editprofile">Edit profile</button>\n\n</div>\n\n\n\n        \n\n<ion-card *ngFor="let user of userData.users">\n\n    \n\n    <ion-card-content style= "font-size: 18px; padding: 18px 18px 18px 18px">\n\n         Birthdate: &nbsp; &nbsp; <b>{{user.birthdate}} </b><br>\n\n         Gender: &nbsp; &nbsp; &nbsp; &nbsp; {{gender()}} <br>\n\n         Height: &nbsp; &nbsp; &nbsp; &nbsp;<b> {{user.height}} cm  </b><br>\n\n         Weight: &nbsp; &nbsp; &nbsp; &nbsp;<b>  {{user.weight}} kg </b><br>\n\n       <br><i>  Notes: &nbsp; &nbsp; &nbsp; &nbsp; </i>\n\n    </ion-card-content>\n\n    </ion-card>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Axinya\Desktop\hci-projekt\Новая папка (2)\sportner\src\pages\profile\profile.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
@@ -56226,7 +56210,7 @@ Profile = __decorate([
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rhr_entries__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rhr_entries__ = __webpack_require__(39);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RhrReminder; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -56272,11 +56256,7 @@ var RhrReminder = (function () {
 RhrReminder = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-<<<<<<< HEAD
-        selector: 'page-rhr-reminder',template:/*ion-inline-start:"C:\Users\gledi\Desktop\sportner\src\pages\rhr-reminder\rhr-reminder.html"*/'<!--\n\n  Generated template for the RhrReminder page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n\n\n<!--\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar color="danger">\n\n    <ion-title>Reminder</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <div class="reminder-content">\n\n    <h1>Todays RHR entry</h1>\n\n    <p>It seems like you have not entered your todays resting heart rate yet!</p>\n\n    <p>Add it now or just skip.</p>\n\n\n\n    <ion-item>\n\n      <ion-input type="number" [(ngModel)]="rhrEntry" placeholder="Number Input with no label"></ion-input>\n\n    </ion-item>\n\n    <br>\n\n    <div align="center">\n\n    <button ion-button round color="primary" style="font-size: 20px"(click)="saveEnry()"> Save</button>\n\n    <br><br><br>\n\n    <button ion-button round color="primary" style="margin-top:250px" (click)="closeModal()">Skip</button>\n\n    </div>\n\n  </div>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\gledi\Desktop\sportner\src\pages\rhr-reminder\rhr-reminder.html"*/,
-=======
         selector: 'page-rhr-reminder',template:/*ion-inline-start:"C:\Users\Axinya\Desktop\hci-projekt\Новая папка (2)\sportner\src\pages\rhr-reminder\rhr-reminder.html"*/'<!--\n\n  Generated template for the RhrReminder page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n\n\n<!--\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar color="danger">\n\n    <ion-title>Reminder</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <div class="reminder-content">\n\n    <h1>Todays RHR entry</h1>\n\n    <p>It seems like you have not entered your todays resting heart rate yet!</p>\n\n    <p>Add it now or just skip.</p>\n\n\n\n    <ion-item>\n\n      <ion-input type="number" [(ngModel)]="rhrEntry" placeholder="Number Input with no label"></ion-input>\n\n    </ion-item>\n\n    <br>\n\n    <div align="center">\n\n    <button ion-button round color="primary" style="font-size: 20px"(click)="saveEnry()"> Save</button>\n\n    <button ion-button round color="danger" style="font-size: 20px" (click)="closeModal()">Skip</button>\n\n    </div>\n\n  </div>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Axinya\Desktop\hci-projekt\Новая папка (2)\sportner\src\pages\rhr-reminder\rhr-reminder.html"*/,
->>>>>>> e42df763b6af5f82d42602ad5c4ee70460fc8f6f
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
@@ -56324,7 +56304,7 @@ var Settings = (function () {
 Settings = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-settings',template:/*ion-inline-start:"C:\Users\gledi\Desktop\sportner\src\pages\settings\settings.html"*/'<!--\n\n  Generated template for the Settings page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar color="sportner">\n\n    <ion-title>Settings</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\gledi\Desktop\sportner\src\pages\settings\settings.html"*/,
+        selector: 'page-settings',template:/*ion-inline-start:"C:\Users\Axinya\Desktop\hci-projekt\Новая папка (2)\sportner\src\pages\settings\settings.html"*/'<!--\n\n  Generated template for the Settings page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar color="sportner">\n\n    <ion-title>Settings</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Axinya\Desktop\hci-projekt\Новая папка (2)\sportner\src\pages\settings\settings.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
 ], Settings);
@@ -56369,7 +56349,7 @@ var Statistics = (function () {
 Statistics = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-statistics',template:/*ion-inline-start:"C:\Users\gledi\Desktop\sportner\src\pages\statistics\statistics.html"*/'<!--\n\n  Generated template for the Statistics page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar color="sportner">\n\n    <ion-title>Statistics</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\gledi\Desktop\sportner\src\pages\statistics\statistics.html"*/,
+        selector: 'page-statistics',template:/*ion-inline-start:"C:\Users\Axinya\Desktop\hci-projekt\Новая папка (2)\sportner\src\pages\statistics\statistics.html"*/'<!--\n\n  Generated template for the Statistics page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar color="sportner">\n\n    <ion-title>Statistics</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Axinya\Desktop\hci-projekt\Новая папка (2)\sportner\src\pages\statistics\statistics.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
 ], Statistics);
@@ -56384,7 +56364,7 @@ Statistics = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_workout_entries__ = __webpack_require__(41);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_activities__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_activities__ = __webpack_require__(40);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return WorkoutDetails; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -56425,7 +56405,7 @@ var WorkoutDetails = (function () {
 WorkoutDetails = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-workout-details',template:/*ion-inline-start:"C:\Users\gledi\Desktop\sportner\src\pages\workout-details\workout-details.html"*/'<!--\n\n  Generated template for the WorkoutDetails page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>{{date}}</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n  <ion-icon name="{{icon}}"></ion-icon>\n\n  \n\n  <p>{{note}}</p>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\gledi\Desktop\sportner\src\pages\workout-details\workout-details.html"*/,
+        selector: 'page-workout-details',template:/*ion-inline-start:"C:\Users\Axinya\Desktop\hci-projekt\Новая папка (2)\sportner\src\pages\workout-details\workout-details.html"*/'<!--\n\n  Generated template for the WorkoutDetails page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>{{date}}</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n  <ion-icon name="{{icon}}"></ion-icon>\n\n  \n\n  <p>{{note}}</p>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Axinya\Desktop\hci-projekt\Новая папка (2)\sportner\src\pages\workout-details\workout-details.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
@@ -56456,8 +56436,8 @@ webpackEmptyContext.id = 112;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_workout_entries__ = __webpack_require__(41);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_activities__ = __webpack_require__(39);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_rhr_entries__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_activities__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_rhr_entries__ = __webpack_require__(39);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__rhr_reminder_rhr_reminder__ = __webpack_require__(108);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__workout_details_workout_details__ = __webpack_require__(111);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
@@ -56516,7 +56496,7 @@ var HomePage = (function () {
 }());
 HomePage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-home',template:/*ion-inline-start:"C:\Users\gledi\Desktop\sportner\src\pages\home\home.html"*/'<ion-header>\n\n  <ion-navbar color="sportner">\n\n    <ion-title>Home</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n\n\n  <p (click)="generateRandomQuote()" class="quote">\n\n    "{{quote}}"\n\n  </p>\n\n  \n\n  <ion-list>\n\n    <ion-card *ngFor="let workout of workoutsService.workouts" (click)="showWorkout(workout.id)">\n\n      <ion-item>\n\n        <ion-avatar item-left>\n\n          <img src="img/{{activities.getItem(workout.activity).icon}}">\n\n        </ion-avatar>\n\n        <h2>{{activities.getItem(workout.activity).name}}</h2>\n\n        <p>{{workout.date}}</p>\n\n      </ion-item>\n\n\n\n      <ion-card-content>\n\n        <p>{{workout.note}}</p>\n\n      </ion-card-content>\n\n    </ion-card>\n\n  </ion-list>\n\n  \n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\gledi\Desktop\sportner\src\pages\home\home.html"*/
+        selector: 'page-home',template:/*ion-inline-start:"C:\Users\Axinya\Desktop\hci-projekt\Новая папка (2)\sportner\src\pages\home\home.html"*/'<ion-header>\n\n  <ion-navbar color="sportner">\n\n    <ion-title>Home</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n\n\n  <p (click)="generateRandomQuote()" class="quote">\n\n    "{{quote}}"\n\n  </p>\n\n  \n\n  <ion-list>\n\n    <ion-card *ngFor="let workout of workoutsService.workouts" (click)="showWorkout(workout.id)">\n\n      <ion-item>\n\n        <ion-avatar item-left>\n\n          <img src="img/{{activities.getItem(workout.activity).icon}}">\n\n        </ion-avatar>\n\n        <h2>{{activities.getItem(workout.activity).name}}</h2>\n\n        <p>{{workout.date}}</p>\n\n      </ion-item>\n\n\n\n      <ion-card-content>\n\n        <p>{{workout.note}}</p>\n\n      </ion-card-content>\n\n    </ion-card>\n\n  </ion-list>\n\n  \n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Axinya\Desktop\hci-projekt\Новая папка (2)\sportner\src\pages\home\home.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* ModalController */],
@@ -56565,11 +56545,7 @@ var TabsPage = (function () {
     return TabsPage;
 }());
 TabsPage = __decorate([
-<<<<<<< HEAD
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({template:/*ion-inline-start:"C:\Users\gledi\Desktop\sportner\src\pages\tabs\tabs.html"*/'<ion-tabs>\n\n  <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="home"></ion-tab>\n\n  <ion-tab [root]="tab2Root" tabTitle="Profile" tabIcon="contact"></ion-tab>\n\n  <ion-tab [root]="tab3Root" tabTitle="Add new entry!" tabIcon="book"></ion-tab>\n\n  <ion-tab [root]="tab4Root" tabTitle="Statistics" tabIcon="stats"></ion-tab>\n\n  <ion-tab [root]="tab5Root" tabTitle="Settings" tabIcon="settings"></ion-tab>\n\n</ion-tabs>\n\n'/*ion-inline-end:"C:\Users\gledi\Desktop\sportner\src\pages\tabs\tabs.html"*/
-=======
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({template:/*ion-inline-start:"C:\Users\Axinya\Desktop\hci-projekt\Новая папка (2)\sportner\src\pages\tabs\tabs.html"*/'<ion-tabs>\n\n  <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="home"></ion-tab>\n\n  <ion-tab [root]="tab2Root" tabTitle="Profile" tabIcon="contact"></ion-tab>\n\n  <ion-tab [root]="tab3Root" tabTitle="New entry" tabIcon="book"></ion-tab>\n\n  <ion-tab [root]="tab4Root" tabTitle="Statistics" tabIcon="stats"></ion-tab>\n\n  <ion-tab [root]="tab5Root" tabTitle="Settings" tabIcon="settings"></ion-tab>\n\n</ion-tabs>\n\n'/*ion-inline-end:"C:\Users\Axinya\Desktop\hci-projekt\Новая папка (2)\sportner\src\pages\tabs\tabs.html"*/
->>>>>>> e42df763b6af5f82d42602ad5c4ee70460fc8f6f
     }),
     __metadata("design:paramtypes", [])
 ], TabsPage);
@@ -75196,8 +75172,8 @@ webpackAsyncContext.id = 208;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__providers_workout_entries__ = __webpack_require__(41);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__providers_user_data__ = __webpack_require__(51);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__providers_auth_service__ = __webpack_require__(213);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__providers_rhr_entries__ = __webpack_require__(40);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__providers_activities__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__providers_rhr_entries__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__providers_activities__ = __webpack_require__(40);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -75522,7 +75498,7 @@ var Intro = (function () {
 Intro = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-intro',template:/*ion-inline-start:"C:\Users\gledi\Desktop\sportner\src\pages\intro\intro.html"*/'<!--\n\n  Generated template for the Intro page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>Intro</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\gledi\Desktop\sportner\src\pages\intro\intro.html"*/,
+        selector: 'page-intro',template:/*ion-inline-start:"C:\Users\Axinya\Desktop\hci-projekt\Новая папка (2)\sportner\src\pages\intro\intro.html"*/'<!--\n\n  Generated template for the Intro page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>Intro</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Axinya\Desktop\hci-projekt\Новая папка (2)\sportner\src\pages\intro\intro.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
 ], Intro);
@@ -75566,7 +75542,7 @@ var MyApp = (function () {
     return MyApp;
 }());
 MyApp = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({template:/*ion-inline-start:"C:\Users\gledi\Desktop\sportner\src\app\app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n\n'/*ion-inline-end:"C:\Users\gledi\Desktop\sportner\src\app\app.html"*/
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({template:/*ion-inline-start:"C:\Users\Axinya\Desktop\hci-projekt\Новая папка (2)\sportner\src\app\app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n\n'/*ion-inline-end:"C:\Users\Axinya\Desktop\hci-projekt\Новая папка (2)\sportner\src\app\app.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
 ], MyApp);

@@ -20,9 +20,9 @@ export class NewrhrPage {
   
  showAlert() {
   let alert = this.alertCtrl.create({
-    title: 'Low battery',
-    subTitle: '10% of battery remaining',
-    buttons: ['Dismiss']
+    title: 'Notification',
+    subTitle: 'New RHR ist saved',
+    buttons: ['OK']
   });
   alert.present();
   }
