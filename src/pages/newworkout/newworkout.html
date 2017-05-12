@@ -30,8 +30,6 @@
     </ion-select>
   </ion-item>
 
-
-
    <ion-item>
     <ion-label color="primary">Date</ion-label>
     <ion-input type="date"></ion-input>
@@ -54,7 +52,7 @@
 
 <br><br>
 <div align="center">
-<button ion-button round style="font-size:17px" type="submit" [navPush]="editprofile">
+<button ion-button round style="font-size:17px" type="submit" (click)="showAlert()" >
   Save
 </button>
 </div>

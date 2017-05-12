@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams} from 'ionic-angular';
+import { AlertController } from 'ionic-angular';
 
 /**
  * Generated class for the NewworkoutPage page.
@@ -14,13 +15,23 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class NewworkoutPage {
 
-  constructor(
+constructor(
   public navCtrl: NavController, 
-  public navParams: NavParams) {
+  public navParams: NavParams,
+  public alertCtrl: AlertController) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad NewworkoutPage');
+  }
+  
+   showAlert() {
+    let alert = this.alertCtrl.create({
+      title: 'Notification',
+      subTitle: 'New workout is added',
+      buttons: ['OK']
+    });
+    alert.present();
   }
 
 }
