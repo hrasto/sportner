@@ -26965,3 +26965,11 @@ page-home .quote {
   color: #999;
   transition: 0.3s linear;
 }
+
+page-statistics .scroll-content {
+  background-color: #f4f4f4;
+}
+
+page-statistics ion-card-header {
+  font-weight: bold;
+}
