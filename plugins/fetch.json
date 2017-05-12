@@ -46,5 +46,35 @@
         },
         "is_top_level": true,
         "variables": {}
+    },
+    "cordova-plugin-facebook4": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-facebook4"
+        },
+        "is_top_level": true,
+        "variables": {
+            "APP_ID": "1261414160638519",
+            "APP_NAME": "Sportner"
+        }
+    },
+    "cordova-plugin-nativestorage": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-nativestorage"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-facebook4.4": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-facebook4.4"
+        },
+        "is_top_level": true,
+        "variables": {
+            "APP_ID": "1261414160638519",
+            "APP_NAME": "Sportner"
+        }
     }
 }
