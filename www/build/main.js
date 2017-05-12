@@ -19838,7 +19838,7 @@ var /** @type {?} */ ANIMATION_TRANSITION_END_FALLBACK_PADDING_MS = 400;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_alert_alert__ = __webpack_require__(58);
 /* unused harmony reexport Alert */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_alert_alert_controller__ = __webpack_require__(120);
-/* unused harmony reexport AlertController */
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return __WEBPACK_IMPORTED_MODULE_6__components_alert_alert_controller__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_alert_alert_component__ = __webpack_require__(57);
 /* unused harmony reexport AlertCmp */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_app_app__ = __webpack_require__(6);
@@ -19932,7 +19932,7 @@ var /** @type {?} */ ANIMATION_TRANSITION_END_FALLBACK_PADDING_MS = 400;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_52__components_modal_modal_component__ = __webpack_require__(72);
 /* unused harmony reexport ModalCmp */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_53__components_modal_modal_controller__ = __webpack_require__(149);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return __WEBPACK_IMPORTED_MODULE_53__components_modal_modal_controller__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return __WEBPACK_IMPORTED_MODULE_53__components_modal_modal_controller__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_54__components_nav_nav__ = __webpack_require__(75);
 /* unused harmony reexport Nav */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_55__components_nav_nav_pop__ = __webpack_require__(73);
@@ -20076,7 +20076,7 @@ var /** @type {?} */ ANIMATION_TRANSITION_END_FALLBACK_PADDING_MS = 400;
 /* unused harmony reexport UrlSerializer */
 /* unused harmony reexport DeepLinkConfigToken */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_121__navigation_view_controller__ = __webpack_require__(5);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return __WEBPACK_IMPORTED_MODULE_121__navigation_view_controller__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return __WEBPACK_IMPORTED_MODULE_121__navigation_view_controller__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_122__gestures_pan_gesture__ = __webpack_require__(49);
 /* unused harmony reexport PanGesture */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_123__gestures_gesture__ = __webpack_require__(239);
@@ -44955,7 +44955,7 @@ var TabsPage = (function () {
     return TabsPage;
 }());
 TabsPage = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({template:/*ion-inline-start:"C:\Users\Andrada\Desktop\hci_m3\sportner\src\pages\tabs\tabs.html"*/'<ion-tabs>\n\n  <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="home"></ion-tab>\n\n  <ion-tab [root]="tab2Root" tabTitle="Profile" tabIcon="contact"></ion-tab>\n\n  <ion-tab [root]="tab3Root" tabTitle="Add new entry!" tabIcon="book"></ion-tab>\n\n  <ion-tab [root]="tab4Root" tabTitle="Statistics" tabIcon="stats"></ion-tab>\n\n  <ion-tab [root]="tab5Root" tabTitle="Settings" tabIcon="settings"></ion-tab>\n\n</ion-tabs>\n\n'/*ion-inline-end:"C:\Users\Andrada\Desktop\hci_m3\sportner\src\pages\tabs\tabs.html"*/
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({template:/*ion-inline-start:"C:\Users\Andrada\Desktop\hci_m3\sportner\src\pages\tabs\tabs.html"*/'<ion-tabs>\n\n  <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="home"></ion-tab>\n\n  <ion-tab [root]="tab2Root" tabTitle="Profile" tabIcon="contact"></ion-tab>\n\n  <ion-tab [root]="tab3Root" tabTitle="New entry" tabIcon="book"></ion-tab>\n\n  <ion-tab [root]="tab4Root" tabTitle="Statistics" tabIcon="stats"></ion-tab>\n\n  <ion-tab [root]="tab5Root" tabTitle="Settings" tabIcon="settings"></ion-tab>\n\n</ion-tabs>\n\n'/*ion-inline-end:"C:\Users\Andrada\Desktop\hci_m3\sportner\src\pages\tabs\tabs.html"*/
     }),
     __metadata("design:paramtypes", [])
 ], TabsPage);
@@ -55982,6 +55982,8 @@ exports.isFunction = isFunction;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_workout_entries__ = __webpack_require__(41);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_rhr_entries__ = __webpack_require__(40);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_activities__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__newworkout_newworkout__ = __webpack_require__(286);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__newrhr_newrhr__ = __webpack_require__(285);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Diary; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -55992,6 +55994,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
+
 
 
 
@@ -56010,6 +56014,8 @@ var Diary = (function () {
         this.workoutsService = workoutsService;
         this.rhrService = rhrService;
         this.activities = activities;
+        this.newworkoutPage = __WEBPACK_IMPORTED_MODULE_5__newworkout_newworkout__["a" /* NewworkoutPage */];
+        this.newrhrPage = __WEBPACK_IMPORTED_MODULE_6__newrhr_newrhr__["a" /* NewrhrPage */];
         this.rhrEntries = [];
     }
     Diary.prototype.ionViewDidLoad = function () {
@@ -56032,7 +56038,7 @@ var Diary = (function () {
 Diary = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-diary',template:/*ion-inline-start:"C:\Users\Andrada\Desktop\hci_m3\sportner\src\pages\diary\diary.html"*/'<!--\n\n  Generated template for the Diary page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar color="sportner">    \n\n    <div padding>\n\n      <ion-segment [(ngModel)]="entries" color="light">\n\n        <ion-segment-button value="workout">\n\n          Workouts\n\n        </ion-segment-button>\n\n        <ion-segment-button value="rhr">\n\n          RHR\n\n        </ion-segment-button>\n\n      </ion-segment>\n\n    </div>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <ion-fab bottom right>\n\n    <button ion-fab mini color="danger"><ion-icon name="heart"></ion-icon></button>\n\n    <button ion-fab mini color="primary"><ion-icon name="football"></ion-icon></button>\n\n  </ion-fab>\n\n  <!--\n\n  <ion-fab bottom right>\n\n    <button ion-fab mini><ion-icon name="add"></ion-icon></button>\n\n    <ion-fab-list side="left">\n\n      <button ion-fab><ion-icon name="heart"></ion-icon></button>\n\n      <button ion-fab><ion-icon name="football"></ion-icon></button>\n\n    </ion-fab-list>\n\n  </ion-fab>\n\n  -->\n\n\n\n  <div [ngSwitch]="entries">\n\n    <ion-list *ngSwitchCase="\'workout\'">\n\n      <ion-card *ngFor="let workout of workoutsService.workouts" (click)="showWorkout(workout.id)">\n\n        <ion-item>\n\n          <ion-avatar item-left>\n\n            <img src="img/{{activities.getItem(workout.activity).icon}}">\n\n          </ion-avatar>\n\n          <h2>{{activities.getItem(workout.activity).name}}</h2>\n\n          <p>{{workout.date}}</p>\n\n        </ion-item>\n\n\n\n        <ion-card-content>\n\n          <p>{{workout.note}}</p>\n\n        </ion-card-content>\n\n      </ion-card>\n\n    </ion-list>\n\n\n\n    <ion-list *ngSwitchCase="\'rhr\'">\n\n      <ion-card *ngFor="let rhr of rhrEntries">\n\n        <ion-item>\n\n          <ion-avatar item-left>\n\n            <ion-icon name="heart"></ion-icon>\n\n          </ion-avatar>\n\n          <h2>{{rhr.value}}</h2>\n\n          <p>{{rhr.day}}.{{rhr.month}}.{{rhr.year}}</p>\n\n        </ion-item>\n\n      </ion-card>\n\n    </ion-list>\n\n  </div>\n\n\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Andrada\Desktop\hci_m3\sportner\src\pages\diary\diary.html"*/,
+        selector: 'page-diary',template:/*ion-inline-start:"C:\Users\Andrada\Desktop\hci_m3\sportner\src\pages\diary\diary.html"*/'<!--\n\n  Generated template for the Diary page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar color="sportner">    \n\n    <div padding>\n\n      <ion-segment [(ngModel)]="entries" color="light">\n\n        <ion-segment-button value="workout">\n\n          Workouts\n\n        </ion-segment-button>\n\n        <ion-segment-button value="rhr">\n\n          RHR\n\n        </ion-segment-button>\n\n      </ion-segment>\n\n    </div>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n\n\n  <ion-fab bottom right>\n\n    <button ion-fab mini [navPush]="newrhrPage"color="danger"><ion-icon name="heart"></ion-icon></button>\n\n    <button ion-fab mini [navPush]="newworkoutPage" color="primary" ><ion-icon name="football"></ion-icon></button>\n\n  </ion-fab>\n\n  <!--\n\n  <ion-fab bottom right>\n\n    <button ion-fab mini><ion-icon name="add"></ion-icon></button>\n\n    <ion-fab-list side="left">\n\n      <button ion-fab><ion-icon name="heart"></ion-icon></button>\n\n      <button ion-fab><ion-icon name="football"></ion-icon></button>\n\n    </ion-fab-list>\n\n  </ion-fab>\n\n  -->\n\n\n\n  <div [ngSwitch]="entries">\n\n    <ion-list *ngSwitchCase="\'workout\'">\n\n      <ion-card *ngFor="let workout of workoutsService.workouts" (click)="showWorkout(workout.id)">\n\n        <ion-item>\n\n          <ion-avatar item-left>\n\n            <img src="img/{{activities.getItem(workout.activity).icon}}">\n\n          </ion-avatar>\n\n          <h2>{{activities.getItem(workout.activity).name}}</h2>\n\n          <p>{{workout.date}}</p>\n\n        </ion-item>\n\n\n\n        <ion-card-content>\n\n          <p>{{workout.note}}</p>\n\n   \n\n        </ion-card-content>\n\n      </ion-card>\n\n    </ion-list>\n\n\n\n    <ion-list *ngSwitchCase="\'rhr\'">\n\n      <ion-card *ngFor="let rhr of rhrEntries">\n\n        <ion-item>\n\n          <ion-avatar item-left>\n\n            <ion-icon name="heart"></ion-icon>\n\n          </ion-avatar>\n\n          <h2>{{rhr.value}}</h2>\n\n          <p>{{rhr.day}}.{{rhr.month}}.{{rhr.year}}</p>\n\n        </ion-item>\n\n      </ion-card>\n\n    </ion-list>\n\n  </div>\n\n\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Andrada\Desktop\hci_m3\sportner\src\pages\diary\diary.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
@@ -56276,11 +56282,11 @@ var RhrReminder = (function () {
 RhrReminder = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-rhr-reminder',template:/*ion-inline-start:"C:\Users\Andrada\Desktop\hci_m3\sportner\src\pages\rhr-reminder\rhr-reminder.html"*/'<!--\n\n  Generated template for the RhrReminder page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n\n\n<!--\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar color="danger">\n\n    <ion-title>Reminder</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <div class="reminder-content">\n\n    <h1>Todays RHR entry</h1>\n\n    <p>It seems like you have not entered your todays resting heart rate yet!</p>\n\n    <p>Add it now or just skip.</p>\n\n\n\n    <ion-item>\n\n      <ion-input type="number" [(ngModel)]="rhrEntry" placeholder="Number Input with no label"></ion-input>\n\n    </ion-item>\n\n    <br>\n\n    <div align="center">\n\n    <button ion-button round color="primary" style="font-size: 20px"(click)="saveEnry()"> Save</button>\n\n    <br><br><br>\n\n    <button ion-button round color="primary" style="margin-top:250px" (click)="closeModal()">Skip</button>\n\n    </div>\n\n  </div>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Andrada\Desktop\hci_m3\sportner\src\pages\rhr-reminder\rhr-reminder.html"*/,
+        selector: 'page-rhr-reminder',template:/*ion-inline-start:"C:\Users\Andrada\Desktop\hci_m3\sportner\src\pages\rhr-reminder\rhr-reminder.html"*/'<!--\n\n  Generated template for the RhrReminder page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n\n\n<!--\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar color="danger">\n\n    <ion-title>Reminder</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <div class="reminder-content">\n\n    <h1>Todays RHR entry</h1>\n\n    <p>It seems like you have not entered your todays resting heart rate yet!</p>\n\n    <p>Add it now or just skip.</p>\n\n\n\n    <ion-item>\n\n      <ion-input type="number" [(ngModel)]="rhrEntry" placeholder="Number Input with no label"></ion-input>\n\n    </ion-item>\n\n    <br>\n\n    <div align="center">\n\n    <button ion-button round color="primary" style="font-size: 20px"(click)="saveEnry()"> Save</button>\n\n    <button ion-button round color="danger" style="font-size: 20px" (click)="closeModal()">Skip</button>\n\n    </div>\n\n  </div>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Andrada\Desktop\hci_m3\sportner\src\pages\rhr-reminder\rhr-reminder.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* ViewController */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ViewController */],
         __WEBPACK_IMPORTED_MODULE_2__providers_rhr_entries__["a" /* RhrEntries */]])
 ], RhrReminder);
 
@@ -56519,7 +56525,7 @@ HomePage = __decorate([
         selector: 'page-home',template:/*ion-inline-start:"C:\Users\Andrada\Desktop\hci_m3\sportner\src\pages\home\home.html"*/'<ion-header>\n\n  <ion-navbar color="sportner">\n\n    <ion-title>Home</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n\n\n  <p (click)="generateRandomQuote()" class="quote">\n\n    "{{quote}}"\n\n  </p>\n\n  \n\n  <ion-list>\n\n    <ion-card *ngFor="let workout of workoutsService.workouts" (click)="showWorkout(workout.id)">\n\n      <ion-item>\n\n        <ion-avatar item-left>\n\n          <img src="img/{{activities.getItem(workout.activity).icon}}">\n\n        </ion-avatar>\n\n        <h2>{{activities.getItem(workout.activity).name}}</h2>\n\n        <p>{{workout.date}}</p>\n\n      </ion-item>\n\n\n\n      <ion-card-content>\n\n        <p>{{workout.note}}</p>\n\n      </ion-card-content>\n\n    </ion-card>\n\n  </ion-list>\n\n  \n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Andrada\Desktop\hci_m3\sportner\src\pages\home\home.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ModalController */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* ModalController */],
         __WEBPACK_IMPORTED_MODULE_2__providers_workout_entries__["a" /* WorkoutEntries */],
         __WEBPACK_IMPORTED_MODULE_4__providers_rhr_entries__["a" /* RhrEntries */],
         __WEBPACK_IMPORTED_MODULE_3__providers_activities__["a" /* Activities */]])
@@ -75184,35 +75190,43 @@ module.exports = g;
 var map = {
 	"../pages/diary/diary.module": [
 		277,
-		7
+		18
 	],
 	"../pages/intro/intro.module": [
 		278,
-		6
+		17
 	],
 	"../pages/manageprofile/manageprofile.module": [
 		279,
-		5
+		16
+	],
+	"../pages/newrhr/newrhr.module": [
+		287,
+		14
+	],
+	"../pages/newworkout/newworkout.module": [
+		288,
+		15
 	],
 	"../pages/profile/profile.module": [
 		280,
-		4
+		13
 	],
 	"../pages/rhr-reminder/rhr-reminder.module": [
 		281,
-		3
+		12
 	],
 	"../pages/settings/settings.module": [
 		282,
-		2
+		11
 	],
 	"../pages/statistics/statistics.module": [
 		283,
-		1
+		10
 	],
 	"../pages/workout-details/workout-details.module": [
 		284,
-		0
+		9
 	]
 };
 function webpackAsyncContext(req) {
@@ -75248,13 +75262,15 @@ webpackAsyncContext.id = 208;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_tabs_tabs__ = __webpack_require__(52);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_workout_details_workout_details__ = __webpack_require__(112);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_manageprofile_manageprofile__ = __webpack_require__(107);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__ionic_native_status_bar__ = __webpack_require__(118);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__ionic_native_splash_screen__ = __webpack_require__(117);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__providers_workout_entries__ = __webpack_require__(41);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__providers_user_data__ = __webpack_require__(53);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__providers_auth_service__ = __webpack_require__(212);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__providers_rhr_entries__ = __webpack_require__(40);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__providers_activities__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_newworkout_newworkout__ = __webpack_require__(286);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_newrhr_newrhr__ = __webpack_require__(285);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__ionic_native_status_bar__ = __webpack_require__(118);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__ionic_native_splash_screen__ = __webpack_require__(117);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__providers_workout_entries__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__providers_user_data__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__providers_auth_service__ = __webpack_require__(212);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__providers_rhr_entries__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__providers_activities__ = __webpack_require__(39);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -75262,6 +75278,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
 
 
 
@@ -75301,11 +75319,26 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_4__pages_intro_intro__["a" /* Intro */],
             __WEBPACK_IMPORTED_MODULE_5__pages_rhr_reminder_rhr_reminder__["a" /* RhrReminder */],
             __WEBPACK_IMPORTED_MODULE_12__pages_workout_details_workout_details__["a" /* WorkoutDetails */],
-            __WEBPACK_IMPORTED_MODULE_13__pages_manageprofile_manageprofile__["a" /* Manageprofile */]
+            __WEBPACK_IMPORTED_MODULE_13__pages_manageprofile_manageprofile__["a" /* Manageprofile */],
+            __WEBPACK_IMPORTED_MODULE_14__pages_newworkout_newworkout__["a" /* NewworkoutPage */],
+            __WEBPACK_IMPORTED_MODULE_15__pages_newrhr_newrhr__["a" /* NewrhrPage */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["a" /* BrowserModule */],
-            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["a" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */])
+            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["a" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */], {}, {
+                links: [
+                    { loadChildren: '../pages/manageprofile/manageprofile.module#ManageprofileModule', name: 'Manageprofile', segment: 'manageprofile', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/profile/profile.module#ProfileModule', name: 'Profile', segment: 'profile', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/diary/diary.module#DiaryModule', name: 'Diary', segment: 'diary', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/rhr-reminder/rhr-reminder.module#RhrReminderModule', name: 'RhrReminder', segment: 'rhr-reminder', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/workout-details/workout-details.module#WorkoutDetailsModule', name: 'WorkoutDetails', segment: 'workout-details', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/settings/settings.module#SettingsModule', name: 'Settings', segment: 'settings', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/statistics/statistics.module#StatisticsModule', name: 'Statistics', segment: 'statistics', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/intro/intro.module#IntroModule', name: 'Intro', segment: 'intro', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/newrhr/newrhr.module#NewrhrPageModule', name: 'NewrhrPage', segment: 'newrhr', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/newworkout/newworkout.module#NewworkoutPageModule', name: 'NewworkoutPage', segment: 'newworkout', priority: 'low', defaultHistory: [] }
+                ]
+            })
         ],
         bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicApp */]],
         entryComponents: [
@@ -75319,17 +75352,19 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_4__pages_intro_intro__["a" /* Intro */],
             __WEBPACK_IMPORTED_MODULE_5__pages_rhr_reminder_rhr_reminder__["a" /* RhrReminder */],
             __WEBPACK_IMPORTED_MODULE_12__pages_workout_details_workout_details__["a" /* WorkoutDetails */],
-            __WEBPACK_IMPORTED_MODULE_13__pages_manageprofile_manageprofile__["a" /* Manageprofile */]
+            __WEBPACK_IMPORTED_MODULE_13__pages_manageprofile_manageprofile__["a" /* Manageprofile */],
+            __WEBPACK_IMPORTED_MODULE_14__pages_newworkout_newworkout__["a" /* NewworkoutPage */],
+            __WEBPACK_IMPORTED_MODULE_15__pages_newrhr_newrhr__["a" /* NewrhrPage */]
         ],
         providers: [
-            __WEBPACK_IMPORTED_MODULE_14__ionic_native_status_bar__["a" /* StatusBar */],
-            __WEBPACK_IMPORTED_MODULE_15__ionic_native_splash_screen__["a" /* SplashScreen */],
+            __WEBPACK_IMPORTED_MODULE_16__ionic_native_status_bar__["a" /* StatusBar */],
+            __WEBPACK_IMPORTED_MODULE_17__ionic_native_splash_screen__["a" /* SplashScreen */],
             { provide: __WEBPACK_IMPORTED_MODULE_0__angular_core__["b" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicErrorHandler */] },
-            __WEBPACK_IMPORTED_MODULE_16__providers_workout_entries__["a" /* WorkoutEntries */],
-            __WEBPACK_IMPORTED_MODULE_18__providers_auth_service__["a" /* AuthService */],
-            __WEBPACK_IMPORTED_MODULE_19__providers_rhr_entries__["a" /* RhrEntries */],
-            __WEBPACK_IMPORTED_MODULE_20__providers_activities__["a" /* Activities */],
-            __WEBPACK_IMPORTED_MODULE_17__providers_user_data__["a" /* UserData */]
+            __WEBPACK_IMPORTED_MODULE_18__providers_workout_entries__["a" /* WorkoutEntries */],
+            __WEBPACK_IMPORTED_MODULE_20__providers_auth_service__["a" /* AuthService */],
+            __WEBPACK_IMPORTED_MODULE_21__providers_rhr_entries__["a" /* RhrEntries */],
+            __WEBPACK_IMPORTED_MODULE_22__providers_activities__["a" /* Activities */],
+            __WEBPACK_IMPORTED_MODULE_19__providers_user_data__["a" /* UserData */]
         ]
     })
 ], AppModule);
@@ -112774,6 +112809,150 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
 //# sourceMappingURL=main.js.map
+
+/***/ }),
+/* 277 */,
+/* 278 */,
+/* 279 */,
+/* 280 */,
+/* 281 */,
+/* 282 */,
+/* 283 */,
+/* 284 */,
+/* 285 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rhr_entries__ = __webpack_require__(40);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NewrhrPage; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+/**
+ * Generated class for the NewrhrPage page.
+ *
+ * See http://ionicframework.com/docs/components/#navigation for more info
+ * on Ionic pages and navigation.
+ */
+var NewrhrPage = (function () {
+    function NewrhrPage(navCtrl, navParams, alertCtrl, viewCtrl, rhrEntries) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.alertCtrl = alertCtrl;
+        this.viewCtrl = viewCtrl;
+        this.rhrEntries = rhrEntries;
+        this.rhrEntry = 65;
+    }
+    NewrhrPage.prototype.closeModal = function () {
+        this.viewCtrl.dismiss();
+    };
+    NewrhrPage.prototype.saveEnry = function () {
+        console.log(this.rhrEntry);
+        this.rhrEntries.addEntry("rasto", this.rhrEntry);
+        console.log(this.rhrEntries.data);
+        this.showAlert();
+        this.closeModal();
+    };
+    NewrhrPage.prototype.showAlert = function () {
+        var alert = this.alertCtrl.create({
+            title: 'Notification',
+            subTitle: 'New RHR is saved',
+            buttons: ['OK']
+        });
+        alert.present();
+    };
+    return NewrhrPage;
+}());
+NewrhrPage = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
+        selector: 'page-newrhr',template:/*ion-inline-start:"C:\Users\Andrada\Desktop\hci_m3\sportner\src\pages\newrhr\newrhr.html"*/'<!--\n\n  Generated template for the NewrhrPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>New RHR</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n <ion-item> \n\n    <ion-label color="primary">Value</ion-label>\n\n    <ion-input type="number" [(ngModel)]="rhrEntry" placeholder="Value"></ion-input>\n\n  </ion-item>\n\n\n\n   <!-- <ion-item>\n\n    <ion-label color="primary">Date</ion-label>\n\n    <ion-input placeholder="" type="date"></ion-input>\n\n  </ion-item> -->\n\n\n\n<br><br>\n\n<div align="center">\n\n\n\n<button ion-button round style="font-size:17px" (click)="saveEnry()">\n\n  Save\n\n</button>\n\n</div>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Andrada\Desktop\hci_m3\sportner\src\pages\newrhr\newrhr.html"*/,
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* AlertController */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ViewController */],
+        __WEBPACK_IMPORTED_MODULE_2__providers_rhr_entries__["a" /* RhrEntries */]])
+], NewrhrPage);
+
+//# sourceMappingURL=newrhr.js.map
+
+/***/ }),
+/* 286 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NewworkoutPage; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+/**
+ * Generated class for the NewworkoutPage page.
+ *
+ * See http://ionicframework.com/docs/components/#navigation for more info
+ * on Ionic pages and navigation.
+ */
+var NewworkoutPage = (function () {
+    function NewworkoutPage(navCtrl, navParams, viewCtrl, alertCtrl) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.viewCtrl = viewCtrl;
+        this.alertCtrl = alertCtrl;
+    }
+    NewworkoutPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad NewworkoutPage');
+    };
+    NewworkoutPage.prototype.closeModal = function () {
+        this.viewCtrl.dismiss();
+    };
+    NewworkoutPage.prototype.showAlert = function () {
+        var alert = this.alertCtrl.create({
+            title: 'Notification',
+            subTitle: 'New workout is saved',
+            buttons: ['OK']
+        });
+        alert.present();
+        this.closeModal();
+    };
+    return NewworkoutPage;
+}());
+NewworkoutPage = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
+        selector: 'page-newworkout',template:/*ion-inline-start:"C:\Users\Andrada\Desktop\hci_m3\sportner\src\pages\newworkout\newworkout.html"*/'<!--\n\n  Generated template for the NewworkoutPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header color="sportner">\n\n\n\n  <ion-navbar>\n\n    <ion-title>New workout</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n  <ion-item>\n\n    <ion-label color="primary">Activity</ion-label>\n\n    <ion-select [(ngModel)]="activities">\n\n      <ion-option value="run">Running</ion-option>\n\n      <ion-option value="cyc">Cycling</ion-option>\n\n      <ion-option value="mbyke">Mountain Biking</ion-option>\n\n      <ion-option value="walk">Walking</ion-option>\n\n      <ion-option value="nordwolk">Nordic Walking</ion-option>\n\n      <ion-option value="ski">Skiing</ion-option>\n\n      <ion-option value="swim">Swimming</ion-option>\n\n      <ion-option value="gym">Gym</ion-option>\n\n      <ion-option value="hike">Hiking</ion-option>      \n\n    </ion-select>\n\n  </ion-item>\n\n\n\n   <ion-item>\n\n    <ion-label color="primary">Date</ion-label>\n\n    <ion-input type="date"></ion-input>\n\n  </ion-item>\n\n\n\n <ion-item>\n\n    <ion-label color="primary">Duration (min)</ion-label>\n\n    <ion-input placeholder="120" type="number"></ion-input>\n\n  </ion-item>\n\n\n\n   <ion-item>\n\n    <ion-label color="primary">Distance (m) </ion-label>\n\n    <ion-input placeholder="1200" type="number"></ion-input>\n\n  </ion-item>\n\n\n\n   <ion-item>\n\n    <ion-label color="primary">Notes</ion-label>\n\n    <ion-input placeholder="add details" type="text"clearInput></ion-input>\n\n  </ion-item>\n\n\n\n<br><br>\n\n<div align="center">\n\n<button ion-button round style="font-size:17px" type="submit" (click)="showAlert()" >\n\n  Save\n\n</button>\n\n</div>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Andrada\Desktop\hci_m3\sportner\src\pages\newworkout\newworkout.html"*/,
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ViewController */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* AlertController */]])
+], NewworkoutPage);
+
+//# sourceMappingURL=newworkout.js.map
 
 /***/ })
 /******/ ]);

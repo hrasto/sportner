@@ -1,0 +1,35 @@
+<!--
+  Generated template for the NewrhrPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>New RHR</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+ <ion-item> 
+    <ion-label color="primary">Value</ion-label>
+    <ion-input type="number" [(ngModel)]="rhrEntry" placeholder="Value"></ion-input>
+  </ion-item>
+
+   <!-- <ion-item>
+    <ion-label color="primary">Date</ion-label>
+    <ion-input placeholder="" type="date"></ion-input>
+  </ion-item> -->
+
+<br><br>
+<div align="center">
+
+<button ion-button round style="font-size:17px" (click)="saveEnry()">
+  Save
+</button>
+</div>
+
+</ion-content>
