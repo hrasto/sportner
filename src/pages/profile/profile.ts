@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { UserData } from '../../providers/user-data';
-
+import { Manageprofile } from '../../pages/manageprofile/manageprofile';
 
 @IonicPage()
 @Component({
@@ -10,6 +10,7 @@ import { UserData } from '../../providers/user-data';
 })
 export class Profile {
   g: any;
+  editprofile = Manageprofile;
   constructor(public navCtrl: NavController, 
   public navParams: NavParams,
   public userData: UserData) {

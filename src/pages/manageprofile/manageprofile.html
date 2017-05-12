@@ -1,0 +1,65 @@
+<!--
+  Generated template for the Manageprofile page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header color="sportner">
+
+  <ion-navbar>
+    <ion-title>Edit your profile!</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<div align="center"*ngFor="let user of userData.users">
+    <ion-icon name="contact" style="font-size: 100px; color: #b5b1b2"></ion-icon>
+    <div class="bla" style="font-size: 25px; color:#ff4d4d; ">
+        <b> {{user.firstName}} {{user.lastName}}</b> <br>
+    </div>
+    <div class="email" style="font-size:16px">
+        {{user.email}} <br><br>
+    </div>
+    
+</div>
+
+ <ion-item>
+    <ion-label color="primary">First Name</ion-label>
+    <ion-input placeholder="bla" typw="text"></ion-input>
+  </ion-item>
+
+   <ion-item>
+    <ion-label color="primary">Last Name</ion-label>
+    <ion-input placeholder="bla" typw="text"></ion-input>
+  </ion-item>
+
+   <ion-item>
+    <ion-label color="primary">Birthdate</ion-label>
+    <ion-input placeholder="bla" type="date"></ion-input>
+  </ion-item>
+
+ <ion-item>
+    <ion-label color="primary">Height (cm)</ion-label>
+    <ion-input placeholder="160" type="number"></ion-input>
+  </ion-item>
+
+   <ion-item>
+    <ion-label color="primary">Weight (kg) </ion-label>
+    <ion-input placeholder="50" type="number"></ion-input>
+  </ion-item>
+
+   <ion-item>
+    <ion-label color="primary">Notes</ion-label>
+    <ion-input placeholder="bla" type="text"clearInput></ion-input>
+  </ion-item>
+
+<br><br>
+<div align="center">
+<button ion-button round style="font-size:17px" type="submit" [navPush]="editprofile">
+  Save
+</button>
+</div>
+
+</ion-content>

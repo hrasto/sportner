@@ -17,17 +17,18 @@
     <div class="email" style="font-size:16px">
         {{user.email}} <br><br>
     </div>
-    <button ion-button round outline>Edit profile</button>
+    <button ion-button round outline [navPush]="editprofile">Edit profile</button>
 </div>
 
         
 <ion-card *ngFor="let user of userData.users">
     
     <ion-card-content style= "font-size: 18px; padding: 18px 18px 18px 18px">
-         Birthdate: &nbsp; &nbsp; <b>{{user.birthdate}} </b><br><br>
-         Gender: &nbsp; &nbsp; &nbsp; &nbsp; {{g}} <br>
-         Height: &nbsp; &nbsp; &nbsp; &nbsp;<b> {{user.height}} cm  </b><br><br>
-         Weight: &nbsp; &nbsp; &nbsp; &nbsp;<b>  {{user.weight}} kg </b>
+         Birthdate: &nbsp; &nbsp; <b>{{user.birthdate}} </b><br>
+         Gender: &nbsp; &nbsp; &nbsp; &nbsp; {{gender()}} <br>
+         Height: &nbsp; &nbsp; &nbsp; &nbsp;<b> {{user.height}} cm  </b><br>
+         Weight: &nbsp; &nbsp; &nbsp; &nbsp;<b>  {{user.weight}} kg </b><br>
+       <br><i>  Notes: &nbsp; &nbsp; &nbsp; &nbsp; </i>
     </ion-card-content>
     </ion-card>
 </ion-content>
