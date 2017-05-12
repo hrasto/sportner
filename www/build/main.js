@@ -55862,20 +55862,27 @@ var Profile = (function () {
     }
     Profile.prototype.ionViewDidLoad = function () {
         this.userData.load();
+        this.gender();
         console.log('ionViewDidLoad Profile');
+    };
+    Profile.prototype.gender = function () {
+        this.userData.load();
+        if (this.userData.users.gender == 1)
+            var ge = "female";
+        else if (this.userData.users.gender == 0)
+            var ge = "male";
     };
     return Profile;
 }());
 Profile = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-profile',template:/*ion-inline-start:"C:\Users\Andrada\Desktop\hci_m3\sportner\src\pages\profile\profile.html"*/'\n\n<ion-header>\n\n\n\n  <ion-navbar color="sportner">\n\n    <ion-title>Profile</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n    <ion-icon name="contact"></ion-icon>\n\n    <p *ngFor="let user of userData.users"> {{user.firstName}} {{user.lastName}}</p>\n\n\n\n  \n\n        \n\n        \n\n<ion-card *ngFor="let user of userData.users">\n\n    \n\n    <ion-card-content>\n\n         {{user.email}}\n\n         {{user.birthdate}}\n\n        </ion-card-content>\n\n    </ion-card>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Andrada\Desktop\hci_m3\sportner\src\pages\profile\profile.html"*/,
+        selector: 'page-profile',template:/*ion-inline-start:"C:\Users\Andrada\Desktop\hci_m3\sportner\src\pages\profile\profile.html"*/'\n\n<ion-header>\n\n\n\n  <ion-navbar color="sportner">\n\n    <ion-title>Profile</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n<div align="center"*ngFor="let user of userData.users">\n\n    <ion-icon name="contact" style="font-size: 200px; color: #b5b1b2"></ion-icon>\n\n    <div class="bla" style="font-size: 25px; color:#ff4d4d; ">\n\n        <b> {{user.firstName}} {{user.lastName}}</b> <br>\n\n    </div>\n\n    <div class="email" style="font-size:16px">\n\n        {{user.email}} <br><br>\n\n    </div>\n\n    <button ion-button round outline>Edit profile</button>\n\n</div>\n\n\n\n        \n\n<ion-card *ngFor="let user of userData.users">\n\n    \n\n    <ion-card-content style= "font-size: 18px; padding: 18px 18px 18px 18px">\n\n         Birthdate: &nbsp; &nbsp; <b>{{user.birthdate}} </b><br><br>\n\n         Gender: &nbsp; &nbsp; &nbsp; &nbsp; {{g}} <br>\n\n         Height: &nbsp; &nbsp; &nbsp; &nbsp;<b> {{user.height}} cm  </b><br><br>\n\n         Weight: &nbsp; &nbsp; &nbsp; &nbsp;<b>  {{user.weight}} kg </b>\n\n    </ion-card-content>\n\n    </ion-card>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Andrada\Desktop\hci_m3\sportner\src\pages\profile\profile.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
-        __WEBPACK_IMPORTED_MODULE_2__providers_user_data__["a" /* UserData */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__providers_user_data__["a" /* UserData */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_user_data__["a" /* UserData */]) === "function" && _c || Object])
 ], Profile);
 
+var _a, _b, _c;
 //# sourceMappingURL=profile.js.map
 
 /***/ }),
@@ -56188,12 +56195,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 */
 var UserData = (function () {
     function UserData() {
-        this.users = [];
+        this.users = [{ firstName: 'Andrada', lastName: 'Colceriu', email: 'andradaclr@yahoo.de', gender: 1, birthdate: '10.08.1996', height: '178', weight: '68' }];
         console.log('Hello UserData Provider');
     }
     UserData.prototype.load = function () {
         this.users = [
-            { firstName: 'Andrada', lastName: 'Colceriu', email: 'andradaclr@yahoo.de', birthdate: '10.08.1996', height: '178', weight: '68' },
+            { firstName: 'Andrada', lastName: 'Colceriu', email: 'andradaclr@yahoo.de', gender: 1, birthdate: '10.08.1996', height: '178', weight: '68' },
         ];
     };
     UserData.prototype.addItem = function () {

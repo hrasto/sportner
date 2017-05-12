@@ -14,12 +14,12 @@ export class UserData {
   constructor() {
     console.log('Hello UserData Provider');
   }
-  users: any = [];
+  users: any = [{firstName: 'Andrada', lastName: 'Colceriu', email: 'andradaclr@yahoo.de', gender: 1, birthdate: '10.08.1996', height: '178', weight: '68' }];
 
   
   load(){
     this.users = [
-      {firstName: 'Andrada', lastName: 'Colceriu', email: 'andradaclr@yahoo.de', birthdate: '10.08.1996', height: '178', weight: '68' },
+      {firstName: 'Andrada', lastName: 'Colceriu', email: 'andradaclr@yahoo.de', gender: 1, birthdate: '10.08.1996', height: '178', weight: '68' },
     ];
   }
 
