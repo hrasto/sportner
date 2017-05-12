@@ -24,10 +24,10 @@ export class RhrEntries {
       {
         user:"rasto",
         entries:[
-          {day: "1494518", value: "63"},
-          {day: "1494519", value: "62"},
-          {day: "1494520", value: "62"},
-          {day: "1494521", value: "60"}
+          {day: "1494518", value: 63},
+          {day: "1494519", value: 62},
+          {day: "1494520", value: 62},
+          {day: "1494521", value: 60}
         ]        
       }
     ];

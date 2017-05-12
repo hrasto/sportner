@@ -6,22 +6,65 @@
 -->
 <ion-header>
 
-  <ion-navbar color="sportner">
-    <ion-title>Diary</ion-title>
+  <ion-navbar color="sportner">    
+    <div padding>
+      <ion-segment [(ngModel)]="entries" color="light">
+        <ion-segment-button value="workout">
+          Workouts
+        </ion-segment-button>
+        <ion-segment-button value="rhr">
+          RHR
+        </ion-segment-button>
+      </ion-segment>
+    </div>
   </ion-navbar>
 
 </ion-header>
 
-
 <ion-content padding>
-  <ion-list>
-      <ion-card *ngFor="let workout of workoutsService.workouts">
-        <ion-card-header>
-          {{workout.activity}}
-        </ion-card-header>
+  <ion-fab bottom right>
+    <button ion-fab mini color="danger"><ion-icon name="heart"></ion-icon></button>
+    <button ion-fab mini color="primary"><ion-icon name="football"></ion-icon></button>
+  </ion-fab>
+  <!--
+  <ion-fab bottom right>
+    <button ion-fab mini><ion-icon name="add"></ion-icon></button>
+    <ion-fab-list side="left">
+      <button ion-fab><ion-icon name="heart"></ion-icon></button>
+      <button ion-fab><ion-icon name="football"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
+  -->
+
+  <div [ngSwitch]="entries">
+    <ion-list *ngSwitchCase="'workout'">
+      <ion-card *ngFor="let workout of workoutsService.workouts" (click)="showWorkout(workout.id)">
+        <ion-item>
+          <ion-avatar item-left>
+            <img src="img/{{activities.getItem(workout.activity).icon}}">
+          </ion-avatar>
+          <h2>{{activities.getItem(workout.activity).name}}</h2>
+          <p>{{workout.date}}</p>
+        </ion-item>
+
         <ion-card-content>
-          {{workout.date}}
+          <p>{{workout.note}}</p>
         </ion-card-content>
       </ion-card>
-  </ion-list>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'rhr'">
+      <ion-card *ngFor="let rhr of rhrEntries">
+        <ion-item>
+          <ion-avatar item-left>
+            <ion-icon name="heart"></ion-icon>
+          </ion-avatar>
+          <h2>{{rhr.value}}</h2>
+          <p>{{rhr.day}}.{{rhr.month}}.{{rhr.year}}</p>
+        </ion-item>
+      </ion-card>
+    </ion-list>
+  </div>
+
+
 </ion-content>
