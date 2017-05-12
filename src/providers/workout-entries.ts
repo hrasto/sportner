@@ -13,22 +13,25 @@ export class WorkoutEntries {
 
   workouts: any = [];
 
+  nextId: any = 1;
+
   constructor() {
     console.log('Hello WorkoutEntries Provider');
   }
 
   load(){
+    this.nextId = 11;
     this.workouts = [
-      {id:1, date: '1.5.2017', activity: 1, note: 'Morning run', duration: ''},
-      {id:2, date: '2.5.2017', activity: 2, note: 'Bla bla bla', duration: ''},
-      {id:3, date: '3.5.2017', activity: 3, note: 'Bla bla bla', duration: ''},
-      {id:4, date: '3.5.2017', activity: 4, note: 'Bla bla bla', duration: ''},
-      {id:5, date: '4.5.2017', activity: 5, note: 'Bla bla bla', duration: ''},
-      {id:6, date: '5.5.2017', activity: 6, note: 'Bla bla bla', duration: ''},
-      {id:7, date: '6.5.2017', activity: 7, note: 'Bla bla bla', duration: ''},
-      {id:8, date: '7.5.2017', activity: 8, note: 'Bla bla bla', duration: ''},
+      {id:10, date: '9.5.2017', activity: 10, note: 'Bla bla bla', duration: ''},
       {id:9, date: '8.5.2017', activity: 9, note: 'Bla bla bla', duration: ''},
-      {id:10, date: '9.5.2017', activity: 10, note: 'Bla bla bla', duration: ''}
+      {id:8, date: '7.5.2017', activity: 8, note: 'Bla bla bla', duration: ''},
+      {id:7, date: '6.5.2017', activity: 7, note: 'Bla bla bla', duration: ''},
+      {id:6, date: '5.5.2017', activity: 6, note: 'Bla bla bla', duration: ''},
+      {id:5, date: '4.5.2017', activity: 5, note: 'Bla bla bla', duration: ''},
+      {id:4, date: '3.5.2017', activity: 4, note: 'Bla bla bla', duration: ''},
+      {id:3, date: '3.5.2017', activity: 3, note: 'Bla bla bla', duration: ''},
+      {id:2, date: '2.5.2017', activity: 2, note: 'Bla bla bla', duration: ''},
+      {id:1, date: '1.5.2017', activity: 1, note: 'Morning run', duration: ''}
     ];
   }
 
@@ -39,10 +42,16 @@ export class WorkoutEntries {
     return false;
   }
 
-  addItem(){
-
-    // later
-
+  addItem(activity, note, duration){
+    let today = new Date();
+    let workout = {
+      id: this.nextId,
+      date: today.getDay()+"."+today.getMonth()+"."+today.getFullYear(),
+      activity: activity, 
+      note: note,
+      duration: duration
+    };
+    this.workouts.unshift(workout);
+    ++this.nextId;
   }
-
 }

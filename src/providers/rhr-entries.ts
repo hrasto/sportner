@@ -24,10 +24,10 @@ export class RhrEntries {
       {
         user:"rasto",
         entries:[
-          {day: "1494518", value: 63},
-          {day: "1494519", value: 62},
+          {day: "1494521", value: 60},
           {day: "1494520", value: 62},
-          {day: "1494521", value: 60}
+          {day: "1494519", value: 62},
+          {day: "1494518", value: 63}
         ]        
       }
     ];
@@ -48,14 +48,11 @@ export class RhrEntries {
           "day": this.getElapsedDays(),
           "value": value
         };
-        this.data[i].entries.push(entry);
+        this.data[i].entries.unshift(entry);
       }
   }
 
   getElapsedDays(){
     return Math.floor((new Date).getTime() / 1000000);
   }
-
-  
-
 }
