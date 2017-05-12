@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { WorkoutEntries } from '../../providers/workout-entries';
 import { RhrEntries } from '../../providers/rhr-entries';
 import { Activities } from '../../providers/activities';
+import { NewworkoutPage } from '../newworkout/newworkout';
 
 /**
  * Generated class for the Diary page.
@@ -16,6 +17,7 @@ import { Activities } from '../../providers/activities';
   templateUrl: 'diary.html',
 })
 export class Diary {
+newworkoutPage = NewworkoutPage;
 
   rhrEntries:any=[];
 

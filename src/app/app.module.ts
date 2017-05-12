@@ -13,7 +13,7 @@ import { Settings } from '../pages/settings/settings';
 import { TabsPage } from '../pages/tabs/tabs';
 import { WorkoutDetails } from '../pages/workout-details/workout-details';
 import { Manageprofile } from '../pages/manageprofile/manageprofile';
-
+import { NewworkoutPage } from '../pages/newworkout/newworkout';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -36,7 +36,8 @@ import { Activities } from '../providers/activities';
     Intro,
     RhrReminder,
     WorkoutDetails,
-    Manageprofile
+    Manageprofile,
+    NewworkoutPage
   ],
   imports: [
     BrowserModule,
@@ -54,7 +55,8 @@ import { Activities } from '../providers/activities';
     Intro,
     RhrReminder,
     WorkoutDetails,
-    Manageprofile
+    Manageprofile,
+    NewworkoutPage
   ],
   providers: [
     StatusBar,
