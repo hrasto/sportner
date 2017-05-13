@@ -15,6 +15,7 @@ import { WorkoutDetails } from '../pages/workout-details/workout-details';
 import { Manageprofile } from '../pages/manageprofile/manageprofile';
 import { NewworkoutPage } from '../pages/newworkout/newworkout';
 import { NewrhrPage } from '../pages/newrhr/newrhr';
+import { RhrInfoPage } from '../pages/rhr-info/rhr-info';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -39,7 +40,8 @@ import { Activities } from '../providers/activities';
     WorkoutDetails,
     Manageprofile,
     NewworkoutPage,
-    NewrhrPage
+    NewrhrPage,
+    RhrInfoPage
   ],
   imports: [
     BrowserModule,
@@ -59,7 +61,8 @@ import { Activities } from '../providers/activities';
     WorkoutDetails,
     Manageprofile,
     NewworkoutPage,
-    NewrhrPage
+    NewrhrPage,
+    RhrInfoPage
   ],
   providers: [
     StatusBar,

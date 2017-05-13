@@ -1,6 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Chart } from 'chart.js';
+import { RhrInfoPage } from '../rhr-info/rhr-info';
 
 /**
  * Generated class for the Statistics page.
@@ -14,6 +15,7 @@ import { Chart } from 'chart.js';
   templateUrl: 'statistics.html',
 })
 export class Statistics {
+rhrInfoPage=RhrInfoPage;
  @ViewChild('barCanvas') barCanvas;
  /** @ViewChild('doughnutCanvas') doughnutCanvas;*/
     @ViewChild('lineCanvas') lineCanvas;
