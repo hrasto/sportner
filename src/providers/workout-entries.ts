@@ -28,7 +28,7 @@ export class WorkoutEntries {
       {id:7, date: '6.5.2017', activity: 7, note: 'Bla bla bla', duration: 10},
       {id:6, date: '5.5.2017', activity: 6, note: 'Bla bla bla', duration: 10},
       {id:5, date: '4.5.2017', activity: 5, note: 'Bla bla bla', duration: 10},
-      {id:4, date: '3.5.2017', activity: 4, note: 'Bla bla bla', duration: 10},
+      {id:4, date: '3.5.2017', activity: 4, note: 'Bla bla bla', duration: 40},
       {id:3, date: '3.5.2017', activity: 3, note: 'Bla bla bla', duration: 10},
       {id:2, date: '2.5.2017', activity: 2, note: 'Bla bla bla', duration: 10},
       {id:1, date: '1.5.2017', activity: 1, note: 'Morning run', duration: 10}

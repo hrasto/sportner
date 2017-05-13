@@ -53,6 +53,10 @@ export class RhrEntries {
   }
 
   getElapsedDays(){
-    return Math.floor((new Date).getTime() / 1000000);
+    var secs = Math.floor((new Date).getTime() / 1000);
+    console.log(secs);
+    var days = secs - (secs % (60*60*24));
+    console.log(days);
+    return days;
   }
 }

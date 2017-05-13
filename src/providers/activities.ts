@@ -27,7 +27,8 @@ export class Activities {
       {id:7, name:"Skiing", icon:"005-skiing.png"},
       {id:8, name:"Swimming", icon:"009-swimming.png"},
       {id:9, name:"Gym", icon:"006-dumbbell.png"},
-      {id:10, name:"Hiking", icon:"007-hiker.png"}
+      {id:10, name:"Hiking", icon:"007-hiker.png"},
+      {id:11, name:"Other", icon:"001-question.png"}
     ];
   }
 

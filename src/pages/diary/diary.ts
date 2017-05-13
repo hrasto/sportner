@@ -42,9 +42,9 @@ newrhrPage=NewrhrPage;
     for(var i = 0; i < this.rhrService.data[0].entries.length; ++i){
       this.rhrEntries.push({
         value: this.rhrService.data[0].entries[i].value,
-        year: (new Date(this.rhrService.data[0].entries[i].day * 1000000)).getFullYear(),
-        month: (new Date(this.rhrService.data[0].entries[i].day * 1000000)).getMonth(),
-        day: (new Date(this.rhrService.data[0].entries[i].day * 1000000)).getDay()
+        year: (new Date(this.rhrService.data[0].entries[i].day * 1000)).getFullYear(),
+        month: (new Date(this.rhrService.data[0].entries[i].day * 1000)).getMonth(),
+        day: (new Date(this.rhrService.data[0].entries[i].day * 1000)).getDay()
       });
     }
   }
