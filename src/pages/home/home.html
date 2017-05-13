@@ -11,19 +11,25 @@
   </p>
   
   <ion-list>
-    <ion-card *ngFor="let workout of workoutsService.workouts" (click)="showWorkout(workout.id)">
+    <h1 style="text-align: center;font-size: 15px;color: #666;">Last Workout</h1> 
+    <ion-card>
       <ion-item>
         <ion-avatar item-left>
-          <img src="img/{{activities.getItem(workout.activity).icon}}">
+          <img src="img/{{activities.getItem(lwActivity).icon}}">
         </ion-avatar>
-        <h2>{{activities.getItem(workout.activity).name}}</h2>
-        <p>{{workout.date}}</p>
+        <h2>{{activities.getItem(lwActivity).name}}</h2>
+        <p>{{lwDate}}</p>
       </ion-item>
 
       <ion-card-content>
-        <p>{{workout.note}}</p>
+        <p>{{lwNote}}</p>
       </ion-card-content>
     </ion-card>
   </ion-list>
+
+  <h1 style="text-align: center;font-size: 15px;color: #666;">Total Duration</h1>
+  <h1 style="text-align: center;">{{totalTime}}</h1>
+  <h1 style="text-align: center;font-size: 15px;color: #666;">Total Workouts</h1>
+  <h1 style="text-align: center;">{{totalWorkouts}}</h1>
   
 </ion-content>
