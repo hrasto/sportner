@@ -13,11 +13,19 @@
 </ion-header>
 
 
-<ion-content padding>
 
+
+<ion-content padding>
+ <br><br>
+ 
+   <div align="center">
+    <ion-icon name="ios-heart" style="font-size: 170px; color: #f53d3d"></ion-icon>
+</div>
+ <br>
+ 
  <ion-item> 
     <ion-label color="primary">Value</ion-label>
-    <ion-input type="number" [(ngModel)]="rhrEntry" placeholder="Value"></ion-input>
+    <ion-input placeholder="Value" type="number" [(ngModel)]="rhrEntry"></ion-input>
   </ion-item>
 
    <!-- <ion-item>
@@ -28,7 +36,7 @@
 <br><br>
 <div align="center">
 
-<button ion-button round style="font-size:17px" (click)="saveEnry()">
+<button ion-button round style="font-size:17px" type="submit" (click)="saveEnry()">
   Save
 </button>
 </div>

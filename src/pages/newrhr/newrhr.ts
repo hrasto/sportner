@@ -17,7 +17,9 @@ import { AlertController } from 'ionic-angular';
   templateUrl: 'newrhr.html',
 })
 export class NewrhrPage {
-	rhrEntry: any = 65;
+
+rhrEntry: any = 65;
+
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams, 
@@ -26,6 +28,10 @@ export class NewrhrPage {
     public rhrEntries: RhrEntries
     //public diaryService: Diary
   ) { }
+  
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad RhrReminder');
+  }
    
   closeModal() {
     this.viewCtrl.dismiss();
