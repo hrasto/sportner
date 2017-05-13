@@ -5,6 +5,7 @@ import { RhrEntries } from '../../providers/rhr-entries';
 import { Activities } from '../../providers/activities';
 import { NewworkoutPage } from '../newworkout/newworkout';
 import { NewrhrPage } from '../newrhr/newrhr';
+import { WorkoutDetails } from '../workout-details/workout-details';
 
 /**
  * Generated class for the Diary page.
@@ -47,6 +48,10 @@ newrhrPage=NewrhrPage;
         day: (new Date(this.rhrService.data[0].entries[i].day * 1000)).getDay()
       });
     }
+  }
+    
+  showWorkout(id){
+    this.navCtrl.push(WorkoutDetails, id);
   }
 
 }

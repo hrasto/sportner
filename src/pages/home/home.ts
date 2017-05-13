@@ -5,7 +5,6 @@ import { WorkoutEntries } from '../../providers/workout-entries';
 import { Activities } from '../../providers/activities';
 import { RhrEntries } from '../../providers/rhr-entries';
 import { RhrReminder } from '../rhr-reminder/rhr-reminder';
-import { WorkoutDetails } from '../workout-details/workout-details';
 import { Storage } from '@ionic/storage';
 
 @Component({
@@ -85,9 +84,4 @@ export class HomePage {
     var index = (new Date).getMilliseconds() % quotes.length;
     this.quote = quotes[index];
   }
-
-  showWorkout(id){
-    this.navCtrl.push(WorkoutDetails, id);
-  }
-
 }
