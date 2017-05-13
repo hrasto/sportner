@@ -15,14 +15,14 @@
     <ion-card>
       <ion-item>
         <ion-avatar item-left>
-          <img src="img/{{activities.getItem(lwActivity).icon}}">
+          <img src="img/{{activities.getItem(workoutsService.getLwActivity()).icon}}">
         </ion-avatar>
-        <h2>{{activities.getItem(lwActivity).name}}</h2>
-        <p>{{lwDate}}</p>
+        <h2>{{activities.getItem(workoutsService.getLwActivity()).name}}</h2>
+        <p>{{workoutsService.getLwDate()}}</p>
       </ion-item>
 
       <ion-card-content>
-        <p>{{lwNote}}</p>
+        <p>{{workoutsService.getLwNote()}}</p>
       </ion-card-content>
     </ion-card>
   </ion-list>

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 //import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
+import { Storage } from '@ionic/storage';
 
 /*
   Generated class for the WorkoutEntries provider.
@@ -15,12 +16,35 @@ export class WorkoutEntries {
 
   nextId: any = 1;
 
-  constructor() {
+  constructor(public st: Storage) {
     console.log('Hello WorkoutEntries Provider');
   }
 
   load(){
-    this.nextId = 11;
+   this.st.ready().then(()=>{
+      this.st.get("workout-entries").then((val)=>{
+        if(val == null)
+          this.generateWorkouts();
+        else{
+          console.log("loading data from storage");
+          var data = JSON.parse(val);
+          this.workouts = data.workouts;
+          this.nextId = data.nextId;
+        }
+      });
+    });
+  }
+
+  updateStorage(){
+    this.st.ready().then(() => {
+      console.log("updating storage");
+      var data = {workouts: this.workouts, nextId: this.nextId};
+      this.st.set('workout-entries', JSON.stringify(data));
+    });
+  }
+
+  generateWorkouts(){
+    console.log("generating workouts");
     this.workouts = [
       {id:10, date: (new Date).getTime(), activity: 10, note: 'Bla bla bla', duration: 30},
       {id:9, date: (new Date).getTime(), activity: 9, note: 'Bla bla bla', duration: 50},
@@ -32,7 +56,8 @@ export class WorkoutEntries {
       {id:3, date: (new Date).getTime(), activity: 3, note: 'Bla bla bla', duration: 10},
       {id:2, date: (new Date).getTime(), activity: 2, note: 'Bla bla bla', duration: 10},
       {id:1, date: (new Date).getTime(), activity: 1, note: 'Morning run', duration: 10}
-    ];
+    ];    
+    this.nextId = 11;
   }
 
   getItem(id){
@@ -86,6 +111,27 @@ export class WorkoutEntries {
 
   getTotalWorkouts() {
     return this.workouts.length;
+  }
+
+  getLwActivity(){
+    return this.workouts[0] != null ? this.workouts[0].activity : 11;
+  }
+
+  getLwDuration(){
+    return this.workouts[0] != null ? this.workouts[0].duration : 0;
+  }
+
+  getLwDate(){
+    if(this.workouts[0] != null){
+      var date = new Date(this.workouts[0].date);
+      return date.getDate() + "." + (date.getMonth() + 1) + "." + date.getFullYear();
+    }else{
+      return 'dd.mm.yyy';
+    }
+  }
+
+  getLwNote(){
+    return this.workouts[0] != null ?  this.workouts[0].note : '';
   }
 
   getFormatedWorkouts(){

@@ -14,12 +14,7 @@ import { Storage } from '@ionic/storage';
 export class HomePage {
 
   public quote: any = "";
-
-  public lwActivity: any;
-  public lwDuration: any;
-  public lwNote: any;
-  public lwDate: any;
-
+  
   constructor(
     public navCtrl: NavController, 
     public modalCtrl: ModalController,
@@ -30,29 +25,12 @@ export class HomePage {
   ) {
     rhrService.generateData();    
     this.workoutsService.load();
+    console.log(this.workoutsService.workouts);
     this.generateRandomQuote();
     this.rhrService.setEntryToday();
-
-    storage.ready().then(() => {
-
-       // set a key/value
-       storage.set('name', 'Max');
-
-       // Or to get a key/value pair
-       /*
-       storage.get('age').then((val) => {
-         console.log('Your age is', val);
-       })
-       */
-     });
   }
 
   ionViewDidLoad(){
-
-    this.lwActivity = this.workoutsService.workouts[0].activity;
-    this.lwDuration = this.workoutsService.workouts[0].duration;
-    this.lwDate = this.workoutsService.workouts[0].date;
-    this.lwNote = this.workoutsService.workouts[0].note;
 
     if(this.rhrService.entryToday == false){
       let myModal = this.modalCtrl.create(RhrReminder);

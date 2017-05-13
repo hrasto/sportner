@@ -58,6 +58,7 @@ export class NewworkoutPage {
       date = new Date(this.date); // create date obj. from a string
     
     this.workouts.addItem(this.activity, this.note, this.duration, date);
+    this.workouts.updateStorage();
     this.showAlert();
     this.closeModal();
   }

@@ -53,6 +53,8 @@ export class NewrhrPage {
     if(res === false)
       this.alertData.subTitle = "Existing RHR has been overwritten";
     
+    this.rhrEntries.updateStorage();
+
     this.showAlert();
     this.closeModal();
   }

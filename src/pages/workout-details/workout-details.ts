@@ -55,6 +55,7 @@ export class WorkoutDetails {
 
   saveWorkout(){
     this.workouts.editItem(this.workout.id, this.activity, this.note, this.duration, (new Date(this.date)));
+    this.workouts.updateStorage();
     this.navCtrl.pop();
   }
 }

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 //import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
+import { Storage } from '@ionic/storage';
 
 /*
   Generated class for the RhrEntries provider.
@@ -15,8 +16,26 @@ export class RhrEntries {
 
   data: any = [];
 
-  constructor() {
+  constructor(public st : Storage) {
     console.log('Hello RhrEntries Provider');
+  }
+
+  load(){
+    this.st.ready().then(()=>{
+      this.st.get("rhr-entries").then((val)=>{
+        if(val == null)
+          this.generateData();
+        else
+          this.data = JSON.parse(val);
+      });
+    });
+  }
+
+  updateStorage(){
+    this.st.ready().then(() => {
+      console.log("updating storage");
+       this.st.set('rhr-entries', JSON.stringify(this.data));
+    });
   }
 
   generateData(){
@@ -76,7 +95,8 @@ export class RhrEntries {
     }
   }
 
-  getElapsedDays(timestamp){
+  getElapsedDays(timestamp = null){
+    if(timestamp == null) timestamp = (new Date()).getTime();
     var secs = Math.floor(timestamp / 1000);
     console.log(secs);
     var days = secs - (secs % (60*60*24));
