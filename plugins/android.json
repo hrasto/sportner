@@ -1,0 +1,38 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.ionicframework.tabsv2303933"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.ionicframework.tabsv2303933"
+        },
+        "cordova-plugin-facebook4": {
+            "APP_ID": "1261414160638519",
+            "APP_NAME": "Sportner",
+            "PACKAGE_NAME": "com.ionicframework.tabsv2303933"
+        },
+        "cordova-plugin-nativestorage": {
+            "PACKAGE_NAME": "com.ionicframework.tabsv2303933"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.ionicframework.tabsv2303933"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.ionicframework.tabsv2303933"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.ionicframework.tabsv2303933"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "com.ionicframework.tabsv2303933"
+        }
+    },
+    "dependent_plugins": {}
+}

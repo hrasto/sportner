@@ -1,3 +1,20 @@
 page-workout-details {
+    div.header {
+        height: 50px;
+        width: 100%;
+        padding:12px;
+        background: #efefef;
 
+        img{
+            width: 30px; 
+            float:left;
+        }
+
+        span {    
+            width: 60%;
+            float: left;
+            text-align: right;
+            font-size: 25px;
+        }
+    }
 }

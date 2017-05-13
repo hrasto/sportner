@@ -2,6 +2,7 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
+import { IonicStorageModule } from '@ionic/storage';
 
 import { Intro } from '../pages/intro/intro';
 import { RhrReminder } from '../pages/rhr-reminder/rhr-reminder';
@@ -15,6 +16,11 @@ import { WorkoutDetails } from '../pages/workout-details/workout-details';
 import { Manageprofile } from '../pages/manageprofile/manageprofile';
 import { NewworkoutPage } from '../pages/newworkout/newworkout';
 import { NewrhrPage } from '../pages/newrhr/newrhr';
+import { RhrInfoPage } from '../pages/rhr-info/rhr-info';
+import { RhrinfoListPage } from '../pages/rhrinfo-list/rhrinfo-list';
+import { RhrinfoLowPage } from '../pages/rhrinfo-low/rhrinfo-low';
+import { RhrinfoHighPage } from '../pages/rhrinfo-high/rhrinfo-high'; 
+import { RhrinfoMeasurePage } from '../pages/rhrinfo-measure/rhrinfo-measure';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -41,11 +47,17 @@ import { Activities } from '../providers/activities';
     WorkoutDetails,
     Manageprofile,
     NewworkoutPage,
-    NewrhrPage
+    NewrhrPage,
+    RhrInfoPage,
+    RhrinfoListPage,
+    RhrinfoLowPage, 
+    RhrinfoHighPage,
+    RhrinfoMeasurePage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -61,7 +73,12 @@ import { Activities } from '../providers/activities';
     WorkoutDetails,
     Manageprofile,
     NewworkoutPage,
-    NewrhrPage
+    NewrhrPage,
+    RhrInfoPage,
+    RhrinfoListPage,
+    RhrinfoLowPage, 
+    RhrinfoHighPage,
+    RhrinfoMeasurePage
   ],
   providers: [
     StatusBar,

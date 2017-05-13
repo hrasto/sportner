@@ -1,6 +1,9 @@
 import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Chart } from 'chart.js';
+import { RhrinfoListPage } from '../rhrinfo-list/rhrinfo-list';
+import { RhrEntries } from '../../providers/rhr-entries';
+
 
 /**
  * Generated class for the Statistics page.
@@ -14,6 +17,9 @@ import { Chart } from 'chart.js';
   templateUrl: 'statistics.html',
 })
 export class Statistics {
+rhrEntries:any=[];
+rhrinfoListPage=RhrinfoListPage;
+
  @ViewChild('barCanvas') barCanvas;
  /** @ViewChild('doughnutCanvas') doughnutCanvas;*/
     @ViewChild('lineCanvas') lineCanvas;
@@ -22,10 +28,11 @@ export class Statistics {
    /** doughnutChart: any;*/
     lineChart: any;
  
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public rhrService: RhrEntries) {
+ 
   }
   ionViewDidLoad() {
- 
+ /**
         this.barChart = new Chart(this.barCanvas.nativeElement, {
  
             type: 'bar',
@@ -63,7 +70,7 @@ export class Statistics {
                 }
             }
  
-        });
+        }); */
  
       /**  this.doughnutChart = new Chart(this.doughnutCanvas.nativeElement, {
  
@@ -98,28 +105,28 @@ export class Statistics {
  
             type: 'line',
             data: {
-                labels: ["January", "February", "March", "April", "May", "June", "July"],
+                labels: ["4.04.2017","4.04.2017","4.04.2017","4.04.2017"],
                 datasets: [
                     {
-                        label: "RHR dataset",
+                        label: "RHR beats/min",
                         fill: false,
                         lineTension: 0.1,
-                        backgroundColor: "#29e5ab",
-                        borderColor: "#29e5ab",
+                        backgroundColor: "#f53d3d",
+                        borderColor: "#f53d3d",
                         borderCapStyle: 'butt',
                         borderDash: [],
                         borderDashOffset: 0.0,
                         borderJoinStyle: 'miter',
-                        pointBorderColor: "#29e5ab",
+                        pointBorderColor: "#f53d3d",
                         pointBackgroundColor: "#fff",
                         pointBorderWidth: 1,
                         pointHoverRadius: 5,
-                        pointHoverBackgroundColor: "#29e5ab",
+                        pointHoverBackgroundColor: "#f53d3d",
                         pointHoverBorderColor: "rgba(220,220,220,1)",
                         pointHoverBorderWidth: 1,
                         pointRadius: 1,
                         pointHitRadius: 10,
-                        data: [65, 59, 80, 81, 56, 55, 40],
+                        data: [this.rhrService.data[0].entries[0].value,this.rhrService.data[0].entries[1].value,this.rhrService.data[0].entries[2].value,this.rhrService.data[0].entries[3].value],
                         spanGaps: false,
                     }
                 ]

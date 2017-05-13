@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams} from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
 import { ViewController } from 'ionic-angular';
+import { WorkoutEntries } from '../../providers/workout-entries';
+import { Activities } from '../../providers/activities';
 
 /**
  * Generated class for the NewworkoutPage page.
@@ -16,20 +18,29 @@ import { ViewController } from 'ionic-angular';
 })
 export class NewworkoutPage {
 
-constructor(
-  public navCtrl: NavController, 
-  public navParams: NavParams,
-   public viewCtrl: ViewController,
-  public alertCtrl: AlertController) {
-  }
+  activity: any;
+  //date: any;
+  duration: any;
+  note: any;
+
+  constructor(
+    public navCtrl: NavController, 
+    public navParams: NavParams,
+    public viewCtrl: ViewController,
+    public alertCtrl: AlertController,
+    public workouts: WorkoutEntries,
+    public activities: Activities
+  ) { }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad NewworkoutPage');
+    this.activities.load();
   }
   closeModal() {
     this.viewCtrl.dismiss();
   }
-   showAlert() {
+  
+  showAlert() {
     let alert = this.alertCtrl.create({
       title: 'Notification',
       subTitle: 'New workout is saved',
@@ -37,6 +48,12 @@ constructor(
     });
     alert.present();
     this.closeModal();
+  }
+
+  saveWorkout(){
+    this.workouts.addItem(this.activity, this.note, this.duration);
+    this.showAlert();
+    
   }
 
 }

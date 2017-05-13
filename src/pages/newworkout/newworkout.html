@@ -17,6 +17,12 @@
 
   <ion-item>
     <ion-label color="primary">Activity</ion-label>
+    
+    <ion-select [(ngModel)]="activity">
+      <ion-option value="{{activity.id}}" *ngFor="let activity of activities.data">{{activity.name}}</ion-option>
+    </ion-select>
+
+    <!--
     <ion-select [(ngModel)]="activities">
       <ion-option value="run">Running</ion-option>
       <ion-option value="cyc">Cycling</ion-option>
@@ -28,31 +34,36 @@
       <ion-option value="gym">Gym</ion-option>
       <ion-option value="hike">Hiking</ion-option>      
     </ion-select>
+    -->
   </ion-item>
 
-   <ion-item>
+  <!--
+  <ion-item>
     <ion-label color="primary">Date</ion-label>
-    <ion-input type="date"></ion-input>
+    <ion-input type="date" [(ngModel)]="date"></ion-input>
   </ion-item>
+  -->
 
  <ion-item>
     <ion-label color="primary">Duration (min)</ion-label>
-    <ion-input placeholder="120" type="number"></ion-input>
+    <ion-input placeholder="120" type="number" [(ngModel)]="duration"></ion-input>
   </ion-item>
 
+  <!--
    <ion-item>
     <ion-label color="primary">Distance (m) </ion-label>
     <ion-input placeholder="1200" type="number"></ion-input>
   </ion-item>
+  -->
 
    <ion-item>
     <ion-label color="primary">Notes</ion-label>
-    <ion-input placeholder="add details" type="text"clearInput></ion-input>
+    <ion-input placeholder="add details" type="text" [(ngModel)]="note" clearInput></ion-input>
   </ion-item>
 
 <br><br>
 <div align="center">
-<button ion-button round style="font-size:17px" type="submit" (click)="showAlert()" >
+<button ion-button round style="font-size:17px" type="submit" (click)="saveWorkout()" >
   Save
 </button>
 </div>
