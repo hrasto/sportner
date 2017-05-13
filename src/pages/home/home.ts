@@ -16,6 +16,7 @@ import {Intro } from '../intro/intro';
 export class HomePage {
 
   public quote: any = "";
+<<<<<<< HEAD
 
   public lwActivity: any;
   public lwDuration: any;
@@ -25,6 +26,9 @@ bla= 'hello';
   public totalTime: any;
   public totalWorkouts: any;
 
+=======
+  
+>>>>>>> 6aadbb4aa068a4615703b48e393932903015f693
   constructor(
     public navCtrl: NavController, 
     public modalCtrl: ModalController,
@@ -36,8 +40,10 @@ bla= 'hello';
   ) {
     rhrService.generateData();    
     this.workoutsService.load();
+    console.log(this.workoutsService.workouts);
     this.generateRandomQuote();
     this.rhrService.setEntryToday();
+<<<<<<< HEAD
     
     storage.ready().then(() => {
 
@@ -51,10 +57,13 @@ bla= 'hello';
        })
        */
      });
+=======
+>>>>>>> 6aadbb4aa068a4615703b48e393932903015f693
   }
 
   ionViewDidLoad(){
 
+<<<<<<< HEAD
     this.lwActivity = this.workoutsService.workouts[0].activity;
     this.lwDuration = this.workoutsService.workouts[0].duration;
     this.lwDate = this.workoutsService.workouts[0].date;
@@ -68,6 +77,9 @@ bla= 'hello';
       myModal.present();
     }
     if(this.userdata.profileSetup == true && this.rhrService.entryToday == false){
+=======
+    if(this.rhrService.entryToday == false){
+>>>>>>> 6aadbb4aa068a4615703b48e393932903015f693
       let myModal = this.modalCtrl.create(RhrReminder);
       myModal.present();
     }

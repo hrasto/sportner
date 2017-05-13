@@ -37,6 +37,7 @@ newrhrPage=NewrhrPage;
     console.log('ionViewDidLoad Diary');
     this.setRhrEntries();
     //this.workoutsService.load();
+    
   }
 
   setRhrEntries(){

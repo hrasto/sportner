@@ -31,7 +31,9 @@ rhrinfoListPage=RhrinfoListPage;
   constructor(public navCtrl: NavController, public navParams: NavParams, public rhrService: RhrEntries) {
  
   }
-  ionViewDidLoad() {
+
+  
+  ionViewDidEnter() {
  /**
         this.barChart = new Chart(this.barCanvas.nativeElement, {
  
@@ -100,12 +102,12 @@ rhrinfoListPage=RhrinfoListPage;
             }
  
         }); */
- 
-        this.lineChart = new Chart(this.lineCanvas.nativeElement, {
+
+        var options = {
  
             type: 'line',
             data: {
-                labels: ["4.04.2017","4.04.2017","4.04.2017","4.04.2017"],
+                labels: [], // dates
                 datasets: [
                     {
                         label: "RHR beats/min",
@@ -126,13 +128,22 @@ rhrinfoListPage=RhrinfoListPage;
                         pointHoverBorderWidth: 1,
                         pointRadius: 1,
                         pointHitRadius: 10,
-                        data: [this.rhrService.data[0].entries[0].value,this.rhrService.data[0].entries[1].value,this.rhrService.data[0].entries[2].value,this.rhrService.data[0].entries[3].value],
+                        data: [],
                         spanGaps: false,
                     }
                 ]
             }
  
-        });
+        };
+
+        for(var i = this.rhrService.data[0].entries.length-1; i >= 0; --i){
+            var date = new Date(this.rhrService.data[0].entries[i].day*1000);
+            var date_str = date.getDate() + "." + (date.getMonth()+1) + "." + date.getFullYear();
+            options.data.labels.push(date_str);
+            options.data.datasets[0].data.push(this.rhrService.data[0].entries[i].value);
+        }
+ 
+        this.lineChart = new Chart(this.lineCanvas.nativeElement, options);
  
     }
  

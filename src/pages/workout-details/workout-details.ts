@@ -16,9 +16,11 @@ import { Activities } from '../../providers/activities';
 })
 export class WorkoutDetails {
 
+  workout: any;
   date: any;
   activity: any;
-  icon: any;
+  activity_name: any;
+  activity_icon: any;
   note: any;
   duration: any;
 
@@ -30,12 +32,30 @@ export class WorkoutDetails {
   ) { }
 
   ionViewDidLoad() {
-    let workout = this.workouts.getItem(this.navParams.data);
-    this.date = workout.date;
-    this.activity = this.activities.getItem(workout.id).name;
-    this.icon = this.activities.getItem(workout.id).icon;
-    this.note = workout.note;
-    this.duration = workout.duration;
+    this.workout = this.workouts.getItem(this.navParams.data);
+    var d = new Date(this.workout.date);
+    this.date = d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate();
+    this.activity = this.workout.activity;
+    this.activity_name = this.activities.getItem(this.activity).name;
+    this.activity_icon = this.activities.getItem(this.activity).icon;
+    this.note = this.workout.note;
+    this.duration = this.workout.duration;
   }
 
+  ionViewDidLeave() {
+    this.workout = this.workouts.getItem(this.navParams.data);
+    var d = new Date(this.workout.date);
+    this.date = d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate();
+    this.activity = this.workout.activity;
+    this.activity_name = this.activities.getItem(this.activity).name;
+    this.activity_icon = this.activities.getItem(this.activity).icon;
+    this.note = this.workout.note;
+    this.duration = this.workout.duration;
+  }
+
+  saveWorkout(){
+    this.workouts.editItem(this.workout.id, this.activity, this.note, this.duration, (new Date(this.date)));
+    this.workouts.updateStorage();
+    this.navCtrl.pop();
+  }
 }

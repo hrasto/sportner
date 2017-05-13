@@ -4,33 +4,38 @@
   </ion-navbar>
 </ion-header>
 
+<<<<<<< HEAD
 <ion-content padding style="margin-top:5px">
  
  
+=======
+<ion-content padding>
+
+>>>>>>> 6aadbb4aa068a4615703b48e393932903015f693
   <p padding (click)="generateRandomQuote()" class="quote">
     "{{quote}}"
   </p>
-  <br>
+  
   <ion-list>
     <h1 style="text-align: center;font-size: 15px;color: #666;">Last Workout</h1> 
     <ion-card>
       <ion-item>
         <ion-avatar item-left>
-          <img src="img/{{activities.getItem(lwActivity).icon}}">
+          <img src="img/{{activities.getItem(workoutsService.getLwActivity()).icon}}">
         </ion-avatar>
-        <h2>{{activities.getItem(lwActivity).name}}</h2>
-        <p>{{lwDate}}</p>
+        <h2>{{activities.getItem(workoutsService.getLwActivity()).name}}</h2>
+        <p>{{workoutsService.getLwDate()}}</p>
       </ion-item>
 
       <ion-card-content>
-        <p>{{lwNote}}</p>
+        <p>{{workoutsService.getLwNote()}}</p>
       </ion-card-content>
     </ion-card>
   </ion-list>
-<br>
+
   <h1 style="text-align: center;font-size: 15px;color: #666;">Total Duration</h1>
-  <h1 style="text-align: center;">{{totalTime}}</h1>
+  <h1 style="text-align: center;">{{workoutsService.getTotalTime()}}</h1>
   <h1 style="text-align: center;font-size: 15px;color: #666;">Total Workouts</h1>
-  <h1 style="text-align: center;">{{totalWorkouts}}</h1>
+  <h1 style="text-align: center;">{{workoutsService.getTotalWorkouts()}}</h1>
   
 </ion-content>

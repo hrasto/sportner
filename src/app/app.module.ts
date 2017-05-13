@@ -56,6 +56,12 @@ import { Activities } from '../providers/activities';
     BrowserModule,
     IonicModule.forRoot(MyApp),
     IonicStorageModule.forRoot()
+    /*
+    IonicStorageModule.forRoot({
+      name: '__mydb',
+         driverOrder: ['indexeddb', 'sqlite', 'websql']
+    })
+    */
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -86,7 +92,8 @@ import { Activities } from '../providers/activities';
     AuthService,
     RhrEntries,
     Activities,
-    UserData
+    UserData,
+    Storage
   ]
 })
 export class AppModule {}

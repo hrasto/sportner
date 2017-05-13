@@ -39,7 +39,7 @@
 
   <div [ngSwitch]="entries">
     <ion-list *ngSwitchCase="'workout'">
-      <ion-card *ngFor="let workout of workoutsService.workouts" (click)="showWorkout(workout.id)">
+      <ion-card *ngFor="let workout of workoutsService.getFormatedWorkouts()" (click)="showWorkout(workout.id)">
         <ion-item>
           <ion-avatar item-left>
             <img src="img/{{activities.getItem(workout.activity).icon}}">
@@ -56,15 +56,13 @@
     </ion-list>
 
     <ion-list *ngSwitchCase="'rhr'">
-      <ion-card *ngFor="let rhr of rhrEntries">
-        <ion-item>
-          <ion-avatar item-left>
-            <ion-icon name="heart"></ion-icon>
-          </ion-avatar>
-          <h2>{{rhr.value}}</h2>
-          <p>{{rhr.day}}.{{rhr.month}}.{{rhr.year}}</p>
-        </ion-item>
-      </ion-card>
+      <ion-item *ngFor="let rhr of rhrService.getFormatedRHREntries()">
+        <ion-avatar item-left>
+          <ion-icon name="heart"></ion-icon>
+        </ion-avatar>
+        <h2>{{rhr.value}} BPM</h2>
+        <ion-note item-end>{{rhr.day}}.{{rhr.month}}.{{rhr.year}}</ion-note>
+      </ion-item>
     </ion-list>
   </div>
 

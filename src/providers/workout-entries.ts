@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 //import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
+import { Storage } from '@ionic/storage';
 
 /*
   Generated class for the WorkoutEntries provider.
@@ -15,24 +16,48 @@ export class WorkoutEntries {
 
   nextId: any = 1;
 
-  constructor() {
+  constructor(public st: Storage) {
     console.log('Hello WorkoutEntries Provider');
   }
 
   load(){
-    this.nextId = 11;
+   this.st.ready().then(()=>{
+      this.st.get("workout-entries").then((val)=>{
+        if(val == null)
+          this.generateWorkouts();
+        else{
+          console.log("loading data from storage");
+          var data = JSON.parse(val);
+          this.workouts = data.workouts;
+          this.nextId = data.nextId;
+        }
+      });
+    });
+  }
+
+  updateStorage(){
+    this.st.ready().then(() => {
+      console.log("updating storage");
+      var data = {workouts: this.workouts, nextId: this.nextId};
+      this.st.set('workout-entries', JSON.stringify(data));
+    });
+  }
+
+  generateWorkouts(){
+    console.log("generating workouts");
     this.workouts = [
-      {id:10, date: '9.5.2017', activity: 10, note: 'Bla bla bla', duration: 30},
-      {id:9, date: '8.5.2017', activity: 9, note: 'Bla bla bla', duration: 50},
-      {id:8, date: '7.5.2017', activity: 8, note: 'Bla bla bla', duration: 50},
-      {id:7, date: '6.5.2017', activity: 7, note: 'Bla bla bla', duration: 10},
-      {id:6, date: '5.5.2017', activity: 6, note: 'Bla bla bla', duration: 10},
-      {id:5, date: '4.5.2017', activity: 5, note: 'Bla bla bla', duration: 10},
-      {id:4, date: '3.5.2017', activity: 4, note: 'Bla bla bla', duration: 40},
-      {id:3, date: '3.5.2017', activity: 3, note: 'Bla bla bla', duration: 10},
-      {id:2, date: '2.5.2017', activity: 2, note: 'Bla bla bla', duration: 10},
-      {id:1, date: '1.5.2017', activity: 1, note: 'Morning run', duration: 10}
-    ];
+      {id:10, date: (new Date).getTime(), activity: 10, note: 'Bla bla bla', duration: 30},
+      {id:9, date: (new Date).getTime(), activity: 9, note: 'Bla bla bla', duration: 50},
+      {id:8, date: (new Date).getTime(), activity: 8, note: 'Bla bla bla', duration: 50},
+      {id:7, date: (new Date).getTime(), activity: 7, note: 'Bla bla bla', duration: 10},
+      {id:6, date: (new Date).getTime(), activity: 6, note: 'Bla bla bla', duration: 10},
+      {id:5, date: (new Date).getTime(), activity: 5, note: 'Bla bla bla', duration: 10},
+      {id:4, date: (new Date).getTime(), activity: 4, note: 'Bla bla bla', duration: 40},
+      {id:3, date: (new Date).getTime(), activity: 3, note: 'Bla bla bla', duration: 10},
+      {id:2, date: (new Date).getTime(), activity: 2, note: 'Bla bla bla', duration: 10},
+      {id:1, date: (new Date).getTime(), activity: 1, note: 'Morning run', duration: 10}
+    ];    
+    this.nextId = 11;
   }
 
   getItem(id){
@@ -42,17 +67,38 @@ export class WorkoutEntries {
     return false;
   }
 
-  addItem(activity, note, duration){
-    let today = new Date();
+  addItem(activity, note, duration, date){
+    if(activity == null)
+      activity = 11; // other activity
+    if(duration == null)
+      duration = 0;
     let workout = {
       id: this.nextId,
-      date: today.getDay()+"."+today.getMonth()+"."+today.getFullYear(),
+      date: date.getTime(),
       activity: activity, 
       note: note,
       duration: duration
     };
     this.workouts.unshift(workout);
     ++this.nextId;
+  }
+
+  editItem(id, activity, note, duration, date){
+    if(activity == null)
+      activity = 11; // other activity
+    if(duration == null)
+      duration = 0;
+    
+    for(var i = 0; i < this.workouts.length; ++i){
+      if(this.workouts[i].id == id){
+        this.workouts[i].activity = activity;
+        this.workouts[i].note = note;
+        this.workouts[i].duration = duration;
+        this.workouts[i].date = date.getTime();
+        return true;
+      }
+    }
+    return false;
   }
 
   getTotalTime(){
@@ -65,5 +111,42 @@ export class WorkoutEntries {
 
   getTotalWorkouts() {
     return this.workouts.length;
+  }
+
+  getLwActivity(){
+    return this.workouts[0] != null ? this.workouts[0].activity : 11;
+  }
+
+  getLwDuration(){
+    return this.workouts[0] != null ? this.workouts[0].duration : 0;
+  }
+
+  getLwDate(){
+    if(this.workouts[0] != null){
+      var date = new Date(this.workouts[0].date);
+      return date.getDate() + "." + (date.getMonth() + 1) + "." + date.getFullYear();
+    }else{
+      return 'dd.mm.yyy';
+    }
+  }
+
+  getLwNote(){
+    return this.workouts[0] != null ?  this.workouts[0].note : '';
+  }
+
+  getFormatedWorkouts(){
+    let workouts = [];
+    for (var i = 0; i < this.workouts.length; ++i){
+      var d = new Date(this.workouts[i].date);
+      var formated_date = d.getDate() + "."+(d.getMonth()+1)+"."+d.getFullYear();
+      workouts.push({
+        id: this.workouts[i].id,
+        date: formated_date,
+        activity: this.workouts[i].activity,
+        note: this.workouts[i].note,
+        duration: this.workouts[i].id
+      });
+    }
+    return workouts;
   }
 }

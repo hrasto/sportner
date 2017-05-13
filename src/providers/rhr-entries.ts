@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 //import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
+import { Storage } from '@ionic/storage';
 
 /*
   Generated class for the RhrEntries provider.
@@ -15,8 +16,26 @@ export class RhrEntries {
 
   data: any = [];
 
-  constructor() {
+  constructor(public st : Storage) {
     console.log('Hello RhrEntries Provider');
+  }
+
+  load(){
+    this.st.ready().then(()=>{
+      this.st.get("rhr-entries").then((val)=>{
+        if(val == null)
+          this.generateData();
+        else
+          this.data = JSON.parse(val);
+      });
+    });
+  }
+
+  updateStorage(){
+    this.st.ready().then(() => {
+      console.log("updating storage");
+       this.st.set('rhr-entries', JSON.stringify(this.data));
+    });
   }
 
   generateData(){
@@ -24,13 +43,26 @@ export class RhrEntries {
       {
         user:"rasto",
         entries:[
-          {day: "1494521", value: 60},
-          {day: "1494520", value: 62},
-          {day: "1494519", value: 62},
-          {day: "1494518", value: 63}
+          {day: "1494633600", value: 60},
+          {day: "1494623600", value: 62},
+          {day: "1494613600", value: 62},
+          {day: "1494603600", value: 63}
         ]        
       }
     ];
+  }
+
+  getFormatedRHREntries(){
+    let rhr = [];
+    for(var i = 0; i < this.data[0].entries.length; ++i){
+      rhr.push({
+        value: this.data[0].entries[i].value,
+        year: (new Date(this.data[0].entries[i].day * 1000)).getFullYear(),
+        month: (new Date(this.data[0].entries[i].day * 1000)).getMonth()+1, // indexing starts at 0
+        day: (new Date(this.data[0].entries[i].day * 1000)).getDate()
+      });
+    }
+    return rhr;
   }
 
   setEntryToday(){    
@@ -40,20 +72,32 @@ export class RhrEntries {
       this.entryToday = false;
   }
 
-  addEntry(user, value){
-    for(var i = 0; i < this.data.length; ++i)
+  addEntry(user, value, date = null){
+    if (date == null)
+      date = new Date();
+
+    var days = this.getElapsedDays(date.getTime());
+
+    for(var i = 0; i < this.data.length; ++i){
       if(this.data[i].user == user){
-        console.log('adding rhr entry');
-        var entry = {
-          "day": this.getElapsedDays(),
-          "value": value
-        };
+
+        for(var j = 0; j < this.data[i].entries.length; ++j){
+          if(this.data[i].entries[j].day == days){
+            this.data[i].entries[j].value = value;
+            return false;
+          }
+        }
+
+        var entry = {"day": days,"value": value};
         this.data[i].entries.unshift(entry);
+        return true; 
       }
+    }
   }
 
-  getElapsedDays(){
-    var secs = Math.floor((new Date).getTime() / 1000);
+  getElapsedDays(timestamp = null){
+    if(timestamp == null) timestamp = (new Date()).getTime();
+    var secs = Math.floor(timestamp / 1000);
     console.log(secs);
     var days = secs - (secs % (60*60*24));
     console.log(days);

@@ -19,7 +19,7 @@ import { Activities } from '../../providers/activities';
 export class NewworkoutPage {
 
   activity: any;
-  //date: any;
+  date: any;
   duration: any;
   note: any;
 
@@ -36,6 +36,7 @@ export class NewworkoutPage {
     console.log('ionViewDidLoad NewworkoutPage');
     this.activities.load();
   }
+
   closeModal() {
     this.viewCtrl.dismiss();
   }
@@ -47,13 +48,19 @@ export class NewworkoutPage {
       buttons: ['OK']
     });
     alert.present();
-    this.closeModal();
   }
 
   saveWorkout(){
-    this.workouts.addItem(this.activity, this.note, this.duration);
-    this.showAlert();
+    var date;
+    if(this.date == null)
+      date = new Date();
+    else
+      date = new Date(this.date); // create date obj. from a string
     
+    this.workouts.addItem(this.activity, this.note, this.duration, date);
+    this.workouts.updateStorage();
+    this.showAlert();
+    this.closeModal();
   }
 
 }
