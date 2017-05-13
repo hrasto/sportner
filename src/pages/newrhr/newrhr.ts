@@ -18,7 +18,14 @@ import { AlertController } from 'ionic-angular';
 })
 export class NewrhrPage {
 
-rhrEntry: any = 65;
+  rhrEntry: any = 65;
+  date: any; 
+
+  alertData = {
+    title: 'Notification',
+    subTitle: 'New RHR has been saved',
+    buttons: ['OK']
+  };
 
   constructor(
     public navCtrl: NavController, 
@@ -38,20 +45,20 @@ rhrEntry: any = 65;
   }
   
   saveEnry(){
-    console.log(this.rhrEntry);
-    this.rhrEntries.addEntry("rasto", this.rhrEntry);
-    //this.diaryService.setRhrEntries();
-    console.log(this.rhrEntries.data);
+    var d;
+    if(this.date == null) d = new Date();
+    else d = new Date(this.date);
+    var res = this.rhrEntries.addEntry("rasto", this.rhrEntry, d);
+    
+    if(res === false)
+      this.alertData.subTitle = "Existing RHR has been overwritten";
+    
     this.showAlert();
     this.closeModal();
   }
 
  showAlert() {
-  let alert = this.alertCtrl.create({
-    title: 'Notification',
-    subTitle: 'New RHR is saved',
-    buttons: ['OK']
-  });
+  let alert = this.alertCtrl.create(this.alertData);
   alert.present();
   }
 }

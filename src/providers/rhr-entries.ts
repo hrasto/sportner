@@ -53,20 +53,31 @@ export class RhrEntries {
       this.entryToday = false;
   }
 
-  addEntry(user, value){
-    for(var i = 0; i < this.data.length; ++i)
+  addEntry(user, value, date = null){
+    if (date == null)
+      date = new Date();
+
+    var days = this.getElapsedDays(date.getTime());
+
+    for(var i = 0; i < this.data.length; ++i){
       if(this.data[i].user == user){
-        console.log('adding rhr entry');
-        var entry = {
-          "day": this.getElapsedDays(),
-          "value": value
-        };
+
+        for(var j = 0; j < this.data[i].entries.length; ++j){
+          if(this.data[i].entries[j].day == days){
+            this.data[i].entries[j].value = value;
+            return false;
+          }
+        }
+
+        var entry = {"day": days,"value": value};
         this.data[i].entries.unshift(entry);
+        return true; 
       }
+    }
   }
 
-  getElapsedDays(){
-    var secs = Math.floor((new Date).getTime() / 1000);
+  getElapsedDays(timestamp){
+    var secs = Math.floor(timestamp / 1000);
     console.log(secs);
     var days = secs - (secs % (60*60*24));
     console.log(days);

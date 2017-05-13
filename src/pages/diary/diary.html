@@ -56,15 +56,13 @@
     </ion-list>
 
     <ion-list *ngSwitchCase="'rhr'">
-      <ion-card *ngFor="let rhr of rhrService.getFormatedRHREntries()">
-        <ion-item>
-          <ion-avatar item-left>
-            <ion-icon name="heart"></ion-icon>
-          </ion-avatar>
-          <h2>{{rhr.value}}</h2>
-          <p>{{rhr.day}}.{{rhr.month}}.{{rhr.year}}</p>
-        </ion-item>
-      </ion-card>
+      <ion-item *ngFor="let rhr of rhrService.getFormatedRHREntries()">
+        <ion-avatar item-left>
+          <ion-icon name="heart"></ion-icon>
+        </ion-avatar>
+        <h2>{{rhr.value}} BPM</h2>
+        <ion-note item-end>{{rhr.day}}.{{rhr.month}}.{{rhr.year}}</ion-note>
+      </ion-item>
     </ion-list>
   </div>
 
