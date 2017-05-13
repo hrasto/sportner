@@ -16,13 +16,19 @@ import { AlertController } from 'ionic-angular';
   templateUrl: 'newrhr.html',
 })
 export class NewrhrPage {
-	rhrEntry: any = 65;
+
+rhrEntry: any = 65;
+
   constructor(
   public navCtrl: NavController, 
   public navParams: NavParams, 
   private alertCtrl: AlertController,
   public viewCtrl: ViewController,
   public rhrEntries: RhrEntries) {
+  }
+  
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad RhrReminder');
   }
    
   closeModal() {

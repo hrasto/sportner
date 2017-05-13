@@ -1,24 +1,14 @@
 webpackJsonp([7],{
 
-<<<<<<< HEAD
-/***/ 461:
-=======
 /***/ 279:
->>>>>>> dddd76c3ce35d9579dccf30fa666411d9f38a5fa
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-<<<<<<< HEAD
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__rhrinfo_high__ = __webpack_require__(114);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RhrinfoHighPageModule", function() { return RhrinfoHighPageModule; });
-=======
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__manageprofile__ = __webpack_require__(104);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ManageprofileModule", function() { return ManageprofileModule; });
->>>>>>> dddd76c3ce35d9579dccf30fa666411d9f38a5fa
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -28,26 +18,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var RhrinfoHighPageModule = (function () {
-    function RhrinfoHighPageModule() {
+var ManageprofileModule = (function () {
+    function ManageprofileModule() {
     }
-    return RhrinfoHighPageModule;
+    return ManageprofileModule;
 }());
-RhrinfoHighPageModule = __decorate([
+ManageprofileModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["a" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__rhrinfo_high__["a" /* RhrinfoHighPage */],
+            __WEBPACK_IMPORTED_MODULE_2__manageprofile__["a" /* Manageprofile */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__rhrinfo_high__["a" /* RhrinfoHighPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__manageprofile__["a" /* Manageprofile */]),
         ],
         exports: [
-            __WEBPACK_IMPORTED_MODULE_2__rhrinfo_high__["a" /* RhrinfoHighPage */]
+            __WEBPACK_IMPORTED_MODULE_2__manageprofile__["a" /* Manageprofile */]
         ]
     })
-], RhrinfoHighPageModule);
+], ManageprofileModule);
 
-//# sourceMappingURL=rhrinfo-high.module.js.map
+//# sourceMappingURL=manageprofile.module.js.map
 
 /***/ })
 

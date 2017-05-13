@@ -26961,50 +26961,7 @@ ion-navbar.toolbar {
 
 page-home .quote {
   text-align: center;
-  font-size: 17px;
-  line-height: 1.4;
-  font-style: italic;
+  font-size: 1.2 em;
   color: #999;
   transition: 0.3s linear;
 }
-<<<<<<< HEAD
-
-page-statistics ion-card-header {
-  font-weight: bold;
-}
-
-page-statistics table {
-  font-size: 9px;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-page-statistics th, page-statistics td {
-  text-align: left;
-  padding: 6px;
-}
-
-page-statistics tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-
-page-workout-details div.header {
-  height: 50px;
-  width: 100%;
-  padding: 12px;
-  background: #efefef;
-}
-
-page-workout-details div.header img {
-  width: 30px;
-  float: left;
-}
-
-page-workout-details div.header span {
-  width: 60%;
-  float: left;
-  text-align: right;
-  font-size: 25px;
-}
-=======
->>>>>>> dddd76c3ce35d9579dccf30fa666411d9f38a5fa

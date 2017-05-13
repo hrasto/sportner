@@ -15,11 +15,13 @@
 
 <ion-content padding>
 <div align="center"*ngFor="let user of userData.users">
-    <ion-icon name="contact" style="font-size: 120px; color: #b5b1b2"></ion-icon>
+    <ion-icon name="contact" style="font-size: 100px; color: #b5b1b2"></ion-icon>
     <div class="bla" style="font-size: 25px; color:#ff4d4d; ">
         <b> {{user.firstName}} {{user.lastName}}</b> <br>
     </div>
-    <br>
+    <div class="email" style="font-size:16px">
+        {{user.email}} <br><br>
+    </div>
     
 </div>
 
@@ -53,7 +55,7 @@
     <ion-input placeholder="bla" type="text"clearInput></ion-input>
   </ion-item>
 
-<br>
+<br><br>
 <div align="center">
 <button ion-button round style="font-size:17px" type="submit" [navPush]="editprofile">
   Save
