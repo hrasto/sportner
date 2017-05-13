@@ -9,18 +9,41 @@
 
 </ion-header>
 
-<br><br><br><br>
+<br><br><br>
 <ion-content align="center" padding style="">
-  <img style="height:250px; width:300px;     margin-top: 50px;" src="assets/images/logo.jpg" />
+  <img style="height:250px; width:300px;     margin-top: 0;" src="assets/images/logo.jpg" />
 
-<br><br><br><br>
+<p style="font-size: 19px; color: #ff4d4d"><b> Set up your profile before starting the app!</b></p>
+You can edit it later.
+<br>
+ <ion-item>
+    <ion-label color="primary">First Name</ion-label>
+    <ion-input placeholder="bla" typw="text"></ion-input>
+  </ion-item>
+
+   <ion-item>
+    <ion-label color="primary">Last Name</ion-label>
+    <ion-input placeholder="bla" typw="text"></ion-input>
+  </ion-item>
+
+   <ion-item>
+    <ion-label color="primary">Birthdate</ion-label>
+    <ion-input placeholder="bla" type="date"></ion-input>
+  </ion-item>
+
+ <ion-item>
+    <ion-label color="primary">Height (cm)</ion-label>
+    <ion-input placeholder="160" type="number"></ion-input>
+  </ion-item>
+
+   <ion-item>
+    <ion-label color="primary">Weight (kg) </ion-label>
+    <ion-input placeholder="50" type="number"></ion-input>
+  </ion-item>
+
+
 <button ion-button round style="font-size:20px; padding:25px" type="submit" [navPush]="tabs">
-  Sign in
-</button>
-<br><br><br><br>
-Don't you have an account?<br><br>
-<button ion-button round style="font-size:20px; padding:25px" type="submit" [navPush]="tabs">
-  Sign up!
+  Set up!
 </button>
 
 </ion-content>

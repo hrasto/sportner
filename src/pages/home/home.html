@@ -4,12 +4,12 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding style="margin-top:5px">
 
   <p padding (click)="generateRandomQuote()" class="quote">
     "{{quote}}"
   </p>
-  
+  <br>
   <ion-list>
     <h1 style="text-align: center;font-size: 15px;color: #666;">Last Workout</h1> 
     <ion-card>
@@ -26,7 +26,7 @@
       </ion-card-content>
     </ion-card>
   </ion-list>
-
+<br>
   <h1 style="text-align: center;font-size: 15px;color: #666;">Total Duration</h1>
   <h1 style="text-align: center;">{{totalTime}}</h1>
   <h1 style="text-align: center;font-size: 15px;color: #666;">Total Workouts</h1>
