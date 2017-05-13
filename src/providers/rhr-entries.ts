@@ -24,13 +24,26 @@ export class RhrEntries {
       {
         user:"rasto",
         entries:[
-          {day: "1494521", value: 60},
-          {day: "1494520", value: 62},
-          {day: "1494519", value: 62},
-          {day: "1494518", value: 63}
+          {day: "1494633600", value: 60},
+          {day: "1494623600", value: 62},
+          {day: "1494613600", value: 62},
+          {day: "1494603600", value: 63}
         ]        
       }
     ];
+  }
+
+  getFormatedRHREntries(){
+    let rhr = [];
+    for(var i = 0; i < this.data[0].entries.length; ++i){
+      rhr.push({
+        value: this.data[0].entries[i].value,
+        year: (new Date(this.data[0].entries[i].day * 1000)).getFullYear(),
+        month: (new Date(this.data[0].entries[i].day * 1000)).getMonth()+1, // indexing starts at 0
+        day: (new Date(this.data[0].entries[i].day * 1000)).getDate()
+      });
+    }
+    return rhr;
   }
 
   setEntryToday(){    

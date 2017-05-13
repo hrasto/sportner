@@ -56,7 +56,7 @@
     </ion-list>
 
     <ion-list *ngSwitchCase="'rhr'">
-      <ion-card *ngFor="let rhr of rhrEntries">
+      <ion-card *ngFor="let rhr of rhrService.getFormatedRHREntries()">
         <ion-item>
           <ion-avatar item-left>
             <ion-icon name="heart"></ion-icon>
