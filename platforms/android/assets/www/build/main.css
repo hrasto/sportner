@@ -26967,6 +26967,7 @@ page-home .quote {
   color: #999;
   transition: 0.3s linear;
 }
+<<<<<<< HEAD
 
 page-statistics ion-card-header {
   font-weight: bold;
@@ -27005,3 +27006,5 @@ page-workout-details div.header span {
   text-align: right;
   font-size: 25px;
 }
+=======
+>>>>>>> dddd76c3ce35d9579dccf30fa666411d9f38a5fa

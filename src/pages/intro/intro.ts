@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {TabsPage} from '../../pages/tabs/tabs';
 import { NativeStorage} from '@ionic-native/native-storage';
-//import { Facebook} from '@ionic-native/facebook';
-import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook';
+import { Facebook} from '@ionic-native/facebook';
+
 @IonicPage()
 @Component({
   selector: 'page-intro',
@@ -14,24 +14,12 @@ export class Intro {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public facebook: Facebook, public nativestorage: NativeStorage) {
     facebook.browserInit(this.FB_APP_ID, "v2.8");
-  }
-  login(){
-        this.facebook.login(['public_profile', 'user_friends', 'email'])
-    .then((res: FacebookLoginResponse) => console.log('Logged into Facebook!', res))
-    .catch(e => console.log('Error logging into Facebook', e));
-  }
-  
-  tabs = TabsPage;
-
+}
 
   doFbLogin(){
     let permissions = new Array();
     let nav = this.navCtrl;
     permissions = ["public_profile"];
-
-  //   this.facebook.login(['public_profile', 'user_friends', 'email'])
-  // .then((res: FacebookLoginResponse) => console.log('Logged into Facebook!', res))
-  // .catch(e => console.log('Error logging into Facebook', e));
 
     this.facebook.login(permissions).then(function(response){
       let userId = response.authResponse.userID;

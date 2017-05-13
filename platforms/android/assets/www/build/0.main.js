@@ -1,14 +1,24 @@
 webpackJsonp([0],{
 
+<<<<<<< HEAD
 /***/ 465:
+=======
+/***/ 286:
+>>>>>>> dddd76c3ce35d9579dccf30fa666411d9f38a5fa
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+<<<<<<< HEAD
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__rhrinfo_table__ = __webpack_require__(469);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RhrinfoTablePageModule", function() { return RhrinfoTablePageModule; });
+=======
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__workout_details__ = __webpack_require__(111);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "WorkoutDetailsModule", function() { return WorkoutDetailsModule; });
+>>>>>>> dddd76c3ce35d9579dccf30fa666411d9f38a5fa
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
