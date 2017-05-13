@@ -53,6 +53,7 @@ export class NewworkoutPage {
   saveWorkout(){
     this.workouts.addItem(this.activity, this.note, this.duration);
     this.showAlert();
+    
   }
 
 }

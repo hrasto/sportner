@@ -22,6 +22,7 @@ newworkoutPage = NewworkoutPage;
 newrhrPage=NewrhrPage;
 
   rhrEntries:any=[];
+  entries: any = 'workout';
 
   constructor(
     public navCtrl: NavController, 
