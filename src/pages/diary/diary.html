@@ -39,7 +39,7 @@
 
   <div [ngSwitch]="entries">
     <ion-list *ngSwitchCase="'workout'">
-      <ion-card *ngFor="let workout of workoutsService.workouts" (click)="showWorkout(workout.id)">
+      <ion-card *ngFor="let workout of workoutsService.getFormatedWorkouts()" (click)="showWorkout(workout.id)">
         <ion-item>
           <ion-avatar item-left>
             <img src="img/{{activities.getItem(workout.activity).icon}}">

@@ -20,9 +20,6 @@ export class HomePage {
   public lwNote: any;
   public lwDate: any;
 
-  public totalTime: any;
-  public totalWorkouts: any;
-
   constructor(
     public navCtrl: NavController, 
     public modalCtrl: ModalController,
@@ -56,8 +53,6 @@ export class HomePage {
     this.lwDuration = this.workoutsService.workouts[0].duration;
     this.lwDate = this.workoutsService.workouts[0].date;
     this.lwNote = this.workoutsService.workouts[0].note;
-    this.totalTime = this.workoutsService.getTotalTime();
-    this.totalWorkouts = this.workoutsService.getTotalWorkouts();
 
     if(this.rhrService.entryToday == false){
       let myModal = this.modalCtrl.create(RhrReminder);
