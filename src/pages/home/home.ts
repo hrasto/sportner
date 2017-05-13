@@ -6,6 +6,8 @@ import { Activities } from '../../providers/activities';
 import { RhrEntries } from '../../providers/rhr-entries';
 import { RhrReminder } from '../rhr-reminder/rhr-reminder';
 import { Storage } from '@ionic/storage';
+import {UserData} from '../../providers/user-data';
+import {Intro } from '../intro/intro';
 
 @Component({
   selector: 'page-home',
@@ -19,7 +21,7 @@ export class HomePage {
   public lwDuration: any;
   public lwNote: any;
   public lwDate: any;
-
+bla= 'hello';
   public totalTime: any;
   public totalWorkouts: any;
 
@@ -29,17 +31,18 @@ export class HomePage {
     public workoutsService: WorkoutEntries,
     public rhrService: RhrEntries,  
     public activities: Activities,
-    public storage: Storage
+    public storage: Storage,
+    public userdata: UserData
   ) {
     rhrService.generateData();    
     this.workoutsService.load();
     this.generateRandomQuote();
     this.rhrService.setEntryToday();
-
+    
     storage.ready().then(() => {
 
        // set a key/value
-       storage.set('name', 'Max');
+       storage.set('name', this.bla);
 
        // Or to get a key/value pair
        /*
@@ -59,7 +62,12 @@ export class HomePage {
     this.totalTime = this.workoutsService.getTotalTime();
     this.totalWorkouts = this.workoutsService.getTotalWorkouts();
 
-    if(this.rhrService.entryToday == false){
+    
+    if(this.userdata.profileSetup == false){
+      let myModal = this.modalCtrl.create(Intro);
+      myModal.present();
+    }
+    if(this.userdata.profileSetup == true && this.rhrService.entryToday == false){
       let myModal = this.modalCtrl.create(RhrReminder);
       myModal.present();
     }

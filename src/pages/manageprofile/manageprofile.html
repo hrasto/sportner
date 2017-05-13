@@ -15,7 +15,7 @@
 
 <ion-content padding>
 <div align="center"*ngFor="let user of userData.users">
-    <ion-icon name="contact" style="font-size: 120px; color: #b5b1b2"></ion-icon>
+    <ion-icon name="contact" style="font-size: 80px; color: #b5b1b2"></ion-icon>
     <div class="bla" style="font-size: 25px; color:#ff4d4d; ">
         <b> {{user.firstName}} {{user.lastName}}</b> <br>
     </div>
@@ -25,14 +25,22 @@
 
  <ion-item>
     <ion-label color="primary">First Name</ion-label>
-    <ion-input placeholder="bla" typw="text"></ion-input>
+    <ion-input placeholder="bla" type="text"></ion-input>
   </ion-item>
 
    <ion-item>
     <ion-label color="primary">Last Name</ion-label>
-    <ion-input placeholder="bla" typw="text"></ion-input>
+    <ion-input placeholder="bla" type="text"></ion-input>
   </ion-item>
 
+  <ion-item>
+    <ion-label color="primary">Gender</ion-label>
+    <ion-select [(ngModel)]="gender">
+      <ion-option value="female">Female</ion-option>
+      <ion-option value="male">Male</ion-option>
+    </ion-select>
+  </ion-item>
+  
    <ion-item>
     <ion-label color="primary">Birthdate</ion-label>
     <ion-input placeholder="bla" type="date"></ion-input>

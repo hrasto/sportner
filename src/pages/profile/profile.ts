@@ -19,17 +19,10 @@ export class Profile {
 
   ionViewDidLoad() {
     this.userData.load();
-    this.gender();
+    this.userData.getUser();
     console.log('ionViewDidLoad Profile');
   }
 
-  gender(){
-    this.userData.load();
-    if (this.userData.users.gender == 1)
-      var ge = "female";
-    else if (this.userData.users.gender == 0)
-      var ge = "male";
-    this.g = ge;
-  }
+ 
 
 }
