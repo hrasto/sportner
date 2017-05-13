@@ -31,6 +31,7 @@ rhrinfoListPage=RhrinfoListPage;
   constructor(public navCtrl: NavController, public navParams: NavParams, public rhrService: RhrEntries) {
  
   }
+
   
   ionViewDidEnter() {
  /**
