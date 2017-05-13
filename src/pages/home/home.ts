@@ -6,6 +6,7 @@ import { Activities } from '../../providers/activities';
 import { RhrEntries } from '../../providers/rhr-entries';
 import { RhrReminder } from '../rhr-reminder/rhr-reminder';
 import { WorkoutDetails } from '../workout-details/workout-details';
+import { Storage } from '@ionic/storage';
 
 @Component({
   selector: 'page-home',
@@ -20,20 +21,40 @@ export class HomePage {
     public modalCtrl: ModalController,
     public workoutsService: WorkoutEntries,
     public rhrService: RhrEntries,  
-    public activities: Activities  
+    public activities: Activities,
+    public storage: Storage
   ) {
-    rhrService.generateData();
-  }
-
-  ionViewDidLoad(){
+    rhrService.generateData();    
     this.workoutsService.load();
     this.generateRandomQuote();
     this.rhrService.setEntryToday();
+
+    storage.ready().then(() => {
+
+       // set a key/value
+       storage.set('name', 'Max');
+
+       // Or to get a key/value pair
+       /*
+       storage.get('age').then((val) => {
+         console.log('Your age is', val);
+       })
+       */
+     });
+  }
+
+  ionViewDidLoad(){
 
     if(this.rhrService.entryToday == false){
       let myModal = this.modalCtrl.create(RhrReminder);
       myModal.present();
     }
+
+    this.storage.ready().then(() => {
+      this.storage.get("name").then((val)=>{
+        console.log(val);
+      });
+    });
   }
 
   generateRandomQuote(){
