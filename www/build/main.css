@@ -26971,3 +26971,18 @@ page-home .quote {
 page-statistics ion-card-header {
   font-weight: bold;
 }
+
+page-statistics table {
+  font-size: 9px;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+page-statistics th, page-statistics td {
+  text-align: left;
+  padding: 6px;
+}
+
+page-statistics tr:nth-child(even) {
+  background-color: #f2f2f2;
+}

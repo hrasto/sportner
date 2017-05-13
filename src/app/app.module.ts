@@ -16,6 +16,10 @@ import { Manageprofile } from '../pages/manageprofile/manageprofile';
 import { NewworkoutPage } from '../pages/newworkout/newworkout';
 import { NewrhrPage } from '../pages/newrhr/newrhr';
 import { RhrInfoPage } from '../pages/rhr-info/rhr-info';
+import { RhrinfoListPage } from '../pages/rhrinfo-list/rhrinfo-list';
+import { RhrinfoLowPage } from '../pages/rhrinfo-low/rhrinfo-low';
+import { RhrinfoHighPage } from '../pages/rhrinfo-high/rhrinfo-high'; 
+import { RhrinfoMeasurePage } from '../pages/rhrinfo-measure/rhrinfo-measure';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -41,7 +45,11 @@ import { Activities } from '../providers/activities';
     Manageprofile,
     NewworkoutPage,
     NewrhrPage,
-    RhrInfoPage
+    RhrInfoPage,
+    RhrinfoListPage,
+    RhrinfoLowPage, 
+    RhrinfoHighPage,
+    RhrinfoMeasurePage
   ],
   imports: [
     BrowserModule,
@@ -62,7 +70,11 @@ import { Activities } from '../providers/activities';
     Manageprofile,
     NewworkoutPage,
     NewrhrPage,
-    RhrInfoPage
+    RhrInfoPage,
+    RhrinfoListPage,
+    RhrinfoLowPage, 
+    RhrinfoHighPage,
+    RhrinfoMeasurePage
   ],
   providers: [
     StatusBar,
