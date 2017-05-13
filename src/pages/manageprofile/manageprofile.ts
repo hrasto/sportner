@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { UserData } from '../../providers/user-data';
+import { Profile } from '../../pages/profile/profile';
 
 /**
  * Generated class for the Manageprofile page.
@@ -13,8 +14,9 @@ import { UserData } from '../../providers/user-data';
   selector: 'page-manageprofile',
   templateUrl: 'manageprofile.html',
 })
-export class Manageprofile {
 
+export class Manageprofile {
+  profile = Profile;
   constructor(public navCtrl: NavController, 
   public navParams: NavParams,
   public userData: UserData) {

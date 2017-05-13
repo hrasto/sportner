@@ -15,29 +15,29 @@ import { Intro } from '../pages/intro/intro';
   templateUrl: 'app.html'
 })
 export class MyApp {
- rootPage:any =TabsPage;
+ rootPage:any =Intro;
   
-/*
-constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, nativestorage: NativeStorage) {
-      platform.ready().then(() => {
-      // Here we will check if the user is already logged in
-      // because we don't want to ask users to log in each time they open the app
-     // let env = this;
-      //var nav = this.navCtrl;
-      nativestorage.getItem('user')
-      .then( function (data) {
-        // user is previously logged and we have his data
-        // we will let him access the app
-        this.rootPage =TabsPage;
-        splashScreen.hide();
-      }, function (error) {
-        //we don't have the user data so we will ask him to log in
-        this.rootPage =Intro;
-        splashScreen.hide();
-      });
 
-      statusBar.styleDefault();
-    });
+// constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, nativestorage: NativeStorage) {
+//       platform.ready().then(() => {
+//       // Here we will check if the user is already logged in
+//       // because we don't want to ask users to log in each time they open the app
+//      // let env = this;
+
+//       nativestorage.getItem('user')
+//       .then( function (data) {
+//         // user is previously logged and we have his data
+//         // we will let him access the app
+//         this.rootPage = TabsPage;
+//         splashScreen.hide();
+//       }, function (error) {
+//         //we don't have the user data so we will ask him to log in
+//         this.rootPage = Intro;
+//         splashScreen.hide();
+//       });
+
+//       statusBar.styleDefault();
+//     });
      
       
 
@@ -45,7 +45,7 @@ constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen
 
 
 
-  }   
+     
   
  //loader:any;
  /* constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, public auth:AuthService, public loading:LoadingController) {

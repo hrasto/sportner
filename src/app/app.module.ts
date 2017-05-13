@@ -18,6 +18,8 @@ import { NewrhrPage } from '../pages/newrhr/newrhr';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { Facebook } from '@ionic-native/facebook';
+import {NativeStorage} from '@ionic-native/native-storage'
 
 import { WorkoutEntries } from '../providers/workout-entries';
 import { UserData } from '../providers/user-data';
@@ -64,6 +66,8 @@ import { Activities } from '../providers/activities';
   providers: [
     StatusBar,
     SplashScreen,
+    Facebook,
+    NativeStorage,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     WorkoutEntries,
     AuthService,
