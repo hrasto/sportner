@@ -52,15 +52,16 @@ showAlert() {
       buttons: ['OK']
     });
     alert.present();
-    this.closeModal();
+    
   }
 setUpProfile(){
-    //console.log(this.rhrEntry);
+
     console.log(this.firstName, this.lastName, this.gender, this.birthdate, this.height, this.weight, this.notes);
-    this.userdata.setup(this.firstName, this.lastName, this.gender, this.birthdate, this.height, this.weight, this.notes);
-    //console.log(this.rhrEntries.data);
-    this.showAlert();
-    //this.closeModal();
+    this.userdata.addUser(this.firstName, this.lastName, this.gender, this.birthdate, this.height, this.weight, this.notes);
+    this.userdata.updateSt();
+    //this.showAlert();
+    this.closeModal();
+
    // this.viewCtrl.dismiss();
   }
 

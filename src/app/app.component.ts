@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { NativeStorage } from '@ionic-native/native-storage';
+
 //import { NavController } from 'ionic-angular';
 
 import { TabsPage } from '../pages/tabs/tabs';
-import { Intro } from '../pages/intro/intro';
+//import { Intro } from '../pages/intro/intro';
 //import { AuthService } from '../providers/auth-service';
 
 //import { LoadingController } from 'ionic-angular';

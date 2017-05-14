@@ -15,28 +15,24 @@
 
 <ion-content padding>
 <div align="center"*ngFor="let user of userData.users">
-<<<<<<< HEAD
+
     <ion-icon name="contact" style="font-size: 80px; color: #b5b1b2"></ion-icon>
-=======
-    <ion-icon name="contact" style="font-size: 100px; color: #b5b1b2"></ion-icon>
->>>>>>> 6aadbb4aa068a4615703b48e393932903015f693
+
     <div class="bla" style="font-size: 25px; color:#ff4d4d; ">
         <b> {{user.firstName}} {{user.lastName}}</b> <br>
     </div>
-    <div class="email" style="font-size:16px">
-        {{user.email}} <br><br>
+
     </div>
-    
-</div>
+
 
  <ion-item>
     <ion-label color="primary">First Name</ion-label>
-    <ion-input placeholder="bla" type="text"></ion-input>
+    <ion-input placeholder="Enter first name"value="firstName" [(ngModel)]="firstName"type="text"clearInput></ion-input>
   </ion-item>
 
    <ion-item>
     <ion-label color="primary">Last Name</ion-label>
-    <ion-input placeholder="bla" type="text"></ion-input>
+    <ion-input placeholder="Enter last name" value="lastName"[(ngModel)]="lastName"type="text"clearInput></ion-input>
   </ion-item>
 
   <ion-item>
@@ -49,27 +45,27 @@
   
    <ion-item>
     <ion-label color="primary">Birthdate</ion-label>
-    <ion-input placeholder="bla" type="date"></ion-input>
+    <ion-input placeholder="bla"[(ngModel)]="birthdate" type="date"></ion-input>
   </ion-item>
 
  <ion-item>
     <ion-label color="primary">Height (cm)</ion-label>
-    <ion-input placeholder="160" type="number"></ion-input>
+    <ion-input placeholder="Enter your height" [(ngModel)]="height"type="number"clearInput></ion-input>
   </ion-item>
 
    <ion-item>
     <ion-label color="primary">Weight (kg) </ion-label>
-    <ion-input placeholder="50" type="number"></ion-input>
+    <ion-input placeholder="Enter your weight" [(ngModel)]="weight"type="number"clearInput></ion-input>
   </ion-item>
 
    <ion-item>
     <ion-label color="primary">Notes</ion-label>
-    <ion-input placeholder="bla" type="text"clearInput></ion-input>
+    <ion-textarea style="min-height:50px;" placeholder="Enter some notes: diseases, meds, etc." [(ngModel)]="notes" type="text"clearInput></ion-textarea>
   </ion-item>
 
-<br><br>
+<br>
 <div align="center">
-<button ion-button round style="font-size:17px" type="submit" [navPush]="editprofile">
+<button ion-button round style="font-size:17px" type="submit" (click)="saveWorkout()">
   Save
 </button>
 </div>

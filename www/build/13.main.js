@@ -29,7 +29,7 @@ ManageprofileModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_2__manageprofile__["a" /* Manageprofile */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__manageprofile__["a" /* Manageprofile */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__manageprofile__["a" /* Manageprofile */]),
         ],
         exports: [
             __WEBPACK_IMPORTED_MODULE_2__manageprofile__["a" /* Manageprofile */]

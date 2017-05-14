@@ -31,7 +31,7 @@ NewrhrPageModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_2__newrhr__["a" /* NewrhrPage */], __WEBPACK_IMPORTED_MODULE_3__providers_rhr_entries__["a" /* RhrEntries */]
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__newrhr__["a" /* NewrhrPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__newrhr__["a" /* NewrhrPage */]),
         ],
         exports: [
             __WEBPACK_IMPORTED_MODULE_2__newrhr__["a" /* NewrhrPage */], __WEBPACK_IMPORTED_MODULE_3__providers_rhr_entries__["a" /* RhrEntries */]

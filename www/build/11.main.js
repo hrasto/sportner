@@ -29,7 +29,7 @@ NewworkoutPageModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_2__newworkout__["a" /* NewworkoutPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__newworkout__["a" /* NewworkoutPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__newworkout__["a" /* NewworkoutPage */]),
         ],
         exports: [
             __WEBPACK_IMPORTED_MODULE_2__newworkout__["a" /* NewworkoutPage */]

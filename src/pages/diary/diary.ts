@@ -19,9 +19,8 @@ import { WorkoutDetails } from '../workout-details/workout-details';
   templateUrl: 'diary.html',
 })
 export class Diary {
-newworkoutPage = NewworkoutPage;
-newrhrPage=NewrhrPage;
-
+  newworkoutPage = NewworkoutPage;
+  newrhrPage=NewrhrPage;
   rhrEntries:any=[];
   entries: any = 'workout';
 

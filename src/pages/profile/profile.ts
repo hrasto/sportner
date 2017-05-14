@@ -10,7 +10,7 @@ import { Manageprofile } from '../../pages/manageprofile/manageprofile';
 })
 export class Profile {
   g: any;
-  editprofile = Manageprofile;
+  //editprofile = Manageprofile;
   constructor(public navCtrl: NavController, 
   public navParams: NavParams,
   public userData: UserData) {
@@ -18,11 +18,13 @@ export class Profile {
   }
 
   ionViewDidLoad() {
-    this.userData.load();
-    this.userData.getUser();
+   // this.userData.load();
+    //this.userData.getUser();
     console.log('ionViewDidLoad Profile');
   }
-
+  editProfile(id){
+    this.navCtrl.push(Manageprofile,id);
+  }
  
 
 }

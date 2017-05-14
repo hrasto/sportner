@@ -29,7 +29,7 @@ RhrInfoPageModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_2__rhr_info__["a" /* RhrInfoPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__rhr_info__["a" /* RhrInfoPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__rhr_info__["a" /* RhrInfoPage */]),
         ],
         exports: [
             __WEBPACK_IMPORTED_MODULE_2__rhr_info__["a" /* RhrInfoPage */]

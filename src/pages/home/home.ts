@@ -16,19 +16,16 @@ import {Intro } from '../intro/intro';
 export class HomePage {
 
   public quote: any = "";
-<<<<<<< HEAD
+
 
   public lwActivity: any;
   public lwDuration: any;
   public lwNote: any;
   public lwDate: any;
-bla= 'hello';
   public totalTime: any;
   public totalWorkouts: any;
 
-=======
-  
->>>>>>> 6aadbb4aa068a4615703b48e393932903015f693
+
   constructor(
     public navCtrl: NavController, 
     public modalCtrl: ModalController,
@@ -40,55 +37,37 @@ bla= 'hello';
   ) {
     rhrService.generateData();    
     this.workoutsService.load();
+    //this.userdata.load();
     console.log(this.workoutsService.workouts);
     this.generateRandomQuote();
     this.rhrService.setEntryToday();
-<<<<<<< HEAD
+
     
-    storage.ready().then(() => {
-
-       // set a key/value
-       storage.set('name', this.bla);
-
-       // Or to get a key/value pair
-       /*
-       storage.get('age').then((val) => {
-         console.log('Your age is', val);
-       })
-       */
-     });
-=======
->>>>>>> 6aadbb4aa068a4615703b48e393932903015f693
   }
 
   ionViewDidLoad(){
 
-<<<<<<< HEAD
-    this.lwActivity = this.workoutsService.workouts[0].activity;
-    this.lwDuration = this.workoutsService.workouts[0].duration;
-    this.lwDate = this.workoutsService.workouts[0].date;
-    this.lwNote = this.workoutsService.workouts[0].note;
-    this.totalTime = this.workoutsService.getTotalTime();
-    this.totalWorkouts = this.workoutsService.getTotalWorkouts();
 
-    
+    // this.lwActivity = this.workoutsService.workouts[0].activity;
+    // this.lwDuration = this.workoutsService.workouts[0].duration;
+    // this.lwDate = this.workoutsService.workouts[0].date;
+    // this.lwNote = this.workoutsService.workouts[0].note;
+    // this.totalTime = this.workoutsService.getTotalTime();
+    // this.totalWorkouts = this.workoutsService.getTotalWorkouts();
+
+ 
     if(this.userdata.profileSetup == false){
       let myModal = this.modalCtrl.create(Intro);
       myModal.present();
     }
     if(this.userdata.profileSetup == true && this.rhrService.entryToday == false){
-=======
-    if(this.rhrService.entryToday == false){
->>>>>>> 6aadbb4aa068a4615703b48e393932903015f693
-      let myModal = this.modalCtrl.create(RhrReminder);
-      myModal.present();
-    }
 
-    this.storage.ready().then(() => {
-      this.storage.get("name").then((val)=>{
-        console.log(val);
-      });
-    });
+        if(this.rhrService.entryToday == false){
+          let myModal = this.modalCtrl.create(RhrReminder);
+          myModal.present();
+        }
+    }
+    
   }
 
   generateRandomQuote(){

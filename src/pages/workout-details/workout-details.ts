@@ -36,6 +36,7 @@ export class WorkoutDetails {
     var d = new Date(this.workout.date);
     this.date = d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate();
     this.activity = this.workout.activity;
+   
     this.activity_name = this.activities.getItem(this.activity).name;
     this.activity_icon = this.activities.getItem(this.activity).icon;
     this.note = this.workout.note;

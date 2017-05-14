@@ -29,7 +29,7 @@ RhrinfoHighPageModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_2__rhrinfo_high__["a" /* RhrinfoHighPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__rhrinfo_high__["a" /* RhrinfoHighPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__rhrinfo_high__["a" /* RhrinfoHighPage */]),
         ],
         exports: [
             __WEBPACK_IMPORTED_MODULE_2__rhrinfo_high__["a" /* RhrinfoHighPage */]

@@ -29,7 +29,7 @@ RhrReminderModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_2__rhr_reminder__["a" /* RhrReminder */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__rhr_reminder__["a" /* RhrReminder */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__rhr_reminder__["a" /* RhrReminder */]),
         ],
         exports: [
             __WEBPACK_IMPORTED_MODULE_2__rhr_reminder__["a" /* RhrReminder */]

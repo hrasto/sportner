@@ -29,7 +29,7 @@ ProfileModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_2__profile__["a" /* Profile */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__profile__["a" /* Profile */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__profile__["a" /* Profile */]),
         ],
         exports: [
             __WEBPACK_IMPORTED_MODULE_2__profile__["a" /* Profile */]

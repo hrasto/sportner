@@ -29,7 +29,7 @@ RhrinfoMeasurePageModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_2__rhrinfo_measure__["a" /* RhrinfoMeasurePage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__rhrinfo_measure__["a" /* RhrinfoMeasurePage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__rhrinfo_measure__["a" /* RhrinfoMeasurePage */]),
         ],
         exports: [
             __WEBPACK_IMPORTED_MODULE_2__rhrinfo_measure__["a" /* RhrinfoMeasurePage */]
