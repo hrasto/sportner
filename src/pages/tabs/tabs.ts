@@ -3,7 +3,6 @@ import { Component } from '@angular/core';
 import { Profile } from '../profile/profile';
 import { Diary } from '../diary/diary';
 import { HomePage } from '../home/home';
-import { Settings } from '../settings/settings';
 import { Statistics } from '../statistics/statistics';
 
 @Component({
@@ -15,7 +14,7 @@ export class TabsPage {
   tab2Root = Profile;
   tab3Root = Diary;
   tab4Root = Statistics;
-  tab5Root = Settings;
+
 
   constructor() {
 
