@@ -104,7 +104,7 @@ export class WorkoutEntries {
   getTotalTime(){
     var time = 0;
     for(var i = 0; i < this.workouts.length; ++i){
-      time += this.workouts[i].duration;
+      time += parseInt(this.workouts[i].duration);
     }
     return time;
   }
